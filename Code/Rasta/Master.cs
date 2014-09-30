@@ -42,6 +42,14 @@ namespace Rasta
             accountPayableForm.BringToFront();
         }
 
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            Login loginForm = new Login();
+            loginForm.MdiParent = this;
+            loginForm.Show();
+            loginForm.BringToFront();
+        }
+
       
 
         
