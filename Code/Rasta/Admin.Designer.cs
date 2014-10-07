@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpUserMgt = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PassWord = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrivilegeOld = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Privilege = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -68,11 +70,12 @@
             this.txtSupplierAddress = new System.Windows.Forms.TextBox();
             this.txtSupplerCountry = new System.Windows.Forms.TextBox();
             this.cmbSupplierBank = new System.Windows.Forms.ComboBox();
-            this.cmbSupplierType = new System.Windows.Forms.ComboBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.txtSupplierType = new System.Windows.Forms.TextBox();
+            this.dgvSupplier = new System.Windows.Forms.DataGridView();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SupplierID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SupplierBank = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SupplierBank = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.SupplierType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupplierCountry = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,10 +83,11 @@
             this.SupplierDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tpBankMgt = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.dgvwBankMgt = new System.Windows.Forms.DataGridView();
+            this.dgvBank = new System.Windows.Forms.DataGridView();
             this.BankName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BankID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BankCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CurrencyAccepted = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CurrencyAccepted = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.SwiftCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IBAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BankCountry = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,11 +104,11 @@
             this.lblBankCountry = new System.Windows.Forms.Label();
             this.txtBankName = new System.Windows.Forms.TextBox();
             this.txtBankCode = new System.Windows.Forms.TextBox();
-            this.txtBankCurrency = new System.Windows.Forms.TextBox();
             this.txtSwiftCode = new System.Windows.Forms.TextBox();
             this.txtIBAN = new System.Windows.Forms.TextBox();
             this.txtCountry = new System.Windows.Forms.TextBox();
             this.btnBankSave = new System.Windows.Forms.Button();
+            this.cmbCurrencyAccepted = new System.Windows.Forms.ComboBox();
             this.splitContainer9 = new System.Windows.Forms.SplitContainer();
             this.linkLabel9 = new System.Windows.Forms.LinkLabel();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
@@ -119,9 +123,9 @@
             this.btnEditCash = new System.Windows.Forms.Button();
             this.tpProjectMgt = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.LOP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvProject = new System.Windows.Forms.DataGridView();
             this.ProjectType = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.ProjectID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AmountTillDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RemainingAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -143,8 +147,9 @@
             this.cmbProjectType = new System.Windows.Forms.ComboBox();
             this.tpExpenseTypeMgt = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dgvExpenseType = new System.Windows.Forms.DataGridView();
             this.ExpenseType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExpenseTypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ExpenseTypeModify = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ExpenseTypeDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
@@ -155,8 +160,9 @@
             this.txtExpenseType = new System.Windows.Forms.TextBox();
             this.tpSiteMgt = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.dgvSite = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SiteID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
@@ -191,9 +197,9 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.tpSettings = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.dgvCurrency = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ExchangeRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CurrencyID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewButtonColumn3 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridViewButtonColumn4 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
@@ -222,10 +228,10 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).BeginInit();
             this.tpBankMgt.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvwBankMgt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBank)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
@@ -238,7 +244,7 @@
             this.tableLayoutPanel17.SuspendLayout();
             this.tpProjectMgt.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.Panel2.SuspendLayout();
@@ -246,7 +252,7 @@
             this.tableLayoutPanel8.SuspendLayout();
             this.tpExpenseTypeMgt.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExpenseType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
             this.splitContainer5.Panel1.SuspendLayout();
             this.splitContainer5.Panel2.SuspendLayout();
@@ -254,7 +260,7 @@
             this.tableLayoutPanel10.SuspendLayout();
             this.tpSiteMgt.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSite)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
             this.splitContainer6.Panel1.SuspendLayout();
             this.splitContainer6.Panel2.SuspendLayout();
@@ -270,7 +276,7 @@
             this.tableLayoutPanel16.SuspendLayout();
             this.tpSettings.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCurrency)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
             this.splitContainer7.Panel1.SuspendLayout();
             this.splitContainer7.Panel2.SuspendLayout();
@@ -323,11 +329,13 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.UserName,
             this.UserID,
+            this.UserName,
             this.PassWord,
+            this.PrivilegeOld,
             this.Privilege,
             this.Edit,
             this.Delete});
@@ -336,20 +344,27 @@
             this.dataGridView1.Size = new System.Drawing.Size(646, 139);
             this.dataGridView1.TabIndex = 0;
             // 
-            // UserName
-            // 
-            this.UserName.HeaderText = "Name";
-            this.UserName.Name = "UserName";
-            // 
             // UserID
             // 
             this.UserID.HeaderText = "UserID";
             this.UserID.Name = "UserID";
             // 
+            // UserName
+            // 
+            this.UserName.HeaderText = "Name";
+            this.UserName.Name = "UserName";
+            // 
             // PassWord
             // 
             this.PassWord.HeaderText = "PassWord";
             this.PassWord.Name = "PassWord";
+            // 
+            // PrivilegeOld
+            // 
+            this.PrivilegeOld.HeaderText = "PrivilegeOld";
+            this.PrivilegeOld.Name = "PrivilegeOld";
+            this.PrivilegeOld.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.PrivilegeOld.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Privilege
             // 
@@ -379,7 +394,6 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel4);
-            this.splitContainer1.Panel2Collapsed = true;
             this.splitContainer1.Size = new System.Drawing.Size(628, 140);
             this.splitContainer1.SplitterDistance = 29;
             this.splitContainer1.TabIndex = 1;
@@ -484,6 +498,7 @@
             this.btnSaveUser.TabIndex = 4;
             this.btnSaveUser.Text = "Save";
             this.btnSaveUser.UseVisualStyleBackColor = true;
+            this.btnSaveUser.Click += new System.EventHandler(this.btnSaveUser_Click);
             // 
             // txtUserName
             // 
@@ -511,6 +526,7 @@
             this.lstPrivilege.FormattingEnabled = true;
             this.lstPrivilege.Location = new System.Drawing.Point(444, 36);
             this.lstPrivilege.Name = "lstPrivilege";
+            this.lstPrivilege.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.lstPrivilege.Size = new System.Drawing.Size(100, 17);
             this.lstPrivilege.TabIndex = 8;
             // 
@@ -530,7 +546,7 @@
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.splitContainer2, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.dataGridView2, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.dgvSupplier, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(24, 45);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
@@ -553,7 +569,6 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.tableLayoutPanel3);
-            this.splitContainer2.Panel2Collapsed = true;
             this.splitContainer2.Size = new System.Drawing.Size(845, 178);
             this.splitContainer2.SplitterDistance = 26;
             this.splitContainer2.TabIndex = 0;
@@ -588,7 +603,7 @@
             this.tableLayoutPanel3.Controls.Add(this.txtSupplierAddress, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.txtSupplerCountry, 3, 2);
             this.tableLayoutPanel3.Controls.Add(this.cmbSupplierBank, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.cmbSupplierType, 3, 1);
+            this.tableLayoutPanel3.Controls.Add(this.txtSupplierType, 3, 1);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(28, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
@@ -691,6 +706,7 @@
             this.btnSupplierSave.TabIndex = 6;
             this.btnSupplierSave.Text = "Save";
             this.btnSupplierSave.UseVisualStyleBackColor = true;
+            this.btnSupplierSave.Click += new System.EventHandler(this.btnSupplierSave_Click);
             // 
             // txtSupplierCode
             // 
@@ -728,19 +744,20 @@
             this.cmbSupplierBank.Size = new System.Drawing.Size(100, 21);
             this.cmbSupplierBank.TabIndex = 11;
             // 
-            // cmbSupplierType
+            // txtSupplierType
             // 
-            this.cmbSupplierType.FormattingEnabled = true;
-            this.cmbSupplierType.Location = new System.Drawing.Point(537, 38);
-            this.cmbSupplierType.Name = "cmbSupplierType";
-            this.cmbSupplierType.Size = new System.Drawing.Size(100, 21);
-            this.cmbSupplierType.TabIndex = 12;
+            this.txtSupplierType.Location = new System.Drawing.Point(537, 38);
+            this.txtSupplierType.Name = "txtSupplierType";
+            this.txtSupplierType.Size = new System.Drawing.Size(100, 20);
+            this.txtSupplierType.TabIndex = 12;
             // 
-            // dataGridView2
+            // dgvSupplier
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvSupplier.AllowUserToAddRows = false;
+            this.dgvSupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSupplier.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Code,
+            this.SupplierID,
             this.SupplierName,
             this.SupplierBank,
             this.SupplierType,
@@ -748,16 +765,21 @@
             this.SupplierCountry,
             this.SupplierModify,
             this.SupplierDelete});
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(845, 177);
-            this.dataGridView2.TabIndex = 1;
+            this.dgvSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvSupplier.Location = new System.Drawing.Point(3, 3);
+            this.dgvSupplier.Name = "dgvSupplier";
+            this.dgvSupplier.Size = new System.Drawing.Size(845, 177);
+            this.dgvSupplier.TabIndex = 1;
             // 
             // Code
             // 
             this.Code.HeaderText = "Code";
             this.Code.Name = "Code";
+            // 
+            // SupplierID
+            // 
+            this.SupplierID.HeaderText = "SupplierID";
+            this.SupplierID.Name = "SupplierID";
             // 
             // SupplierName
             // 
@@ -768,6 +790,8 @@
             // 
             this.SupplierBank.HeaderText = "Bank";
             this.SupplierBank.Name = "SupplierBank";
+            this.SupplierBank.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.SupplierBank.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // SupplierType
             // 
@@ -809,7 +833,7 @@
             // 
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Controls.Add(this.dgvwBankMgt, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.dgvBank, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.splitContainer3, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.splitContainer9, 0, 2);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(26, 33);
@@ -821,11 +845,13 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(844, 445);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
-            // dgvwBankMgt
+            // dgvBank
             // 
-            this.dgvwBankMgt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvwBankMgt.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvBank.AllowUserToAddRows = false;
+            this.dgvBank.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBank.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BankName,
+            this.BankID,
             this.BankCode,
             this.CurrencyAccepted,
             this.SwiftCode,
@@ -833,16 +859,21 @@
             this.BankCountry,
             this.ModifyBank,
             this.DeleteBank});
-            this.dgvwBankMgt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvwBankMgt.Location = new System.Drawing.Point(3, 3);
-            this.dgvwBankMgt.Name = "dgvwBankMgt";
-            this.dgvwBankMgt.Size = new System.Drawing.Size(838, 105);
-            this.dgvwBankMgt.TabIndex = 0;
+            this.dgvBank.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBank.Location = new System.Drawing.Point(3, 3);
+            this.dgvBank.Name = "dgvBank";
+            this.dgvBank.Size = new System.Drawing.Size(838, 105);
+            this.dgvBank.TabIndex = 0;
             // 
             // BankName
             // 
             this.BankName.HeaderText = "BankName";
             this.BankName.Name = "BankName";
+            // 
+            // BankID
+            // 
+            this.BankID.HeaderText = "BankID";
+            this.BankID.Name = "BankID";
             // 
             // BankCode
             // 
@@ -853,6 +884,8 @@
             // 
             this.CurrencyAccepted.HeaderText = "Currency";
             this.CurrencyAccepted.Name = "CurrencyAccepted";
+            this.CurrencyAccepted.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.CurrencyAccepted.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // SwiftCode
             // 
@@ -924,11 +957,11 @@
             this.tableLayoutPanel6.Controls.Add(this.lblBankCountry, 2, 2);
             this.tableLayoutPanel6.Controls.Add(this.txtBankName, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.txtBankCode, 3, 0);
-            this.tableLayoutPanel6.Controls.Add(this.txtBankCurrency, 1, 1);
             this.tableLayoutPanel6.Controls.Add(this.txtSwiftCode, 3, 1);
             this.tableLayoutPanel6.Controls.Add(this.txtIBAN, 1, 2);
             this.tableLayoutPanel6.Controls.Add(this.txtCountry, 3, 2);
             this.tableLayoutPanel6.Controls.Add(this.btnBankSave, 2, 3);
+            this.tableLayoutPanel6.Controls.Add(this.cmbCurrencyAccepted, 1, 1);
             this.tableLayoutPanel6.Location = new System.Drawing.Point(30, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 4;
@@ -1037,13 +1070,6 @@
             this.txtBankCode.Size = new System.Drawing.Size(100, 20);
             this.txtBankCode.TabIndex = 7;
             // 
-            // txtBankCurrency
-            // 
-            this.txtBankCurrency.Location = new System.Drawing.Point(197, 28);
-            this.txtBankCurrency.Name = "txtBankCurrency";
-            this.txtBankCurrency.Size = new System.Drawing.Size(100, 20);
-            this.txtBankCurrency.TabIndex = 8;
-            // 
             // txtSwiftCode
             // 
             this.txtSwiftCode.Location = new System.Drawing.Point(585, 28);
@@ -1067,12 +1093,21 @@
             // 
             // btnBankSave
             // 
-            this.btnBankSave.Location = new System.Drawing.Point(197, 78);
+            this.btnBankSave.Location = new System.Drawing.Point(391, 78);
             this.btnBankSave.Name = "btnBankSave";
             this.btnBankSave.Size = new System.Drawing.Size(75, 19);
             this.btnBankSave.TabIndex = 12;
             this.btnBankSave.Text = "Save";
             this.btnBankSave.UseVisualStyleBackColor = true;
+            this.btnBankSave.Click += new System.EventHandler(this.btnBankSave_Click);
+            // 
+            // cmbCurrencyAccepted
+            // 
+            this.cmbCurrencyAccepted.FormattingEnabled = true;
+            this.cmbCurrencyAccepted.Location = new System.Drawing.Point(197, 28);
+            this.cmbCurrencyAccepted.Name = "cmbCurrencyAccepted";
+            this.cmbCurrencyAccepted.Size = new System.Drawing.Size(100, 21);
+            this.cmbCurrencyAccepted.TabIndex = 13;
             // 
             // splitContainer9
             // 
@@ -1239,7 +1274,7 @@
             this.tableLayoutPanel7.ColumnCount = 1;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel7.Controls.Add(this.dataGridView3, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.dgvProject, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.splitContainer4, 0, 1);
             this.tableLayoutPanel7.Location = new System.Drawing.Point(35, 45);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
@@ -1249,32 +1284,33 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(748, 395);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
-            // dataGridView3
+            // dgvProject
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.LOP,
+            this.dgvProject.AllowUserToAddRows = false;
+            this.dgvProject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProject.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ProjectType,
+            this.ProjectID,
             this.AmountTillDate,
             this.RemainingAmount,
             this.TotalAmount,
             this.ProjectModify,
             this.ProjectDelete});
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(742, 142);
-            this.dataGridView3.TabIndex = 0;
-            // 
-            // LOP
-            // 
-            this.LOP.HeaderText = "LOP";
-            this.LOP.Name = "LOP";
+            this.dgvProject.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProject.Location = new System.Drawing.Point(3, 3);
+            this.dgvProject.Name = "dgvProject";
+            this.dgvProject.Size = new System.Drawing.Size(742, 142);
+            this.dgvProject.TabIndex = 0;
             // 
             // ProjectType
             // 
             this.ProjectType.HeaderText = "ProjectType";
             this.ProjectType.Name = "ProjectType";
+            // 
+            // ProjectID
+            // 
+            this.ProjectID.HeaderText = "ProjectID";
+            this.ProjectID.Name = "ProjectID";
             // 
             // AmountTillDate
             // 
@@ -1437,6 +1473,7 @@
             this.btnProjectSave.TabIndex = 5;
             this.btnProjectSave.Text = "Save";
             this.btnProjectSave.UseVisualStyleBackColor = true;
+            this.btnProjectSave.Click += new System.EventHandler(this.btnProjectSave_Click);
             // 
             // txtLOP
             // 
@@ -1490,7 +1527,7 @@
             this.tableLayoutPanel9.ColumnCount = 1;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel9.Controls.Add(this.dataGridView4, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.dgvExpenseType, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.splitContainer5, 0, 1);
             this.tableLayoutPanel9.Location = new System.Drawing.Point(48, 39);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
@@ -1500,23 +1537,30 @@
             this.tableLayoutPanel9.Size = new System.Drawing.Size(349, 244);
             this.tableLayoutPanel9.TabIndex = 0;
             // 
-            // dataGridView4
+            // dgvExpenseType
             // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvExpenseType.AllowUserToAddRows = false;
+            this.dgvExpenseType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvExpenseType.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ExpenseType,
+            this.ExpenseTypeID,
             this.ExpenseTypeModify,
             this.ExpenseTypeDelete});
-            this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView4.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(343, 79);
-            this.dataGridView4.TabIndex = 0;
+            this.dgvExpenseType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvExpenseType.Location = new System.Drawing.Point(3, 3);
+            this.dgvExpenseType.Name = "dgvExpenseType";
+            this.dgvExpenseType.Size = new System.Drawing.Size(343, 79);
+            this.dgvExpenseType.TabIndex = 0;
             // 
             // ExpenseType
             // 
             this.ExpenseType.HeaderText = "ExpenseType";
             this.ExpenseType.Name = "ExpenseType";
+            // 
+            // ExpenseTypeID
+            // 
+            this.ExpenseTypeID.HeaderText = "ExpenseTypeID";
+            this.ExpenseTypeID.Name = "ExpenseTypeID";
             // 
             // ExpenseTypeModify
             // 
@@ -1582,6 +1626,7 @@
             this.btnExpenseTypeSave.TabIndex = 2;
             this.btnExpenseTypeSave.Text = "Save";
             this.btnExpenseTypeSave.UseVisualStyleBackColor = true;
+            this.btnExpenseTypeSave.Click += new System.EventHandler(this.btnExpenseTypeSave_Click);
             // 
             // lblExpenseTypeName
             // 
@@ -1620,33 +1665,40 @@
             this.tableLayoutPanel11.ColumnCount = 1;
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel11.Controls.Add(this.dataGridView5, 0, 0);
+            this.tableLayoutPanel11.Controls.Add(this.dgvSite, 0, 0);
             this.tableLayoutPanel11.Controls.Add(this.splitContainer6, 0, 1);
             this.tableLayoutPanel11.Location = new System.Drawing.Point(49, 42);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 2;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.83607F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.16393F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(349, 244);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(349, 342);
             this.tableLayoutPanel11.TabIndex = 1;
             // 
-            // dataGridView5
+            // dgvSite
             // 
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvSite.AllowUserToAddRows = false;
+            this.dgvSite.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSite.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
+            this.SiteID,
             this.dataGridViewButtonColumn1,
             this.dataGridViewButtonColumn2});
-            this.dataGridView5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView5.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(343, 79);
-            this.dataGridView5.TabIndex = 0;
+            this.dgvSite.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvSite.Location = new System.Drawing.Point(3, 3);
+            this.dgvSite.Name = "dgvSite";
+            this.dgvSite.Size = new System.Drawing.Size(343, 113);
+            this.dgvSite.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "Site";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // SiteID
+            // 
+            this.SiteID.HeaderText = "SiteID";
+            this.SiteID.Name = "SiteID";
             // 
             // dataGridViewButtonColumn1
             // 
@@ -1661,7 +1713,7 @@
             // splitContainer6
             // 
             this.splitContainer6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer6.Location = new System.Drawing.Point(3, 88);
+            this.splitContainer6.Location = new System.Drawing.Point(3, 122);
             this.splitContainer6.Name = "splitContainer6";
             this.splitContainer6.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -1673,7 +1725,7 @@
             // 
             this.splitContainer6.Panel2.Controls.Add(this.tableLayoutPanel12);
             this.splitContainer6.Panel2Collapsed = true;
-            this.splitContainer6.Size = new System.Drawing.Size(343, 153);
+            this.splitContainer6.Size = new System.Drawing.Size(343, 217);
             this.splitContainer6.SplitterDistance = 29;
             this.splitContainer6.TabIndex = 1;
             // 
@@ -1712,6 +1764,7 @@
             this.btnSaveSite.TabIndex = 2;
             this.btnSaveSite.Text = "Save";
             this.btnSaveSite.UseVisualStyleBackColor = true;
+            this.btnSaveSite.Click += new System.EventHandler(this.btnSaveSite_Click);
             // 
             // lblSite
             // 
@@ -2001,7 +2054,7 @@
             this.tableLayoutPanel13.ColumnCount = 1;
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel13.Controls.Add(this.dataGridView6, 0, 0);
+            this.tableLayoutPanel13.Controls.Add(this.dgvCurrency, 0, 0);
             this.tableLayoutPanel13.Controls.Add(this.splitContainer7, 0, 1);
             this.tableLayoutPanel13.Location = new System.Drawing.Point(43, 37);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
@@ -2011,29 +2064,30 @@
             this.tableLayoutPanel13.Size = new System.Drawing.Size(694, 244);
             this.tableLayoutPanel13.TabIndex = 1;
             // 
-            // dataGridView6
+            // dgvCurrency
             // 
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvCurrency.AllowUserToAddRows = false;
+            this.dgvCurrency.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCurrency.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2,
-            this.ExchangeRate,
+            this.CurrencyID,
             this.dataGridViewButtonColumn3,
             this.dataGridViewButtonColumn4});
-            this.dataGridView6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView6.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.Size = new System.Drawing.Size(688, 79);
-            this.dataGridView6.TabIndex = 0;
+            this.dgvCurrency.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCurrency.Location = new System.Drawing.Point(3, 3);
+            this.dgvCurrency.Name = "dgvCurrency";
+            this.dgvCurrency.Size = new System.Drawing.Size(688, 79);
+            this.dgvCurrency.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.HeaderText = "Currency";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // ExchangeRate
+            // CurrencyID
             // 
-            this.ExchangeRate.HeaderText = "ExchangeRate";
-            this.ExchangeRate.Name = "ExchangeRate";
+            this.CurrencyID.HeaderText = "CurrencyID";
+            this.CurrencyID.Name = "CurrencyID";
             // 
             // dataGridViewButtonColumn3
             // 
@@ -2145,15 +2199,18 @@
             this.btnCurrencySave.TabIndex = 2;
             this.btnCurrencySave.Text = "Save";
             this.btnCurrencySave.UseVisualStyleBackColor = true;
+            this.btnCurrencySave.Click += new System.EventHandler(this.btnCurrencySave_Click);
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 502);
+            this.ClientSize = new System.Drawing.Size(972, 488);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin";
             this.Text = "Admin";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tabControl1.ResumeLayout(false);
             this.tpUserMgt.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -2174,10 +2231,10 @@
             this.splitContainer2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).EndInit();
             this.tpBankMgt.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvwBankMgt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBank)).EndInit();
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel1.PerformLayout();
             this.splitContainer3.Panel2.ResumeLayout(false);
@@ -2194,7 +2251,7 @@
             this.tableLayoutPanel17.PerformLayout();
             this.tpProjectMgt.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProject)).EndInit();
             this.splitContainer4.Panel1.ResumeLayout(false);
             this.splitContainer4.Panel1.PerformLayout();
             this.splitContainer4.Panel2.ResumeLayout(false);
@@ -2204,7 +2261,7 @@
             this.tableLayoutPanel8.PerformLayout();
             this.tpExpenseTypeMgt.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExpenseType)).EndInit();
             this.splitContainer5.Panel1.ResumeLayout(false);
             this.splitContainer5.Panel1.PerformLayout();
             this.splitContainer5.Panel2.ResumeLayout(false);
@@ -2214,7 +2271,7 @@
             this.tableLayoutPanel10.PerformLayout();
             this.tpSiteMgt.ResumeLayout(false);
             this.tableLayoutPanel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSite)).EndInit();
             this.splitContainer6.Panel1.ResumeLayout(false);
             this.splitContainer6.Panel1.PerformLayout();
             this.splitContainer6.Panel2.ResumeLayout(false);
@@ -2234,7 +2291,7 @@
             this.tableLayoutPanel16.PerformLayout();
             this.tpSettings.ResumeLayout(false);
             this.tableLayoutPanel13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCurrency)).EndInit();
             this.splitContainer7.Panel1.ResumeLayout(false);
             this.splitContainer7.Panel1.PerformLayout();
             this.splitContainer7.Panel2.ResumeLayout(false);
@@ -2259,12 +2316,6 @@
         private System.Windows.Forms.TabPage tpSettings;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UserID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PassWord;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Privilege;
-        private System.Windows.Forms.DataGridViewButtonColumn Edit;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
@@ -2279,15 +2330,7 @@
         private System.Windows.Forms.ListBox lstPrivilege;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SupplierName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SupplierBank;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SupplierType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SupplierCountry;
-        private System.Windows.Forms.DataGridViewButtonColumn SupplierModify;
-        private System.Windows.Forms.DataGridViewButtonColumn SupplierDelete;
+        private System.Windows.Forms.DataGridView dgvSupplier;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label lblSupplierName;
@@ -2302,17 +2345,8 @@
         private System.Windows.Forms.TextBox txtSupplierAddress;
         private System.Windows.Forms.TextBox txtSupplerCountry;
         private System.Windows.Forms.ComboBox cmbSupplierBank;
-        private System.Windows.Forms.ComboBox cmbSupplierType;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.DataGridView dgvwBankMgt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BankName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BankCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CurrencyAccepted;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SwiftCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IBAN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BankCountry;
-        private System.Windows.Forms.DataGridViewButtonColumn ModifyBank;
-        private System.Windows.Forms.DataGridViewButtonColumn DeleteBank;
+        private System.Windows.Forms.DataGridView dgvBank;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
@@ -2324,7 +2358,6 @@
         private System.Windows.Forms.Label lblBankCountry;
         private System.Windows.Forms.TextBox txtBankName;
         private System.Windows.Forms.TextBox txtBankCode;
-        private System.Windows.Forms.TextBox txtBankCurrency;
         private System.Windows.Forms.TextBox txtSwiftCode;
         private System.Windows.Forms.TextBox txtIBAN;
         private System.Windows.Forms.TextBox txtCountry;
@@ -2332,14 +2365,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LOP;
-        private System.Windows.Forms.DataGridViewComboBoxColumn ProjectType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AmountTillDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RemainingAmount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalAmount;
-        private System.Windows.Forms.DataGridViewButtonColumn ProjectModify;
-        private System.Windows.Forms.DataGridViewButtonColumn ProjectDelete;
+        private System.Windows.Forms.DataGridView dgvProject;
         private System.Windows.Forms.SplitContainer splitContainer4;
         private System.Windows.Forms.LinkLabel linkLabel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
@@ -2355,10 +2381,7 @@
         private System.Windows.Forms.TextBox txtAmountDue;
         private System.Windows.Forms.ComboBox cmbProjectType;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ExpenseType;
-        private System.Windows.Forms.DataGridViewButtonColumn ExpenseTypeModify;
-        private System.Windows.Forms.DataGridViewButtonColumn ExpenseTypeDelete;
+        private System.Windows.Forms.DataGridView dgvExpenseType;
         private System.Windows.Forms.SplitContainer splitContainer5;
         private System.Windows.Forms.LinkLabel linkLabel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
@@ -2366,10 +2389,7 @@
         private System.Windows.Forms.Label lblExpenseTypeName;
         private System.Windows.Forms.TextBox txtExpenseType;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
-        private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn2;
+        private System.Windows.Forms.DataGridView dgvSite;
         private System.Windows.Forms.SplitContainer splitContainer6;
         private System.Windows.Forms.LinkLabel linkLabel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
@@ -2377,11 +2397,6 @@
         private System.Windows.Forms.Label lblSite;
         private System.Windows.Forms.TextBox txtSite;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
-        private System.Windows.Forms.DataGridView dataGridView6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ExchangeRate;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn3;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn4;
         private System.Windows.Forms.SplitContainer splitContainer7;
         private System.Windows.Forms.LinkLabel linkLabel7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
@@ -2425,5 +2440,57 @@
         private System.Windows.Forms.TextBox txtNegativeCash;
         private System.Windows.Forms.TextBox txtNegativeCashType;
         private System.Windows.Forms.Button btnEditCash;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PassWord;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrivilegeOld;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Privilege;
+        private System.Windows.Forms.DataGridViewButtonColumn Edit;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CurrencyID;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn3;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn4;
+        private System.Windows.Forms.DataGridView dgvCurrency;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ExpenseType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ExpenseTypeID;
+        private System.Windows.Forms.DataGridViewButtonColumn ExpenseTypeModify;
+        private System.Windows.Forms.DataGridViewButtonColumn ExpenseTypeDelete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SiteID;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn2;
+        private System.Windows.Forms.DataGridViewComboBoxColumn ProjectType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProjectID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AmountTillDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RemainingAmount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalAmount;
+        private System.Windows.Forms.DataGridViewButtonColumn ProjectModify;
+        private System.Windows.Forms.DataGridViewButtonColumn ProjectDelete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BankName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BankID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BankCode;
+        private System.Windows.Forms.DataGridViewComboBoxColumn CurrencyAccepted;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SwiftCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IBAN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BankCountry;
+        private System.Windows.Forms.DataGridViewButtonColumn ModifyBank;
+        private System.Windows.Forms.DataGridViewButtonColumn DeleteBank;
+        private System.Windows.Forms.ComboBox cmbCurrencyAccepted;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SupplierID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SupplierName;
+        private System.Windows.Forms.DataGridViewComboBoxColumn SupplierBank;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SupplierType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SupplierCountry;
+        private System.Windows.Forms.DataGridViewButtonColumn SupplierModify;
+        private System.Windows.Forms.DataGridViewButtonColumn SupplierDelete;
+        private System.Windows.Forms.TextBox txtSupplierType;
+
+        
+        
     }
+   
+
 }
