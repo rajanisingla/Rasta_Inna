@@ -34,6 +34,11 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.treasuryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bankReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.treasuryReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wEETREToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iTReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +48,8 @@
             this.toolStripMenuItem1,
             this.toolStripMenuItem2,
             this.toolStripMenuItem3,
-            this.toolStripMenuItem4});
+            this.toolStripMenuItem4,
+            this.treasuryToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(972, 24);
@@ -73,10 +79,47 @@
             // 
             // toolStripMenuItem4
             // 
+            this.toolStripMenuItem4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bankReportToolStripMenuItem,
+            this.treasuryReportToolStripMenuItem,
+            this.wEETREToolStripMenuItem,
+            this.iTReportToolStripMenuItem});
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Size = new System.Drawing.Size(59, 20);
             this.toolStripMenuItem4.Text = "Reports";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
+            // 
+            // treasuryToolStripMenuItem
+            // 
+            this.treasuryToolStripMenuItem.Name = "treasuryToolStripMenuItem";
+            this.treasuryToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.treasuryToolStripMenuItem.Text = "Treasury";
+            this.treasuryToolStripMenuItem.Click += new System.EventHandler(this.treasuryToolStripMenuItem_Click);
+            // 
+            // bankReportToolStripMenuItem
+            // 
+            this.bankReportToolStripMenuItem.Name = "bankReportToolStripMenuItem";
+            this.bankReportToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.bankReportToolStripMenuItem.Text = "Bank Report";
+            this.bankReportToolStripMenuItem.Click += new System.EventHandler(this.bankReportToolStripMenuItem_Click);
+            // 
+            // treasuryReportToolStripMenuItem
+            // 
+            this.treasuryReportToolStripMenuItem.Name = "treasuryReportToolStripMenuItem";
+            this.treasuryReportToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.treasuryReportToolStripMenuItem.Text = "Treasury Report";
+            // 
+            // wEETREToolStripMenuItem
+            // 
+            this.wEETREToolStripMenuItem.Name = "wEETREToolStripMenuItem";
+            this.wEETREToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.wEETREToolStripMenuItem.Text = "WEETRE";
+            // 
+            // iTReportToolStripMenuItem
+            // 
+            this.iTReportToolStripMenuItem.Name = "iTReportToolStripMenuItem";
+            this.iTReportToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.iTReportToolStripMenuItem.Text = "IT Report";
             // 
             // Master
             // 
@@ -104,6 +147,11 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem treasuryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bankReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem treasuryReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem wEETREToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem iTReportToolStripMenuItem;
 
        
     }
