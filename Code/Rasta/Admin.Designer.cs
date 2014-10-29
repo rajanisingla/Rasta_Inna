@@ -41,17 +41,18 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblPrivilege = new System.Windows.Forms.Label();
             this.btnSaveUser = new System.Windows.Forms.Button();
-            this.txtUserName = new System.Windows.Forms.TextBox();
             this.lstPrivilege = new System.Windows.Forms.ListBox();
             this.txtPassWord = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.txtCompanyRole = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PassWord = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrivilegeOld = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Privilege = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.CompanyRole = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.tpSupplierMgt = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -70,16 +71,16 @@
             this.txtSupplierAddress = new System.Windows.Forms.TextBox();
             this.txtSupplerCountry = new System.Windows.Forms.TextBox();
             this.cmbSupplierBank = new System.Windows.Forms.ComboBox();
-            this.txtSupplierType = new System.Windows.Forms.TextBox();
+            this.cmbSupplierType = new System.Windows.Forms.ComboBox();
             this.dgvSupplier = new System.Windows.Forms.DataGridView();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupplierID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupplierBank = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.SupplierType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SupplierType = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupplierCountry = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SupplierModify = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.SupplierModify = new System.Windows.Forms.DataGridViewImageColumn();
             this.SupplierDelete = new System.Windows.Forms.DataGridViewImageColumn();
             this.tpBankMgt = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -91,11 +92,17 @@
             this.SwiftCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IBAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BankCountry = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ModifyBank = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Discipline = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.AccountNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cash = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ModifyBank = new System.Windows.Forms.DataGridViewImageColumn();
             this.DeleteBank = new System.Windows.Forms.DataGridViewImageColumn();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblBankName = new System.Windows.Forms.Label();
             this.lblBankCode = new System.Windows.Forms.Label();
             this.lblBankCurrency = new System.Windows.Forms.Label();
@@ -107,11 +114,16 @@
             this.txtSwiftCode = new System.Windows.Forms.TextBox();
             this.txtIBAN = new System.Windows.Forms.TextBox();
             this.txtCountry = new System.Windows.Forms.TextBox();
-            this.btnBankSave = new System.Windows.Forms.Button();
             this.cmbCurrencyAccepted = new System.Windows.Forms.ComboBox();
+            this.cmbDiscipline = new System.Windows.Forms.ComboBox();
+            this.txtAccountNumber = new System.Windows.Forms.TextBox();
+            this.btnBankSave = new System.Windows.Forms.Button();
+            this.txtCash = new System.Windows.Forms.TextBox();
             this.splitContainer9 = new System.Windows.Forms.SplitContainer();
             this.linkLabel9 = new System.Windows.Forms.LinkLabel();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblEditBankName = new System.Windows.Forms.Label();
             this.lblTotalCash = new System.Windows.Forms.Label();
             this.lblNegativeCash = new System.Windows.Forms.Label();
@@ -121,19 +133,23 @@
             this.txtNegativeCash = new System.Windows.Forms.TextBox();
             this.txtNegativeCashType = new System.Windows.Forms.TextBox();
             this.btnEditCash = new System.Windows.Forms.Button();
+            this.txtTDDuration = new System.Windows.Forms.TextBox();
+            this.calTDStartDate = new System.Windows.Forms.DateTimePicker();
             this.tpProjectMgt = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvProject = new System.Windows.Forms.DataGridView();
+            this.ProjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProjectType = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.ProjectID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AmountTillDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RemainingAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProjectModify = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ProjectModify = new System.Windows.Forms.DataGridViewImageColumn();
             this.ProjectDelete = new System.Windows.Forms.DataGridViewImageColumn();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
             this.lblProjectType = new System.Windows.Forms.Label();
             this.lblAmntTillDate = new System.Windows.Forms.Label();
             this.lblAmntDue = new System.Windows.Forms.Label();
@@ -143,12 +159,13 @@
             this.txtAmountDue = new System.Windows.Forms.TextBox();
             this.cmbProjectType = new System.Windows.Forms.ComboBox();
             this.txtTotalAmount = new System.Windows.Forms.TextBox();
+            this.txtProjectName = new System.Windows.Forms.TextBox();
             this.tpExpenseTypeMgt = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvExpenseType = new System.Windows.Forms.DataGridView();
             this.ExpenseType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ExpenseTypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ExpenseTypeModify = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ExpenseTypeModify = new System.Windows.Forms.DataGridViewImageColumn();
             this.ExpenseTypeDelete = new System.Windows.Forms.DataGridViewImageColumn();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
             this.linkLabel5 = new System.Windows.Forms.LinkLabel();
@@ -161,7 +178,7 @@
             this.dgvSite = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SiteID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
@@ -171,11 +188,14 @@
             this.txtSite = new System.Windows.Forms.TextBox();
             this.tpPayementApprovalMgt = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView7 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewButtonColumn5 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dgvApprover = new System.Windows.Forms.DataGridView();
+            this.department = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.location = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.approver = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.disciplineOld = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.locationold = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.approverold = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewButtonColumn5 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewButtonColumn6 = new System.Windows.Forms.DataGridViewImageColumn();
             this.splitContainer8 = new System.Windows.Forms.SplitContainer();
             this.linkLabel8 = new System.Windows.Forms.LinkLabel();
@@ -184,15 +204,16 @@
             this.lblLocation1 = new System.Windows.Forms.Label();
             this.lblApprover1 = new System.Windows.Forms.Label();
             this.btnApproverSave = new System.Windows.Forms.Button();
-            this.txtDepartment = new System.Windows.Forms.TextBox();
-            this.txtApprover2 = new System.Windows.Forms.TextBox();
             this.cmbLocation2 = new System.Windows.Forms.ComboBox();
+            this.cmbDepartment = new System.Windows.Forms.ComboBox();
+            this.cmbApprover = new System.Windows.Forms.ComboBox();
             this.tpSettings = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvCurrency = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CurrencyID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewButtonColumn3 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.currencyID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExchangeRateinUSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewButtonColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewButtonColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
             this.linkLabel7 = new System.Windows.Forms.LinkLabel();
@@ -260,7 +281,7 @@
             this.tableLayoutPanel12.SuspendLayout();
             this.tpPayementApprovalMgt.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvApprover)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).BeginInit();
             this.splitContainer8.Panel1.SuspendLayout();
             this.splitContainer8.Panel2.SuspendLayout();
@@ -289,7 +310,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1267, 642);
+            this.tabControl1.Size = new System.Drawing.Size(1274, 665);
             this.tabControl1.TabIndex = 0;
             // 
             // tpUserMgt
@@ -298,7 +319,7 @@
             this.tpUserMgt.Location = new System.Drawing.Point(4, 22);
             this.tpUserMgt.Name = "tpUserMgt";
             this.tpUserMgt.Padding = new System.Windows.Forms.Padding(3);
-            this.tpUserMgt.Size = new System.Drawing.Size(1259, 616);
+            this.tpUserMgt.Size = new System.Drawing.Size(1266, 639);
             this.tpUserMgt.TabIndex = 0;
             this.tpUserMgt.Text = "Users";
             this.tpUserMgt.UseVisualStyleBackColor = true;
@@ -316,12 +337,12 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(652, 291);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(851, 367);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Location = new System.Drawing.Point(3, 148);
+            this.splitContainer1.Location = new System.Drawing.Point(3, 186);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -332,10 +353,10 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel4);
+            this.splitContainer1.Panel2Collapsed = true;
             this.splitContainer1.Size = new System.Drawing.Size(628, 140);
             this.splitContainer1.SplitterDistance = 29;
             this.splitContainer1.TabIndex = 1;
-            this.splitContainer1.Panel2Collapsed = true;
             // 
             // linkLabel1
             // 
@@ -355,15 +376,15 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel4.Controls.Add(this.lblUserName, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.lblUserName, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.lblPassWord, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.lblName, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.lblName, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.lblPrivilege, 2, 1);
             this.tableLayoutPanel4.Controls.Add(this.btnSaveUser, 1, 2);
-            this.tableLayoutPanel4.Controls.Add(this.txtUserName, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.lstPrivilege, 3, 1);
             this.tableLayoutPanel4.Controls.Add(this.txtPassWord, 3, 0);
-            this.tableLayoutPanel4.Controls.Add(this.txtName, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.txtName, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txtCompanyRole, 1, 1);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(17, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
@@ -378,13 +399,13 @@
             this.lblUserName.AutoSize = true;
             this.lblUserName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblUserName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.Location = new System.Drawing.Point(2, 0);
+            this.lblUserName.Location = new System.Drawing.Point(2, 33);
             this.lblUserName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.lblUserName.Size = new System.Drawing.Size(143, 33);
             this.lblUserName.TabIndex = 0;
-            this.lblUserName.Text = "User ID";
+            this.lblUserName.Text = "Company Role";
             this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblPassWord
@@ -406,7 +427,7 @@
             this.lblName.AutoSize = true;
             this.lblName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(2, 33);
+            this.lblName.Location = new System.Drawing.Point(2, 0);
             this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblName.Name = "lblName";
             this.lblName.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
@@ -439,13 +460,6 @@
             this.btnSaveUser.UseVisualStyleBackColor = true;
             this.btnSaveUser.Click += new System.EventHandler(this.btnSaveUser_Click);
             // 
-            // txtUserName
-            // 
-            this.txtUserName.Location = new System.Drawing.Point(150, 3);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(100, 20);
-            this.txtUserName.TabIndex = 5;
-            // 
             // lstPrivilege
             // 
             this.lstPrivilege.FormattingEnabled = true;
@@ -464,10 +478,17 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(150, 36);
+            this.txtName.Location = new System.Drawing.Point(150, 3);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 20);
             this.txtName.TabIndex = 7;
+            // 
+            // txtCompanyRole
+            // 
+            this.txtCompanyRole.Location = new System.Drawing.Point(150, 36);
+            this.txtCompanyRole.Name = "txtCompanyRole";
+            this.txtCompanyRole.Size = new System.Drawing.Size(100, 20);
+            this.txtCompanyRole.TabIndex = 5;
             // 
             // dataGridView1
             // 
@@ -480,17 +501,19 @@
             this.PassWord,
             this.PrivilegeOld,
             this.Privilege,
+            this.CompanyRole,
             this.Edit,
             this.Delete});
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(646, 139);
+            this.dataGridView1.Size = new System.Drawing.Size(845, 110);
             this.dataGridView1.TabIndex = 0;
             // 
             // UserID
             // 
             this.UserID.HeaderText = "UserID";
             this.UserID.Name = "UserID";
+            this.UserID.ReadOnly = true;
             // 
             // UserName
             // 
@@ -514,12 +537,17 @@
             this.Privilege.HeaderText = "Privilege";
             this.Privilege.Name = "Privilege";
             // 
+            // CompanyRole
+            // 
+            this.CompanyRole.HeaderText = "Company Role";
+            this.CompanyRole.Name = "CompanyRole";
+            // 
             // Edit
             // 
-            this.Edit.HeaderText = "";
+            this.Edit.HeaderText = "Modify";
+            this.Edit.Image = ((System.Drawing.Image)(resources.GetObject("Edit.Image")));
             this.Edit.Name = "Edit";
-            this.Edit.Text = "Save";
-            this.Edit.UseColumnTextForButtonValue = true;
+            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // Delete
             // 
@@ -534,7 +562,7 @@
             this.tpSupplierMgt.Location = new System.Drawing.Point(4, 22);
             this.tpSupplierMgt.Name = "tpSupplierMgt";
             this.tpSupplierMgt.Padding = new System.Windows.Forms.Padding(3);
-            this.tpSupplierMgt.Size = new System.Drawing.Size(1259, 616);
+            this.tpSupplierMgt.Size = new System.Drawing.Size(1266, 639);
             this.tpSupplierMgt.TabIndex = 1;
             this.tpSupplierMgt.Text = "Suppliers";
             this.tpSupplierMgt.UseVisualStyleBackColor = true;
@@ -545,18 +573,18 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.splitContainer2, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.dgvSupplier, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(24, 45);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(24, 53);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(851, 367);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(851, 320);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(3, 186);
+            this.splitContainer2.Location = new System.Drawing.Point(3, 118);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -567,10 +595,10 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.tableLayoutPanel3);
-            this.splitContainer2.Size = new System.Drawing.Size(845, 178);
-            this.splitContainer2.SplitterDistance = 26;
-            this.splitContainer2.TabIndex = 0;
             this.splitContainer2.Panel2Collapsed = true;
+            this.splitContainer2.Size = new System.Drawing.Size(845, 199);
+            this.splitContainer2.SplitterDistance = 28;
+            this.splitContainer2.TabIndex = 0;
             // 
             // linkLabel2
             // 
@@ -602,8 +630,8 @@
             this.tableLayoutPanel3.Controls.Add(this.txtSupplierAddress, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.txtSupplerCountry, 3, 2);
             this.tableLayoutPanel3.Controls.Add(this.cmbSupplierBank, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.txtSupplierType, 3, 1);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(28, 3);
+            this.tableLayoutPanel3.Controls.Add(this.cmbSupplierType, 3, 1);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(19, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -743,12 +771,13 @@
             this.cmbSupplierBank.Size = new System.Drawing.Size(100, 21);
             this.cmbSupplierBank.TabIndex = 11;
             // 
-            // txtSupplierType
+            // cmbSupplierType
             // 
-            this.txtSupplierType.Location = new System.Drawing.Point(537, 38);
-            this.txtSupplierType.Name = "txtSupplierType";
-            this.txtSupplierType.Size = new System.Drawing.Size(100, 20);
-            this.txtSupplierType.TabIndex = 12;
+            this.cmbSupplierType.FormattingEnabled = true;
+            this.cmbSupplierType.Location = new System.Drawing.Point(537, 38);
+            this.cmbSupplierType.Name = "cmbSupplierType";
+            this.cmbSupplierType.Size = new System.Drawing.Size(100, 21);
+            this.cmbSupplierType.TabIndex = 12;
             // 
             // dgvSupplier
             // 
@@ -768,7 +797,7 @@
             this.dgvSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSupplier.Location = new System.Drawing.Point(3, 3);
             this.dgvSupplier.Name = "dgvSupplier";
-            this.dgvSupplier.Size = new System.Drawing.Size(845, 177);
+            this.dgvSupplier.Size = new System.Drawing.Size(845, 109);
             this.dgvSupplier.TabIndex = 1;
             // 
             // Code
@@ -797,6 +826,8 @@
             // 
             this.SupplierType.HeaderText = "Type";
             this.SupplierType.Name = "SupplierType";
+            this.SupplierType.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.SupplierType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Address
             // 
@@ -810,10 +841,10 @@
             // 
             // SupplierModify
             // 
-            this.SupplierModify.HeaderText = "";
+            this.SupplierModify.HeaderText = "Modify";
+            this.SupplierModify.Image = ((System.Drawing.Image)(resources.GetObject("SupplierModify.Image")));
             this.SupplierModify.Name = "SupplierModify";
-            this.SupplierModify.Text = "Save";
-            this.SupplierModify.UseColumnTextForButtonValue = true;
+            this.SupplierModify.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // SupplierDelete
             // 
@@ -828,7 +859,7 @@
             this.tpBankMgt.Location = new System.Drawing.Point(4, 22);
             this.tpBankMgt.Name = "tpBankMgt";
             this.tpBankMgt.Padding = new System.Windows.Forms.Padding(3);
-            this.tpBankMgt.Size = new System.Drawing.Size(1259, 616);
+            this.tpBankMgt.Size = new System.Drawing.Size(1266, 639);
             this.tpBankMgt.TabIndex = 0;
             this.tpBankMgt.Text = "Banks";
             this.tpBankMgt.UseVisualStyleBackColor = true;
@@ -840,13 +871,13 @@
             this.tableLayoutPanel5.Controls.Add(this.dgvBank, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.splitContainer3, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.splitContainer9, 0, 2);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(26, 33);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(24, 53);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 3;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.94382F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.05618F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.75728F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(844, 445);
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.42991F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.86916F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.70094F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(851, 535);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // dgvBank
@@ -862,12 +893,15 @@
             this.SwiftCode,
             this.IBAN,
             this.BankCountry,
+            this.Discipline,
+            this.AccountNumber,
+            this.Cash,
             this.ModifyBank,
             this.DeleteBank});
             this.dgvBank.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvBank.Location = new System.Drawing.Point(3, 3);
             this.dgvBank.Name = "dgvBank";
-            this.dgvBank.Size = new System.Drawing.Size(838, 105);
+            this.dgvBank.Size = new System.Drawing.Size(845, 114);
             this.dgvBank.TabIndex = 0;
             // 
             // BankName
@@ -907,12 +941,29 @@
             this.BankCountry.HeaderText = "Country ";
             this.BankCountry.Name = "BankCountry";
             // 
+            // Discipline
+            // 
+            this.Discipline.HeaderText = "Disciplineid";
+            this.Discipline.Name = "Discipline";
+            // 
+            // AccountNumber
+            // 
+            this.AccountNumber.HeaderText = "AccountNo";
+            this.AccountNumber.Name = "AccountNumber";
+            this.AccountNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.AccountNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Cash
+            // 
+            this.Cash.HeaderText = "Cash";
+            this.Cash.Name = "Cash";
+            // 
             // ModifyBank
             // 
-            this.ModifyBank.HeaderText = "";
+            this.ModifyBank.HeaderText = "Modify";
+            this.ModifyBank.Image = ((System.Drawing.Image)(resources.GetObject("ModifyBank.Image")));
             this.ModifyBank.Name = "ModifyBank";
-            this.ModifyBank.Text = "Save";
-            this.ModifyBank.UseColumnTextForButtonValue = true;
+            this.ModifyBank.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // DeleteBank
             // 
@@ -924,7 +975,7 @@
             // splitContainer3
             // 
             this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer3.Location = new System.Drawing.Point(3, 114);
+            this.splitContainer3.Location = new System.Drawing.Point(3, 123);
             this.splitContainer3.Name = "splitContainer3";
             this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -936,8 +987,8 @@
             // 
             this.splitContainer3.Panel2.Controls.Add(this.tableLayoutPanel6);
             this.splitContainer3.Panel2Collapsed = true;
-            this.splitContainer3.Size = new System.Drawing.Size(838, 150);
-            this.splitContainer3.SplitterDistance = 33;
+            this.splitContainer3.Size = new System.Drawing.Size(845, 217);
+            this.splitContainer3.SplitterDistance = 36;
             this.splitContainer3.TabIndex = 1;
             // 
             // linkLabel3
@@ -958,6 +1009,9 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.Controls.Add(this.label5, 0, 4);
+            this.tableLayoutPanel6.Controls.Add(this.label2, 2, 3);
+            this.tableLayoutPanel6.Controls.Add(this.label1, 0, 3);
             this.tableLayoutPanel6.Controls.Add(this.lblBankName, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.lblBankCode, 2, 0);
             this.tableLayoutPanel6.Controls.Add(this.lblBankCurrency, 0, 1);
@@ -969,17 +1023,64 @@
             this.tableLayoutPanel6.Controls.Add(this.txtSwiftCode, 3, 1);
             this.tableLayoutPanel6.Controls.Add(this.txtIBAN, 1, 2);
             this.tableLayoutPanel6.Controls.Add(this.txtCountry, 3, 2);
-            this.tableLayoutPanel6.Controls.Add(this.btnBankSave, 2, 3);
             this.tableLayoutPanel6.Controls.Add(this.cmbCurrencyAccepted, 1, 1);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(30, 3);
+            this.tableLayoutPanel6.Controls.Add(this.cmbDiscipline, 1, 3);
+            this.tableLayoutPanel6.Controls.Add(this.txtAccountNumber, 3, 3);
+            this.tableLayoutPanel6.Controls.Add(this.btnBankSave, 2, 5);
+            this.tableLayoutPanel6.Controls.Add(this.txtCash, 1, 4);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 4;
+            this.tableLayoutPanel6.RowCount = 6;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(778, 100);
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(778, 154);
             this.tableLayoutPanel6.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(2, 100);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.label5.Size = new System.Drawing.Size(190, 24);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Cash";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(390, 75);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.label2.Size = new System.Drawing.Size(190, 25);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Account Number";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(2, 75);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.label1.Size = new System.Drawing.Size(190, 25);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Discipline";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblBankName
             // 
@@ -1100,16 +1201,6 @@
             this.txtCountry.Size = new System.Drawing.Size(100, 20);
             this.txtCountry.TabIndex = 11;
             // 
-            // btnBankSave
-            // 
-            this.btnBankSave.Location = new System.Drawing.Point(391, 78);
-            this.btnBankSave.Name = "btnBankSave";
-            this.btnBankSave.Size = new System.Drawing.Size(75, 19);
-            this.btnBankSave.TabIndex = 12;
-            this.btnBankSave.Text = "Save";
-            this.btnBankSave.UseVisualStyleBackColor = true;
-            this.btnBankSave.Click += new System.EventHandler(this.btnBankSave_Click);
-            // 
             // cmbCurrencyAccepted
             // 
             this.cmbCurrencyAccepted.FormattingEnabled = true;
@@ -1118,10 +1209,42 @@
             this.cmbCurrencyAccepted.Size = new System.Drawing.Size(100, 21);
             this.cmbCurrencyAccepted.TabIndex = 13;
             // 
+            // cmbDiscipline
+            // 
+            this.cmbDiscipline.FormattingEnabled = true;
+            this.cmbDiscipline.Location = new System.Drawing.Point(197, 78);
+            this.cmbDiscipline.Name = "cmbDiscipline";
+            this.cmbDiscipline.Size = new System.Drawing.Size(100, 21);
+            this.cmbDiscipline.TabIndex = 16;
+            // 
+            // txtAccountNumber
+            // 
+            this.txtAccountNumber.Location = new System.Drawing.Point(585, 78);
+            this.txtAccountNumber.Name = "txtAccountNumber";
+            this.txtAccountNumber.Size = new System.Drawing.Size(100, 20);
+            this.txtAccountNumber.TabIndex = 17;
+            // 
+            // btnBankSave
+            // 
+            this.btnBankSave.Location = new System.Drawing.Point(391, 127);
+            this.btnBankSave.Name = "btnBankSave";
+            this.btnBankSave.Size = new System.Drawing.Size(75, 23);
+            this.btnBankSave.TabIndex = 12;
+            this.btnBankSave.Text = "Save";
+            this.btnBankSave.UseVisualStyleBackColor = true;
+            this.btnBankSave.Click += new System.EventHandler(this.btnBankSave_Click);
+            // 
+            // txtCash
+            // 
+            this.txtCash.Location = new System.Drawing.Point(197, 103);
+            this.txtCash.Name = "txtCash";
+            this.txtCash.Size = new System.Drawing.Size(100, 20);
+            this.txtCash.TabIndex = 19;
+            // 
             // splitContainer9
             // 
             this.splitContainer9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer9.Location = new System.Drawing.Point(3, 270);
+            this.splitContainer9.Location = new System.Drawing.Point(3, 346);
             this.splitContainer9.Name = "splitContainer9";
             this.splitContainer9.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -1133,8 +1256,8 @@
             // 
             this.splitContainer9.Panel2.Controls.Add(this.tableLayoutPanel17);
             this.splitContainer9.Panel2Collapsed = true;
-            this.splitContainer9.Size = new System.Drawing.Size(838, 172);
-            this.splitContainer9.SplitterDistance = 47;
+            this.splitContainer9.Size = new System.Drawing.Size(845, 186);
+            this.splitContainer9.SplitterDistance = 52;
             this.splitContainer9.TabIndex = 2;
             // 
             // linkLabel9
@@ -1155,6 +1278,8 @@
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel17.Controls.Add(this.label4, 2, 2);
+            this.tableLayoutPanel17.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel17.Controls.Add(this.lblEditBankName, 0, 0);
             this.tableLayoutPanel17.Controls.Add(this.lblTotalCash, 2, 0);
             this.tableLayoutPanel17.Controls.Add(this.lblNegativeCash, 0, 1);
@@ -1163,15 +1288,46 @@
             this.tableLayoutPanel17.Controls.Add(this.txtTotalCash, 3, 0);
             this.tableLayoutPanel17.Controls.Add(this.txtNegativeCash, 1, 1);
             this.tableLayoutPanel17.Controls.Add(this.txtNegativeCashType, 3, 1);
-            this.tableLayoutPanel17.Controls.Add(this.btnEditCash, 2, 2);
+            this.tableLayoutPanel17.Controls.Add(this.btnEditCash, 2, 3);
+            this.tableLayoutPanel17.Controls.Add(this.txtTDDuration, 1, 2);
+            this.tableLayoutPanel17.Controls.Add(this.calTDStartDate, 3, 2);
             this.tableLayoutPanel17.Location = new System.Drawing.Point(30, 3);
             this.tableLayoutPanel17.Name = "tableLayoutPanel17";
-            this.tableLayoutPanel17.RowCount = 3;
+            this.tableLayoutPanel17.RowCount = 4;
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(737, 100);
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(737, 112);
             this.tableLayoutPanel17.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(370, 54);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.label4.Size = new System.Drawing.Size(180, 27);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Deposit Date";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(2, 54);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.label3.Size = new System.Drawing.Size(180, 27);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Duration(in Months)";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblEditBankName
             // 
@@ -1182,7 +1338,7 @@
             this.lblEditBankName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEditBankName.Name = "lblEditBankName";
             this.lblEditBankName.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.lblEditBankName.Size = new System.Drawing.Size(180, 33);
+            this.lblEditBankName.Size = new System.Drawing.Size(180, 27);
             this.lblEditBankName.TabIndex = 0;
             this.lblEditBankName.Text = "Bank";
             this.lblEditBankName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1196,7 +1352,7 @@
             this.lblTotalCash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalCash.Name = "lblTotalCash";
             this.lblTotalCash.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.lblTotalCash.Size = new System.Drawing.Size(180, 33);
+            this.lblTotalCash.Size = new System.Drawing.Size(180, 27);
             this.lblTotalCash.TabIndex = 1;
             this.lblTotalCash.Text = "Total Cash";
             this.lblTotalCash.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1206,11 +1362,11 @@
             this.lblNegativeCash.AutoSize = true;
             this.lblNegativeCash.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblNegativeCash.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNegativeCash.Location = new System.Drawing.Point(2, 33);
+            this.lblNegativeCash.Location = new System.Drawing.Point(2, 27);
             this.lblNegativeCash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNegativeCash.Name = "lblNegativeCash";
             this.lblNegativeCash.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.lblNegativeCash.Size = new System.Drawing.Size(180, 33);
+            this.lblNegativeCash.Size = new System.Drawing.Size(180, 27);
             this.lblNegativeCash.TabIndex = 2;
             this.lblNegativeCash.Text = "Negative Cash";
             this.lblNegativeCash.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1220,11 +1376,11 @@
             this.lblType.AutoSize = true;
             this.lblType.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblType.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblType.Location = new System.Drawing.Point(370, 33);
+            this.lblType.Location = new System.Drawing.Point(370, 27);
             this.lblType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblType.Name = "lblType";
             this.lblType.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.lblType.Size = new System.Drawing.Size(180, 33);
+            this.lblType.Size = new System.Drawing.Size(180, 27);
             this.lblType.TabIndex = 3;
             this.lblType.Text = "Type";
             this.lblType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1236,36 +1392,54 @@
             this.cmbEditBankName.Name = "cmbEditBankName";
             this.cmbEditBankName.Size = new System.Drawing.Size(100, 21);
             this.cmbEditBankName.TabIndex = 4;
+            this.cmbEditBankName.SelectedIndexChanged += new System.EventHandler(this.cmbEditBankName_SelectedIndexChanged);
             // 
             // txtTotalCash
             // 
             this.txtTotalCash.Location = new System.Drawing.Point(555, 3);
             this.txtTotalCash.Name = "txtTotalCash";
+            this.txtTotalCash.ReadOnly = true;
             this.txtTotalCash.Size = new System.Drawing.Size(100, 20);
             this.txtTotalCash.TabIndex = 5;
             // 
             // txtNegativeCash
             // 
-            this.txtNegativeCash.Location = new System.Drawing.Point(187, 36);
+            this.txtNegativeCash.Location = new System.Drawing.Point(187, 30);
             this.txtNegativeCash.Name = "txtNegativeCash";
             this.txtNegativeCash.Size = new System.Drawing.Size(100, 20);
             this.txtNegativeCash.TabIndex = 6;
             // 
             // txtNegativeCashType
             // 
-            this.txtNegativeCashType.Location = new System.Drawing.Point(555, 36);
+            this.txtNegativeCashType.Location = new System.Drawing.Point(555, 30);
             this.txtNegativeCashType.Name = "txtNegativeCashType";
             this.txtNegativeCashType.Size = new System.Drawing.Size(100, 20);
             this.txtNegativeCashType.TabIndex = 7;
             // 
             // btnEditCash
             // 
-            this.btnEditCash.Location = new System.Drawing.Point(371, 69);
+            this.btnEditCash.Location = new System.Drawing.Point(371, 84);
             this.btnEditCash.Name = "btnEditCash";
             this.btnEditCash.Size = new System.Drawing.Size(75, 23);
             this.btnEditCash.TabIndex = 8;
             this.btnEditCash.Text = "Save";
             this.btnEditCash.UseVisualStyleBackColor = true;
+            this.btnEditCash.Click += new System.EventHandler(this.btnEditCash_Click);
+            // 
+            // txtTDDuration
+            // 
+            this.txtTDDuration.Location = new System.Drawing.Point(187, 57);
+            this.txtTDDuration.Name = "txtTDDuration";
+            this.txtTDDuration.Size = new System.Drawing.Size(100, 20);
+            this.txtTDDuration.TabIndex = 11;
+            // 
+            // calTDStartDate
+            // 
+            this.calTDStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.calTDStartDate.Location = new System.Drawing.Point(555, 57);
+            this.calTDStartDate.Name = "calTDStartDate";
+            this.calTDStartDate.Size = new System.Drawing.Size(103, 20);
+            this.calTDStartDate.TabIndex = 12;
             // 
             // tpProjectMgt
             // 
@@ -1273,7 +1447,7 @@
             this.tpProjectMgt.Location = new System.Drawing.Point(4, 22);
             this.tpProjectMgt.Name = "tpProjectMgt";
             this.tpProjectMgt.Padding = new System.Windows.Forms.Padding(3);
-            this.tpProjectMgt.Size = new System.Drawing.Size(1259, 616);
+            this.tpProjectMgt.Size = new System.Drawing.Size(1266, 639);
             this.tpProjectMgt.TabIndex = 1;
             this.tpProjectMgt.Text = "Projects";
             this.tpProjectMgt.UseVisualStyleBackColor = true;
@@ -1285,12 +1459,12 @@
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel7.Controls.Add(this.dgvProject, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.splitContainer4, 0, 1);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(35, 45);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(24, 53);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.6506F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.3494F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(748, 395);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(851, 309);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
             // dgvProject
@@ -1299,6 +1473,7 @@
             this.dgvProject.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProject.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProjectName,
             this.ProjectType,
             this.ProjectID,
             this.AmountTillDate,
@@ -1309,8 +1484,13 @@
             this.dgvProject.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProject.Location = new System.Drawing.Point(3, 3);
             this.dgvProject.Name = "dgvProject";
-            this.dgvProject.Size = new System.Drawing.Size(742, 142);
+            this.dgvProject.Size = new System.Drawing.Size(845, 110);
             this.dgvProject.TabIndex = 0;
+            // 
+            // ProjectName
+            // 
+            this.ProjectName.HeaderText = "Name";
+            this.ProjectName.Name = "ProjectName";
             // 
             // ProjectType
             // 
@@ -1339,10 +1519,10 @@
             // 
             // ProjectModify
             // 
-            this.ProjectModify.HeaderText = "";
+            this.ProjectModify.HeaderText = "Modify";
+            this.ProjectModify.Image = ((System.Drawing.Image)(resources.GetObject("ProjectModify.Image")));
             this.ProjectModify.Name = "ProjectModify";
-            this.ProjectModify.Text = "Save";
-            this.ProjectModify.UseColumnTextForButtonValue = true;
+            this.ProjectModify.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // ProjectDelete
             // 
@@ -1354,7 +1534,7 @@
             // splitContainer4
             // 
             this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer4.Location = new System.Drawing.Point(3, 151);
+            this.splitContainer4.Location = new System.Drawing.Point(3, 119);
             this.splitContainer4.Name = "splitContainer4";
             this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -1365,10 +1545,10 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.tableLayoutPanel8);
-            this.splitContainer4.Size = new System.Drawing.Size(742, 241);
+            this.splitContainer4.Panel2Collapsed = true;
+            this.splitContainer4.Size = new System.Drawing.Size(845, 187);
             this.splitContainer4.SplitterDistance = 27;
             this.splitContainer4.TabIndex = 1;
-            this.splitContainer4.Panel2Collapsed = true;
             // 
             // linkLabel4
             // 
@@ -1388,16 +1568,18 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel8.Controls.Add(this.label6, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.lblProjectType, 2, 0);
             this.tableLayoutPanel8.Controls.Add(this.lblAmntTillDate, 0, 1);
             this.tableLayoutPanel8.Controls.Add(this.lblAmntDue, 2, 1);
-            this.tableLayoutPanel8.Controls.Add(this.lblTotalAmnt, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.lblTotalAmnt, 0, 2);
             this.tableLayoutPanel8.Controls.Add(this.btnProjectSave, 1, 3);
             this.tableLayoutPanel8.Controls.Add(this.txtAmountTillDate, 1, 1);
             this.tableLayoutPanel8.Controls.Add(this.txtAmountDue, 3, 1);
             this.tableLayoutPanel8.Controls.Add(this.cmbProjectType, 3, 0);
-            this.tableLayoutPanel8.Controls.Add(this.txtTotalAmount, 1, 0);
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(38, 15);
+            this.tableLayoutPanel8.Controls.Add(this.txtTotalAmount, 1, 2);
+            this.tableLayoutPanel8.Controls.Add(this.txtProjectName, 1, 0);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(12, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 4;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -1406,6 +1588,20 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(701, 126);
             this.tableLayoutPanel8.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(2, 0);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.label6.Size = new System.Drawing.Size(171, 31);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Project Name";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblProjectType
             // 
@@ -1454,7 +1650,7 @@
             this.lblTotalAmnt.AutoSize = true;
             this.lblTotalAmnt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTotalAmnt.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalAmnt.Location = new System.Drawing.Point(2, 0);
+            this.lblTotalAmnt.Location = new System.Drawing.Point(2, 62);
             this.lblTotalAmnt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalAmnt.Name = "lblTotalAmnt";
             this.lblTotalAmnt.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
@@ -1497,10 +1693,17 @@
             // 
             // txtTotalAmount
             // 
-            this.txtTotalAmount.Location = new System.Drawing.Point(178, 3);
+            this.txtTotalAmount.Location = new System.Drawing.Point(178, 65);
             this.txtTotalAmount.Name = "txtTotalAmount";
             this.txtTotalAmount.Size = new System.Drawing.Size(100, 20);
             this.txtTotalAmount.TabIndex = 8;
+            // 
+            // txtProjectName
+            // 
+            this.txtProjectName.Location = new System.Drawing.Point(178, 3);
+            this.txtProjectName.Name = "txtProjectName";
+            this.txtProjectName.Size = new System.Drawing.Size(100, 20);
+            this.txtProjectName.TabIndex = 12;
             // 
             // tpExpenseTypeMgt
             // 
@@ -1508,9 +1711,9 @@
             this.tpExpenseTypeMgt.Location = new System.Drawing.Point(4, 22);
             this.tpExpenseTypeMgt.Name = "tpExpenseTypeMgt";
             this.tpExpenseTypeMgt.Padding = new System.Windows.Forms.Padding(3);
-            this.tpExpenseTypeMgt.Size = new System.Drawing.Size(1259, 616);
+            this.tpExpenseTypeMgt.Size = new System.Drawing.Size(1266, 639);
             this.tpExpenseTypeMgt.TabIndex = 0;
-            this.tpExpenseTypeMgt.Text = "Expense Type";
+            this.tpExpenseTypeMgt.Text = "Revenue Type";
             this.tpExpenseTypeMgt.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel9
@@ -1520,12 +1723,12 @@
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel9.Controls.Add(this.dgvExpenseType, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.splitContainer5, 0, 1);
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(48, 39);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(24, 53);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 2;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.83607F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.16393F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(349, 244);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(851, 335);
             this.tableLayoutPanel9.TabIndex = 0;
             // 
             // dgvExpenseType
@@ -1541,7 +1744,7 @@
             this.dgvExpenseType.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvExpenseType.Location = new System.Drawing.Point(3, 3);
             this.dgvExpenseType.Name = "dgvExpenseType";
-            this.dgvExpenseType.Size = new System.Drawing.Size(343, 79);
+            this.dgvExpenseType.Size = new System.Drawing.Size(845, 110);
             this.dgvExpenseType.TabIndex = 0;
             // 
             // ExpenseType
@@ -1556,10 +1759,10 @@
             // 
             // ExpenseTypeModify
             // 
-            this.ExpenseTypeModify.HeaderText = "";
+            this.ExpenseTypeModify.HeaderText = "Modify";
+            this.ExpenseTypeModify.Image = ((System.Drawing.Image)(resources.GetObject("ExpenseTypeModify.Image")));
             this.ExpenseTypeModify.Name = "ExpenseTypeModify";
-            this.ExpenseTypeModify.Text = "Save";
-            this.ExpenseTypeModify.UseColumnTextForButtonValue = true;
+            this.ExpenseTypeModify.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // ExpenseTypeDelete
             // 
@@ -1571,7 +1774,7 @@
             // splitContainer5
             // 
             this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer5.Location = new System.Drawing.Point(3, 88);
+            this.splitContainer5.Location = new System.Drawing.Point(3, 119);
             this.splitContainer5.Name = "splitContainer5";
             this.splitContainer5.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -1583,7 +1786,7 @@
             // 
             this.splitContainer5.Panel2.Controls.Add(this.tableLayoutPanel10);
             this.splitContainer5.Panel2Collapsed = true;
-            this.splitContainer5.Size = new System.Drawing.Size(343, 153);
+            this.splitContainer5.Size = new System.Drawing.Size(845, 213);
             this.splitContainer5.SplitterDistance = 29;
             this.splitContainer5.TabIndex = 1;
             // 
@@ -1606,7 +1809,7 @@
             this.tableLayoutPanel10.Controls.Add(this.btnExpenseTypeSave, 1, 1);
             this.tableLayoutPanel10.Controls.Add(this.lblExpenseTypeName, 0, 0);
             this.tableLayoutPanel10.Controls.Add(this.txtExpenseType, 1, 0);
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(28, 3);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(24, 53);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 2;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1651,7 +1854,7 @@
             this.tpSiteMgt.Location = new System.Drawing.Point(4, 22);
             this.tpSiteMgt.Name = "tpSiteMgt";
             this.tpSiteMgt.Padding = new System.Windows.Forms.Padding(3);
-            this.tpSiteMgt.Size = new System.Drawing.Size(1259, 616);
+            this.tpSiteMgt.Size = new System.Drawing.Size(1266, 639);
             this.tpSiteMgt.TabIndex = 1;
             this.tpSiteMgt.Text = "Sites";
             this.tpSiteMgt.UseVisualStyleBackColor = true;
@@ -1663,12 +1866,12 @@
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel11.Controls.Add(this.dgvSite, 0, 0);
             this.tableLayoutPanel11.Controls.Add(this.splitContainer6, 0, 1);
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(49, 42);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(24, 53);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 2;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.83607F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.16393F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(349, 342);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(851, 334);
             this.tableLayoutPanel11.TabIndex = 1;
             // 
             // dgvSite
@@ -1684,7 +1887,7 @@
             this.dgvSite.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSite.Location = new System.Drawing.Point(3, 3);
             this.dgvSite.Name = "dgvSite";
-            this.dgvSite.Size = new System.Drawing.Size(343, 113);
+            this.dgvSite.Size = new System.Drawing.Size(845, 110);
             this.dgvSite.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
@@ -1699,10 +1902,10 @@
             // 
             // dataGridViewButtonColumn1
             // 
-            this.dataGridViewButtonColumn1.HeaderText = "";
+            this.dataGridViewButtonColumn1.HeaderText = "Modify";
+            this.dataGridViewButtonColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewButtonColumn1.Image")));
             this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
-            this.dataGridViewButtonColumn1.Text = "Save";
-            this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
+            this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // dataGridViewButtonColumn2
             // 
@@ -1714,7 +1917,7 @@
             // splitContainer6
             // 
             this.splitContainer6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer6.Location = new System.Drawing.Point(3, 122);
+            this.splitContainer6.Location = new System.Drawing.Point(3, 119);
             this.splitContainer6.Name = "splitContainer6";
             this.splitContainer6.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -1726,7 +1929,7 @@
             // 
             this.splitContainer6.Panel2.Controls.Add(this.tableLayoutPanel12);
             this.splitContainer6.Panel2Collapsed = true;
-            this.splitContainer6.Size = new System.Drawing.Size(343, 217);
+            this.splitContainer6.Size = new System.Drawing.Size(845, 212);
             this.splitContainer6.SplitterDistance = 29;
             this.splitContainer6.TabIndex = 1;
             // 
@@ -1749,7 +1952,7 @@
             this.tableLayoutPanel12.Controls.Add(this.btnSaveSite, 1, 1);
             this.tableLayoutPanel12.Controls.Add(this.lblSite, 0, 0);
             this.tableLayoutPanel12.Controls.Add(this.txtSite, 1, 0);
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(28, 3);
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(24, 53);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 2;
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1794,7 +1997,7 @@
             this.tpPayementApprovalMgt.Location = new System.Drawing.Point(4, 22);
             this.tpPayementApprovalMgt.Name = "tpPayementApprovalMgt";
             this.tpPayementApprovalMgt.Padding = new System.Windows.Forms.Padding(3);
-            this.tpPayementApprovalMgt.Size = new System.Drawing.Size(1259, 616);
+            this.tpPayementApprovalMgt.Size = new System.Drawing.Size(1266, 639);
             this.tpPayementApprovalMgt.TabIndex = 0;
             this.tpPayementApprovalMgt.Text = "Payment Approval";
             this.tpPayementApprovalMgt.UseVisualStyleBackColor = true;
@@ -1804,56 +2007,76 @@
             this.tableLayoutPanel15.ColumnCount = 1;
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel15.Controls.Add(this.dataGridView7, 0, 0);
+            this.tableLayoutPanel15.Controls.Add(this.dgvApprover, 0, 0);
             this.tableLayoutPanel15.Controls.Add(this.splitContainer8, 0, 1);
-            this.tableLayoutPanel15.Location = new System.Drawing.Point(46, 44);
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(24, 53);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 2;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.6506F));
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.3494F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(615, 395);
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(851, 309);
             this.tableLayoutPanel15.TabIndex = 1;
             // 
-            // dataGridView7
+            // dgvApprover
             // 
-            this.dataGridView7.AllowUserToAddRows = false;
-            this.dataGridView7.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewComboBoxColumn1,
-            this.dataGridViewTextBoxColumn4,
+            this.dgvApprover.AllowUserToAddRows = false;
+            this.dgvApprover.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvApprover.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvApprover.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.department,
+            this.location,
+            this.approver,
+            this.disciplineOld,
+            this.locationold,
+            this.approverold,
             this.dataGridViewButtonColumn5,
             this.dataGridViewButtonColumn6});
-            this.dataGridView7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView7.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.Size = new System.Drawing.Size(609, 142);
-            this.dataGridView7.TabIndex = 0;
+            this.dgvApprover.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvApprover.Location = new System.Drawing.Point(3, 3);
+            this.dgvApprover.Name = "dgvApprover";
+            this.dgvApprover.Size = new System.Drawing.Size(845, 110);
+            this.dgvApprover.TabIndex = 0;
             // 
-            // dataGridViewTextBoxColumn3
+            // department
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Depatment";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.department.HeaderText = "Depatment";
+            this.department.Name = "department";
+            this.department.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.department.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // dataGridViewComboBoxColumn1
+            // location
             // 
-            this.dataGridViewComboBoxColumn1.HeaderText = "Location";
-            this.dataGridViewComboBoxColumn1.Name = "dataGridViewComboBoxColumn1";
+            this.location.HeaderText = "Location";
+            this.location.Name = "location";
             // 
-            // dataGridViewTextBoxColumn4
+            // approver
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Approver";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.approver.HeaderText = "Approver";
+            this.approver.Name = "approver";
+            this.approver.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.approver.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // disciplineOld
+            // 
+            this.disciplineOld.HeaderText = "disciplineOld";
+            this.disciplineOld.Name = "disciplineOld";
+            // 
+            // locationold
+            // 
+            this.locationold.HeaderText = "locationold";
+            this.locationold.Name = "locationold";
+            // 
+            // approverold
+            // 
+            this.approverold.HeaderText = "approverold";
+            this.approverold.Name = "approverold";
             // 
             // dataGridViewButtonColumn5
             // 
-            this.dataGridViewButtonColumn5.HeaderText = "";
+            this.dataGridViewButtonColumn5.HeaderText = "Modify";
+            this.dataGridViewButtonColumn5.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewButtonColumn5.Image")));
             this.dataGridViewButtonColumn5.Name = "dataGridViewButtonColumn5";
-            this.dataGridViewButtonColumn5.Text = "Save";
-            this.dataGridViewButtonColumn5.UseColumnTextForButtonValue = true;
+            this.dataGridViewButtonColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // dataGridViewButtonColumn6
             // 
@@ -1865,7 +2088,7 @@
             // splitContainer8
             // 
             this.splitContainer8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer8.Location = new System.Drawing.Point(3, 151);
+            this.splitContainer8.Location = new System.Drawing.Point(3, 119);
             this.splitContainer8.Name = "splitContainer8";
             this.splitContainer8.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -1876,10 +2099,10 @@
             // splitContainer8.Panel2
             // 
             this.splitContainer8.Panel2.Controls.Add(this.tableLayoutPanel16);
-            this.splitContainer8.Size = new System.Drawing.Size(609, 241);
+            this.splitContainer8.Panel2Collapsed = true;
+            this.splitContainer8.Size = new System.Drawing.Size(845, 187);
             this.splitContainer8.SplitterDistance = 27;
             this.splitContainer8.TabIndex = 1;
-            this.splitContainer8.Panel2Collapsed = true;
             // 
             // linkLabel8
             // 
@@ -1900,11 +2123,11 @@
             this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel16.Controls.Add(this.lblDepartment, 0, 0);
             this.tableLayoutPanel16.Controls.Add(this.lblLocation1, 0, 1);
-            this.tableLayoutPanel16.Controls.Add(this.lblApprover1, 2, 1);
+            this.tableLayoutPanel16.Controls.Add(this.lblApprover1, 2, 0);
             this.tableLayoutPanel16.Controls.Add(this.btnApproverSave, 1, 3);
-            this.tableLayoutPanel16.Controls.Add(this.txtDepartment, 1, 0);
-            this.tableLayoutPanel16.Controls.Add(this.txtApprover2, 3, 1);
             this.tableLayoutPanel16.Controls.Add(this.cmbLocation2, 1, 1);
+            this.tableLayoutPanel16.Controls.Add(this.cmbDepartment, 1, 0);
+            this.tableLayoutPanel16.Controls.Add(this.cmbApprover, 3, 0);
             this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 15);
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 4;
@@ -1948,7 +2171,7 @@
             this.lblApprover1.AutoSize = true;
             this.lblApprover1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblApprover1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApprover1.Location = new System.Drawing.Point(304, 31);
+            this.lblApprover1.Location = new System.Drawing.Point(304, 0);
             this.lblApprover1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblApprover1.Name = "lblApprover1";
             this.lblApprover1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
@@ -1965,20 +2188,7 @@
             this.btnApproverSave.TabIndex = 5;
             this.btnApproverSave.Text = "Save";
             this.btnApproverSave.UseVisualStyleBackColor = true;
-            // 
-            // txtDepartment
-            // 
-            this.txtDepartment.Location = new System.Drawing.Point(154, 3);
-            this.txtDepartment.Name = "txtDepartment";
-            this.txtDepartment.Size = new System.Drawing.Size(100, 20);
-            this.txtDepartment.TabIndex = 6;
-            // 
-            // txtApprover2
-            // 
-            this.txtApprover2.Location = new System.Drawing.Point(456, 34);
-            this.txtApprover2.Name = "txtApprover2";
-            this.txtApprover2.Size = new System.Drawing.Size(100, 20);
-            this.txtApprover2.TabIndex = 7;
+            this.btnApproverSave.Click += new System.EventHandler(this.btnApproverSave_Click);
             // 
             // cmbLocation2
             // 
@@ -1988,13 +2198,29 @@
             this.cmbLocation2.Size = new System.Drawing.Size(100, 21);
             this.cmbLocation2.TabIndex = 10;
             // 
+            // cmbDepartment
+            // 
+            this.cmbDepartment.FormattingEnabled = true;
+            this.cmbDepartment.Location = new System.Drawing.Point(154, 3);
+            this.cmbDepartment.Name = "cmbDepartment";
+            this.cmbDepartment.Size = new System.Drawing.Size(100, 21);
+            this.cmbDepartment.TabIndex = 11;
+            // 
+            // cmbApprover
+            // 
+            this.cmbApprover.FormattingEnabled = true;
+            this.cmbApprover.Location = new System.Drawing.Point(456, 3);
+            this.cmbApprover.Name = "cmbApprover";
+            this.cmbApprover.Size = new System.Drawing.Size(100, 21);
+            this.cmbApprover.TabIndex = 12;
+            // 
             // tpSettings
             // 
             this.tpSettings.Controls.Add(this.tableLayoutPanel13);
             this.tpSettings.Location = new System.Drawing.Point(4, 22);
             this.tpSettings.Name = "tpSettings";
             this.tpSettings.Padding = new System.Windows.Forms.Padding(3);
-            this.tpSettings.Size = new System.Drawing.Size(1259, 616);
+            this.tpSettings.Size = new System.Drawing.Size(1266, 639);
             this.tpSettings.TabIndex = 1;
             this.tpSettings.Text = "Settings";
             this.tpSettings.UseVisualStyleBackColor = true;
@@ -2006,12 +2232,12 @@
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel13.Controls.Add(this.dgvCurrency, 0, 0);
             this.tableLayoutPanel13.Controls.Add(this.splitContainer7, 0, 1);
-            this.tableLayoutPanel13.Location = new System.Drawing.Point(43, 37);
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(24, 53);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 2;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.83607F));
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.16393F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(404, 244);
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(851, 333);
             this.tableLayoutPanel13.TabIndex = 1;
             // 
             // dgvCurrency
@@ -2021,13 +2247,14 @@
             this.dgvCurrency.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCurrency.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2,
-            this.CurrencyID,
+            this.currencyID,
+            this.ExchangeRateinUSD,
             this.dataGridViewButtonColumn3,
             this.dataGridViewButtonColumn4});
             this.dgvCurrency.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCurrency.Location = new System.Drawing.Point(3, 3);
             this.dgvCurrency.Name = "dgvCurrency";
-            this.dgvCurrency.Size = new System.Drawing.Size(398, 79);
+            this.dgvCurrency.Size = new System.Drawing.Size(845, 110);
             this.dgvCurrency.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn2
@@ -2035,17 +2262,22 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Currency";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // CurrencyID
+            // currencyID
             // 
-            this.CurrencyID.HeaderText = "CurrencyID";
-            this.CurrencyID.Name = "CurrencyID";
+            this.currencyID.HeaderText = "currencyID";
+            this.currencyID.Name = "currencyID";
+            // 
+            // ExchangeRateinUSD
+            // 
+            this.ExchangeRateinUSD.HeaderText = "Exchange Rate(in USD)";
+            this.ExchangeRateinUSD.Name = "ExchangeRateinUSD";
             // 
             // dataGridViewButtonColumn3
             // 
-            this.dataGridViewButtonColumn3.HeaderText = "";
+            this.dataGridViewButtonColumn3.HeaderText = "Modify";
+            this.dataGridViewButtonColumn3.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewButtonColumn3.Image")));
             this.dataGridViewButtonColumn3.Name = "dataGridViewButtonColumn3";
-            this.dataGridViewButtonColumn3.Text = "Save";
-            this.dataGridViewButtonColumn3.UseColumnTextForButtonValue = true;
+            this.dataGridViewButtonColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // dataGridViewButtonColumn4
             // 
@@ -2057,7 +2289,7 @@
             // splitContainer7
             // 
             this.splitContainer7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer7.Location = new System.Drawing.Point(3, 88);
+            this.splitContainer7.Location = new System.Drawing.Point(3, 119);
             this.splitContainer7.Name = "splitContainer7";
             this.splitContainer7.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -2069,7 +2301,7 @@
             // 
             this.splitContainer7.Panel2.Controls.Add(this.tableLayoutPanel14);
             this.splitContainer7.Panel2Collapsed = true;
-            this.splitContainer7.Size = new System.Drawing.Size(398, 153);
+            this.splitContainer7.Size = new System.Drawing.Size(845, 211);
             this.splitContainer7.SplitterDistance = 29;
             this.splitContainer7.TabIndex = 1;
             // 
@@ -2164,7 +2396,6 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Admin";
             this.Text = "Admin";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Admin_Load);
             this.tabControl1.ResumeLayout(false);
             this.tpUserMgt.ResumeLayout(false);
@@ -2236,7 +2467,7 @@
             this.tableLayoutPanel12.PerformLayout();
             this.tpPayementApprovalMgt.ResumeLayout(false);
             this.tableLayoutPanel15.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvApprover)).EndInit();
             this.splitContainer8.Panel1.ResumeLayout(false);
             this.splitContainer8.Panel1.PerformLayout();
             this.splitContainer8.Panel2.ResumeLayout(false);
@@ -2270,7 +2501,6 @@
         private System.Windows.Forms.TabPage tpPayementApprovalMgt;
         private System.Windows.Forms.TabPage tpSettings;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
@@ -2279,7 +2509,7 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblPrivilege;
         private System.Windows.Forms.Button btnSaveUser;
-        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.TextBox txtCompanyRole;
         private System.Windows.Forms.TextBox txtPassWord;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.ListBox lstPrivilege;
@@ -2359,7 +2589,7 @@
         private System.Windows.Forms.Label lblExchangeRate;
         private System.Windows.Forms.TextBox txtExchangeRate;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
-        private System.Windows.Forms.DataGridView dataGridView7;
+        private System.Windows.Forms.DataGridView dgvApprover;
         private System.Windows.Forms.SplitContainer splitContainer8;
         private System.Windows.Forms.LinkLabel linkLabel8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
@@ -2367,8 +2597,6 @@
         private System.Windows.Forms.Label lblLocation1;
         private System.Windows.Forms.Label lblApprover1;
         private System.Windows.Forms.Button btnApproverSave;
-        private System.Windows.Forms.TextBox txtDepartment;
-        private System.Windows.Forms.TextBox txtApprover2;
         private System.Windows.Forms.ComboBox cmbLocation2;
         private System.Windows.Forms.SplitContainer splitContainer9;
         private System.Windows.Forms.LinkLabel linkLabel9;
@@ -2384,23 +2612,37 @@
         private System.Windows.Forms.Button btnEditCash;
         private System.Windows.Forms.DataGridView dgvCurrency;
         private System.Windows.Forms.ComboBox cmbCurrencyAccepted;
-        private System.Windows.Forms.TextBox txtSupplierType;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ExpenseType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ExpenseTypeID;
+        private System.Windows.Forms.DataGridViewImageColumn ExpenseTypeModify;
+        private System.Windows.Forms.DataGridViewImageColumn ExpenseTypeDelete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SiteID;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewButtonColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewButtonColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserID;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
         private System.Windows.Forms.DataGridViewTextBoxColumn PassWord;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrivilegeOld;
         private System.Windows.Forms.DataGridViewComboBoxColumn Privilege;
-        private System.Windows.Forms.DataGridViewButtonColumn Edit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CompanyRole;
+        private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
+        private System.Windows.Forms.ComboBox cmbSupplierType;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn SupplierID;
         private System.Windows.Forms.DataGridViewTextBoxColumn SupplierName;
         private System.Windows.Forms.DataGridViewComboBoxColumn SupplierBank;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SupplierType;
+        private System.Windows.Forms.DataGridViewComboBoxColumn SupplierType;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private System.Windows.Forms.DataGridViewTextBoxColumn SupplierCountry;
-        private System.Windows.Forms.DataGridViewButtonColumn SupplierModify;
+        private System.Windows.Forms.DataGridViewImageColumn SupplierModify;
         private System.Windows.Forms.DataGridViewImageColumn SupplierDelete;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbDiscipline;
+        private System.Windows.Forms.TextBox txtAccountNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn BankName;
         private System.Windows.Forms.DataGridViewTextBoxColumn BankID;
         private System.Windows.Forms.DataGridViewTextBoxColumn BankCode;
@@ -2408,32 +2650,42 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SwiftCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn IBAN;
         private System.Windows.Forms.DataGridViewTextBoxColumn BankCountry;
-        private System.Windows.Forms.DataGridViewButtonColumn ModifyBank;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Discipline;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AccountNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cash;
+        private System.Windows.Forms.DataGridViewImageColumn ModifyBank;
         private System.Windows.Forms.DataGridViewImageColumn DeleteBank;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtCash;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtTDDuration;
+        private System.Windows.Forms.DateTimePicker calTDStartDate;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtProjectName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProjectName;
         private System.Windows.Forms.DataGridViewComboBoxColumn ProjectType;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProjectID;
         private System.Windows.Forms.DataGridViewTextBoxColumn AmountTillDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn RemainingAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalAmount;
-        private System.Windows.Forms.DataGridViewButtonColumn ProjectModify;
+        private System.Windows.Forms.DataGridViewImageColumn ProjectModify;
         private System.Windows.Forms.DataGridViewImageColumn ProjectDelete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ExpenseType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ExpenseTypeID;
-        private System.Windows.Forms.DataGridViewButtonColumn ExpenseTypeModify;
-        private System.Windows.Forms.DataGridViewImageColumn ExpenseTypeDelete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SiteID;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewButtonColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CurrencyID;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn currencyID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ExchangeRateinUSD;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewButtonColumn3;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewButtonColumn4;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn5;
+        private System.Windows.Forms.DataGridViewComboBoxColumn department;
+        private System.Windows.Forms.DataGridViewComboBoxColumn location;
+        private System.Windows.Forms.DataGridViewComboBoxColumn approver;
+        private System.Windows.Forms.DataGridViewComboBoxColumn disciplineOld;
+        private System.Windows.Forms.DataGridViewComboBoxColumn locationold;
+        private System.Windows.Forms.DataGridViewComboBoxColumn approverold;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewButtonColumn5;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewButtonColumn6;
+        private System.Windows.Forms.ComboBox cmbDepartment;
+        private System.Windows.Forms.ComboBox cmbApprover;
 
         
         

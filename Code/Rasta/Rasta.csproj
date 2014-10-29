@@ -96,6 +96,30 @@
     <Compile Include="BankReport.Designer.cs">
       <DependentUpon>BankReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forecast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forecast.Designer.cs">
+      <DependentUpon>Forecast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForecastReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForecastReport.Designer.cs">
+      <DependentUpon>ForecastReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralBudget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralBudget.Designer.cs">
+      <DependentUpon>GeneralBudget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ITReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ITReport.Designer.cs">
+      <DependentUpon>ITReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +140,18 @@
     <Compile Include="Treasury.Designer.cs">
       <DependentUpon>Treasury.cs</DependentUpon>
     </Compile>
+    <Compile Include="TreasuryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TreasuryReport.Designer.cs">
+      <DependentUpon>TreasuryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEETRE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WEETRE.Designer.cs">
+      <DependentUpon>WEETRE.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AccountPayable.resx">
       <DependentUpon>AccountPayable.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +163,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BankReport.resx">
       <DependentUpon>BankReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forecast.resx">
+      <DependentUpon>Forecast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForecastReport.resx">
+      <DependentUpon>ForecastReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralBudget.resx">
+      <DependentUpon>GeneralBudget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ITReport.resx">
+      <DependentUpon>ITReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -146,6 +194,12 @@
     <EmbeddedResource Include="Treasury.resx">
       <DependentUpon>Treasury.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TreasuryReport.resx">
+      <DependentUpon>TreasuryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WEETRE.resx">
+      <DependentUpon>WEETRE.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -161,6 +215,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon1.ico" />
+    <Content Include="Logo RASTAA.jpg" />
     <Content Include="Logo_RASTAA.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

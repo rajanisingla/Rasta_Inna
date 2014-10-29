@@ -75,7 +75,7 @@
             this.tabControl1.Location = new System.Drawing.Point(2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1048, 515);
+            this.tabControl1.Size = new System.Drawing.Size(1274, 665);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.Tabcontrol_SelectedIndexChange);
             // 
@@ -85,9 +85,9 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1040, 489);
+            this.tabPage1.Size = new System.Drawing.Size(1266, 639);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Make Payment";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tblMain
@@ -109,13 +109,13 @@
             this.tblMain.RowCount = 2;
             this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79.94995F));
             this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.05005F));
-            this.tblMain.Size = new System.Drawing.Size(1034, 483);
+            this.tblMain.Size = new System.Drawing.Size(1260, 633);
             this.tblMain.TabIndex = 1;
             // 
             // btnPay
             // 
             this.btnPay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPay.Location = new System.Drawing.Point(30, 396);
+            this.btnPay.Location = new System.Drawing.Point(30, 516);
             this.btnPay.Margin = new System.Windows.Forms.Padding(30, 10, 2, 3);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(78, 32);
@@ -141,7 +141,7 @@
             this.dgvInvoices.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvInvoices.Location = new System.Drawing.Point(3, 3);
             this.dgvInvoices.Name = "dgvInvoices";
-            this.dgvInvoices.Size = new System.Drawing.Size(1028, 380);
+            this.dgvInvoices.Size = new System.Drawing.Size(1254, 500);
             this.dgvInvoices.TabIndex = 12;
             // 
             // Select
@@ -189,7 +189,7 @@
             // btnPDF
             // 
             this.btnPDF.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPDF.Location = new System.Drawing.Point(135, 396);
+            this.btnPDF.Location = new System.Drawing.Point(361, 516);
             this.btnPDF.Margin = new System.Windows.Forms.Padding(3, 10, 10, 3);
             this.btnPDF.Name = "btnPDF";
             this.btnPDF.Size = new System.Drawing.Size(152, 32);
@@ -207,7 +207,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1040, 489);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Generate Reference Letter";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel1

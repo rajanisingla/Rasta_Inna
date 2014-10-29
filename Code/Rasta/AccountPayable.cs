@@ -40,7 +40,7 @@ namespace Rasta
                               "left join rasta.tbl_supplier S on s.SupplierID=ap.SupplierID  " +
                               "left join rasta.tbl_currency c on c.currencyid=ap.currencyid " +
                               "left join rasta.tbl_site st on st.siteid=ap.siteid " +
-                              "where ap.paymentduedate>=curdate() and ap.paymentduedate <date_add(NOW(), INTERVAL 7 day)";
+                              "where ap.paymentduedate>=curdate() and ap.paymentduedate <date_add(NOW(), INTERVAL 7 day) and ap.isforecast=0";
                 sda1 = new MySqlDataAdapter(cmdView, con);
                 DataTable dtView = new DataTable();
                 sda1.Fill(dtView);
@@ -163,7 +163,7 @@ namespace Rasta
             {
                 foreach (DataGridViewCell cell in row.Cells)
                 {
-                    pdfTable.AddCell(Convert.ToString(cell.Value));
+                    pdfTable.AddCell(Convert.ToString(cell.EditedFormattedValue));
                 }
             }
 
@@ -210,12 +210,12 @@ namespace Rasta
 
 
             ////Exporting to PDF
-            string folderPath = "C:\\PDFs\\";
+            string folderPath = Path.GetDirectoryName(Application.ExecutablePath)+"\\PDFs\\";
             if (!Directory.Exists(folderPath))
             {
                 Directory.CreateDirectory(folderPath);
             }
-            using (FileStream stream = new FileStream(folderPath + "DataGridViewExport1.pdf", FileMode.Create))
+            using (FileStream stream = new FileStream(folderPath + "AFP-" + DateTime.Now.ToString("yyyyMMddHHmmssfff") + ".pdf", FileMode.Create))
             {
                 Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
                 PdfWriter.GetInstance(pdfDoc, stream);
@@ -453,6 +453,7 @@ namespace Rasta
             
                 cmd.Parameters.AddWithValue("CMB2", comboBox2.SelectedValue);
             cmd.Parameters.AddWithValue("CMB4", comboBox4.Text);
+            cmd.Parameters.AddWithValue("isForecast",0);
 
             con.Open();
             cmd.ExecuteNonQuery();

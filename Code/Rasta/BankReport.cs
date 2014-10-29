@@ -91,7 +91,7 @@ namespace Rasta
             else
             {
                 string CmdBank = "select concat(b.bankname,' (',c.currencyname,')') as title,"+
-               " b.cash*ce.ExchangeRateinUSD as total,b.negativecash*ce.ExchangeRateinUSD as  totalnegative  from rasta.vw_bank b " +
+               " b.cash/ce.ExchangeRateinUSD as total,b.negativecash/ce.ExchangeRateinUSD as  totalnegative  from rasta.vw_bank b " +
                     "left join rasta.tbl_CurrencyExchange ce on ce.currencyid='" + cmbCurrency.SelectedValue.ToString() + "' left join rasta.tbl_currency c on ce.currencyid=c.currencyid order by title";
                 sda1 = new MySqlDataAdapter(CmdBank, con);
                 DataTable dtBank = new DataTable();
@@ -104,10 +104,10 @@ namespace Rasta
 
                 }
                 string cmdTD = "select concat(b.bankname,' (',c.currencyname,')') as title," +
-                        "sum(case when td.totaltime=0 then  td.amount*ce.exchangerateinusd  else 0 end)  as termdeposit0," +
-                        "sum(case when td.totaltime>0 and td.totaltime<=3 then   td.amount*ce.exchangerateinusd  else 0 end)  as termdeposit3," +
-                        "sum(case when td.totaltime>3 and td.totaltime<=6 then  td.amount*ce.exchangerateinusd  else 0 end)  as termdeposit6," +
-                        "sum(case when td.totaltime>6 then  td.amount*ce.exchangerateinusd else  0 end)  as termdepositMore " +
+                        "sum(case when td.totaltime=0 then  td.amount/ce.exchangerateinusd  else 0 end)  as termdeposit0," +
+                        "sum(case when td.totaltime>0 and td.totaltime<=3 then   td.amount/ce.exchangerateinusd  else 0 end)  as termdeposit3," +
+                        "sum(case when td.totaltime>3 and td.totaltime<=6 then  td.amount/ce.exchangerateinusd  else 0 end)  as termdeposit6," +
+                        "sum(case when td.totaltime>6 then  td.amount/ce.exchangerateinusd else  0 end)  as termdepositMore " +
                         "from  rasta.tbl_termdeposit td " +
                         "left join rasta.vw_bank b on b.bankid=td.BankID " +
                         "left join rasta.tbl_currencyexchange ce on ce.currencyid='" + cmbCurrency.SelectedValue.ToString() + "' " +
@@ -124,10 +124,10 @@ namespace Rasta
 
                 }
                 string cmdother = "select concat(b.bankname,' (',c.currencyname,')') as title," +
-                        "sum(case when td.totaltime=0 then td.amount*ce.exchangerateinusd  else  0 end)  as termdeposit0," +
-                        "sum(case when td.totaltime>0 and td.totaltime<=3 then td.amount*ce.exchangerateinusd   else 0 end)  as termdeposit3," +
-                        "sum(case when td.totaltime>3 and td.totaltime<=6 then td.amount*ce.exchangerateinusd  else 0 end)  as termdeposit6," +
-                        "sum(case when td.totaltime>6 then td.amount*ce.exchangerateinusd  else 0 end)  as termdepositMore " +
+                        "sum(case when td.totaltime=0 then td.amount/ce.exchangerateinusd  else  0 end)  as termdeposit0," +
+                        "sum(case when td.totaltime>0 and td.totaltime<=3 then td.amount/ce.exchangerateinusd   else 0 end)  as termdeposit3," +
+                        "sum(case when td.totaltime>3 and td.totaltime<=6 then td.amount/ce.exchangerateinusd  else 0 end)  as termdeposit6," +
+                        "sum(case when td.totaltime>6 then td.amount/ce.exchangerateinusd  else 0 end)  as termdepositMore " +
                         "from  rasta.tbl_termdeposit td " +
                         "left join rasta.vw_bank b on b.bankid=td.BankID " +
                         "left join rasta.tbl_currencyexchange ce on ce.currencyid='" + cmbCurrency.SelectedValue.ToString() + "' " +

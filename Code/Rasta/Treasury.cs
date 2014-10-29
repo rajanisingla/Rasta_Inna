@@ -201,12 +201,12 @@ namespace Rasta
 
 
                 ////Exporting to PDF
-                string folderPath = "C:\\PDFs\\";
+                string folderPath = Path.GetDirectoryName(Application.ExecutablePath) + "\\PDFs\\";
                 if (!Directory.Exists(folderPath))
                 {
                     Directory.CreateDirectory(folderPath);
                 }
-                using (FileStream stream = new FileStream(folderPath + "DataGridViewExport-" + DateTime.Now.ToString("yyyyMMddHHmmssfff") + ".pdf", FileMode.Create))
+                using (FileStream stream = new FileStream(folderPath + "Payment-" + DateTime.Now.ToString("yyyyMMddHHmmssfff") + ".pdf", FileMode.Create))
                 {
                     Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
                     PdfWriter.GetInstance(pdfDoc, stream);
@@ -228,7 +228,30 @@ namespace Rasta
 
         private void btnGenerateRefLetter_Click(object sender, EventArgs e)
         {
-            string folderPath = "C:\\PDFs\\";
+            string query1 = "select accountNumber from tbl_bank where bankid='"+cmbBank.SelectedValue+"'";
+            MySqlConnection connection = new MySqlConnection(con);
+            MySqlCommand cmd1 = new MySqlCommand(query1, connection);
+            cmd1.CommandType = CommandType.Text;
+            connection.Open();
+            string accountNumber= Convert.ToString(cmd1.ExecuteScalar());
+            connection.Close();
+
+            string query2 = "select username from tbl_users where userid='" + cmbSign1.SelectedValue + "'";
+             cmd1 = new MySqlCommand(query2, connection);
+            cmd1.CommandType = CommandType.Text;
+            connection.Open();
+            string sign1 = Convert.ToString(cmd1.ExecuteScalar());
+            connection.Close();
+
+            string query3 = "select username from tbl_users where userid='" + cmbSign2.SelectedValue + "'";
+            cmd1 = new MySqlCommand(query3, connection);
+            cmd1.CommandType = CommandType.Text;
+            connection.Open();
+            string sign2 = Convert.ToString(cmd1.ExecuteScalar());
+            connection.Close();
+
+
+            string folderPath = Path.GetDirectoryName(Application.ExecutablePath) + "\\PDFs\\";
             if (!Directory.Exists(folderPath))
             {
                 Directory.CreateDirectory(folderPath);
@@ -249,7 +272,7 @@ namespace Rasta
                 pdfDoc.Add(new Phrase("Exmos. Senhores,"));
                 pdfDoc.Add(new Phrase("\n"));
                 pdfDoc.Add(new Phrase("\n"));
-                pdfDoc.Add(new Phrase(string.Concat("Queira por favor debitar a nossa conta nº 123/12345/12/001 e entregar ao Sr. Tesoreiro, portador do BI nº",txtID.Text," o valor de USD",txtAmount.Text," (Dólares Americanos).")));
+                pdfDoc.Add(new Phrase(string.Concat("Queira por favor debitar a nossa conta nº ",accountNumber," e entregar ao Sr. Tesoreiro, portador do BI nº ",txtID.Text," o valor de USD ",txtAmount.Text," (Dólares Americanos).")));
                 pdfDoc.Add(new Phrase("\n"));
                 pdfDoc.Add(new Phrase("\n"));
                 pdfDoc.Add(new Phrase("Sem outro assunto de momento somos,"));
@@ -257,13 +280,20 @@ namespace Rasta
                 pdfDoc.Add(new Phrase("Atenciosamente,"));
                 pdfDoc.Add(new Phrase("\n"));
                 pdfDoc.Add(new Phrase("\n"));
-                pdfDoc.Add(new Phrase("\n"));
+                Paragraph p = new Paragraph();
+                p.IndentationLeft = 10f;
+                p.Add(string.Concat(sign1,"               ",sign2));
+                p.Add("\n");
+                p.Add(string.Concat(cmbSign1.Text, "               ", cmbSign2.Text));
+                pdfDoc.Add(p);
                 pdfDoc.Add(new Phrase("\n"));
 
                 pdfDoc.Close();
                 stream.Close();
             }
         }
+
+      
 
        
        
