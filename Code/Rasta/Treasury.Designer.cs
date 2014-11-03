@@ -290,7 +290,7 @@
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(1030, 60);
             this.lbl.TabIndex = 0;
-            this.lbl.Text = "Genrate Reference Letter";
+            this.lbl.Text = "Generate Reference Letter";
             this.lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblRef

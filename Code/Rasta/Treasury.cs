@@ -73,37 +73,44 @@ namespace Rasta
         {
             try
             {
-                string APIds = string.Empty;
-                foreach (DataGridViewRow row in dgvInvoices.Rows)
+                if (dgvInvoices.Rows.Count > 0)
                 {
-                    if (Convert.ToBoolean(row.Cells[0].Value))
+                    string APIds = string.Empty;
+                    foreach (DataGridViewRow row in dgvInvoices.Rows)
                     {
-                        APIds = string.Concat(APIds + "," + row.Cells["APID"].Value.ToString());
-                        string query = "uPDATE tbl_bank SET cash=cash-" + row.Cells["Amount"].Value + "  WHERE bankid =" + row.Cells["Bank"].Value.ToString() + "";
-                        string ConString = ConfigurationManager.ConnectionStrings["ConString"].ConnectionString;
-                        MySqlConnection con = new MySqlConnection(ConString);
-                        MySqlCommand cmd = new MySqlCommand(query, con);
-                        cmd.CommandType = CommandType.Text;
-                        con.Open();
-                        cmd.ExecuteNonQuery();
-                        con.Close();
-                        dgvInvoices.Rows.Remove(row);
+                        if (Convert.ToBoolean(row.Cells[0].Value))
+                        {
+                            APIds = string.Concat(APIds + "," + row.Cells["APID"].Value.ToString());
+                            string query = "uPDATE tbl_bank SET cash=cash-" + row.Cells["Amount"].Value + "  WHERE bankid =" + row.Cells["Bank"].Value.ToString() + "";
+                            string ConString = ConfigurationManager.ConnectionStrings["ConString"].ConnectionString;
+                            MySqlConnection con = new MySqlConnection(ConString);
+                            MySqlCommand cmd = new MySqlCommand(query, con);
+                            cmd.CommandType = CommandType.Text;
+                            con.Open();
+                            cmd.ExecuteNonQuery();
+                            con.Close();
+                            dgvInvoices.Rows.Remove(row);
+                        }
                     }
+                    APIds = APIds.Remove(0, 1);
+                    string query1 = "uPDATE tbl_AccountPayable SET ispaid=1 WHERE APID IN (" + APIds + ")";
+                    string ConString1 = ConfigurationManager.ConnectionStrings["ConString"].ConnectionString;
+                    MySqlConnection con1 = new MySqlConnection(ConString1);
+                    MySqlCommand cmd1 = new MySqlCommand(query1, con1);
+                    cmd1.CommandType = CommandType.Text;
+                    con1.Open();
+                    cmd1.ExecuteNonQuery();
+                    con1.Close();
+                    MessageBox.Show("Payment done successfully!!", "Sucess");
                 }
-                APIds = APIds.Remove(0, 1);
-                string query1 = "uPDATE tbl_AccountPayable SET ispaid=1 WHERE APID IN (" + APIds + ")";
-                string ConString1 = ConfigurationManager.ConnectionStrings["ConString"].ConnectionString;
-                MySqlConnection con1 = new MySqlConnection(ConString1);
-                MySqlCommand cmd1 = new MySqlCommand(query1, con1);
-                cmd1.CommandType = CommandType.Text;
-                con1.Open();
-                cmd1.ExecuteNonQuery();
-                con1.Close();
-                MessageBox.Show("Payment done successfully!!", "Sucess");
+                else
+                {
+                    MessageBox.Show("No Data present!!", "Warning");
+                }
             }
             catch
             {
-                MessageBox.Show("Invoice saved successfully!!", "Sucess");
+                MessageBox.Show("Some error has occured!!", "Error");
             }
 
 

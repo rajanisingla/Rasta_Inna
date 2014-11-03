@@ -124,7 +124,7 @@
             // 
             this.treasuryReportToolStripMenuItem.Name = "treasuryReportToolStripMenuItem";
             this.treasuryReportToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.treasuryReportToolStripMenuItem.Text = "Treasury Report";
+            this.treasuryReportToolStripMenuItem.Text = "TREFLT";
             this.treasuryReportToolStripMenuItem.Click += new System.EventHandler(this.treasuryReportToolStripMenuItem_Click);
             // 
             // wEETREToolStripMenuItem
@@ -180,7 +180,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Master";
-            this.Text = "Rasta";
+            this.Text = "Rastaa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Master_Load);
             this.menuStrip1.ResumeLayout(false);

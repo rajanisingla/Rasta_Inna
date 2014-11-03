@@ -61,7 +61,7 @@ namespace Rasta
                     query = "UPDATE tbl_CurrencyExchange SET " +
                    "ExchangeRateinUSD = '" + dgvCurrency.Rows[e.RowIndex].Cells[2].Value.ToString() + "'  " +
                    "WHERE CurrencyID =" + dgvCurrency.Rows[e.RowIndex].Cells[1].Value.ToString() + "";
-                     sda = new MySqlDataAdapter(query, con);
+                    sda = new MySqlDataAdapter(query, con);
                     DataTable dtCurrency1 = new DataTable();
                     sda.Fill(dtCurrency1);
                     MessageBox.Show("Information saved successfully!!", "Success");
@@ -159,16 +159,16 @@ namespace Rasta
             {
                 try
                 {
-                string query = "UPDATE tbl_ExpenseType SET " +
-               "ExpenseTypeName = '" + dgvExpenseType.Rows[e.RowIndex].Cells[0].Value.ToString() + "'  " +
-               "WHERE ExpenseTypeID =" + dgvExpenseType.Rows[e.RowIndex].Cells[1].Value.ToString() + "";
-                MySqlConnection con = new MySqlConnection(ConString);
-                MySqlCommand cmd = new MySqlCommand(query, con);
-                cmd.CommandType = CommandType.Text;
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("Information saved successfully!!", "Success");
+                    string query = "UPDATE tbl_ExpenseType SET " +
+                   "ExpenseTypeName = '" + dgvExpenseType.Rows[e.RowIndex].Cells[0].Value.ToString() + "'  " +
+                   "WHERE ExpenseTypeID =" + dgvExpenseType.Rows[e.RowIndex].Cells[1].Value.ToString() + "";
+                    MySqlConnection con = new MySqlConnection(ConString);
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+                    cmd.CommandType = CommandType.Text;
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Information saved successfully!!", "Success");
                 }
                 catch (Exception ex)
                 {
@@ -263,31 +263,32 @@ namespace Rasta
             }
             else if (e.ColumnIndex == 10)
             {
-              try
-              {string query = "UPDATE tbl_Bank SET " +
-               "BankName = '" + dgvBank.Rows[e.RowIndex].Cells[0].Value.ToString() + "' , " +
-               "BankCode = '" + dgvBank.Rows[e.RowIndex].Cells[2].Value.ToString() + "' , " +
-               "SwiftCode = '" + dgvBank.Rows[e.RowIndex].Cells[4].Value.ToString() + "' , " +
-               "IBAN = '" + dgvBank.Rows[e.RowIndex].Cells[5].Value.ToString() + "' , " +
-               "accountnumber = '" + dgvBank.Rows[e.RowIndex].Cells[8].Value.ToString() + "' , " +
-               "Disciplineid = '" + dgvBank.Rows[e.RowIndex].Cells[7].Value.ToString() + "' , " +
-               "Country = '" + dgvBank.Rows[e.RowIndex].Cells[6].Value.ToString() + "'  ," +
-               "cash = '" + dgvBank.Rows[e.RowIndex].Cells[9].Value.ToString() + "'  " +
-               "WHERE BankID =" + dgvBank.Rows[e.RowIndex].Cells[1].Value.ToString() + "";
-                MySqlConnection con = new MySqlConnection(ConString);
-                MySqlCommand cmd = new MySqlCommand(query, con);
-                cmd.CommandType = CommandType.Text;
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
+                try
+                {
+                    string query = "UPDATE tbl_Bank SET " +
+                    "BankName = '" + dgvBank.Rows[e.RowIndex].Cells[0].Value.ToString() + "' , " +
+                    "BankCode = '" + dgvBank.Rows[e.RowIndex].Cells[2].Value.ToString() + "' , " +
+                    "SwiftCode = '" + dgvBank.Rows[e.RowIndex].Cells[4].Value.ToString() + "' , " +
+                    "IBAN = '" + dgvBank.Rows[e.RowIndex].Cells[5].Value.ToString() + "' , " +
+                    "accountnumber = '" + dgvBank.Rows[e.RowIndex].Cells[8].Value.ToString() + "' , " +
+                    "Disciplineid = '" + dgvBank.Rows[e.RowIndex].Cells[7].Value.ToString() + "' , " +
+                    "Country = '" + dgvBank.Rows[e.RowIndex].Cells[6].Value.ToString() + "'  ," +
+                    "cash = '" + dgvBank.Rows[e.RowIndex].Cells[9].Value.ToString() + "'  " +
+                    "WHERE BankID =" + dgvBank.Rows[e.RowIndex].Cells[1].Value.ToString() + "";
+                    MySqlConnection con = new MySqlConnection(ConString);
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+                    cmd.CommandType = CommandType.Text;
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
 
-                MessageBox.Show("Information saved successfully!!", "Success");
-              }
-              catch (Exception ex)
-              {
-                  MessageBox.Show("Some Error has occured!!", "Error");
+                    MessageBox.Show("Information saved successfully!!", "Success");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Some Error has occured!!", "Error");
 
-              }
+                }
             }
             else
             {
@@ -323,21 +324,21 @@ namespace Rasta
             {
                 try
                 {
-                string query = "UPDATE tbl_Supplier SET " +
-               "SupplierName = '" + dgvSupplier.Rows[e.RowIndex].Cells[0].Value.ToString() + "' , " +
-               "SupplierCode = '" + dgvSupplier.Rows[e.RowIndex].Cells[2].Value.ToString() + "' , " +
-               "BankID = '" + dgvSupplier.Rows[e.RowIndex].Cells[3].Value.ToString() + "' , " +
-               "SupplierTypeID = '" + dgvSupplier.Rows[e.RowIndex].Cells[4].Value.ToString() + "' , " +
-               "Address = '" + dgvSupplier.Rows[e.RowIndex].Cells[5].Value.ToString() + "',  " +
-               "Country = '" + dgvSupplier.Rows[e.RowIndex].Cells[6].Value.ToString() + "'  " +
-               "WHERE SupplierID =" + dgvSupplier.Rows[e.RowIndex].Cells[1].Value.ToString() + "";
-                MySqlConnection con = new MySqlConnection(ConString);
-                MySqlCommand cmd = new MySqlCommand(query, con);
-                cmd.CommandType = CommandType.Text;
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("Information saved successfully!!", "Success");
+                    string query = "UPDATE tbl_Supplier SET " +
+                   "SupplierName = '" + dgvSupplier.Rows[e.RowIndex].Cells[0].Value.ToString() + "' , " +
+                   "SupplierCode = '" + dgvSupplier.Rows[e.RowIndex].Cells[2].Value.ToString() + "' , " +
+                   "BankID = '" + dgvSupplier.Rows[e.RowIndex].Cells[3].Value.ToString() + "' , " +
+                   "SupplierTypeID = '" + dgvSupplier.Rows[e.RowIndex].Cells[4].Value.ToString() + "' , " +
+                   "Address = '" + dgvSupplier.Rows[e.RowIndex].Cells[5].Value.ToString() + "',  " +
+                   "Country = '" + dgvSupplier.Rows[e.RowIndex].Cells[6].Value.ToString() + "'  " +
+                   "WHERE SupplierID =" + dgvSupplier.Rows[e.RowIndex].Cells[1].Value.ToString() + "";
+                    MySqlConnection con = new MySqlConnection(ConString);
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+                    cmd.CommandType = CommandType.Text;
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Information saved successfully!!", "Success");
                 }
                 catch (Exception ex)
                 {
@@ -415,38 +416,38 @@ namespace Rasta
         {
             try
             {
-            List<string> selectedFields = new List<string>();
-            foreach (DataRowView selecteditem in lstPrivilege.SelectedItems)
-            {
-                selectedFields.Add(selecteditem["PrivilegeID"].ToString());
-            }
-            string privileges = string.Join(",", selectedFields.ToArray());
-            string spname = "sp_insertusers";
-            string ConString = ConfigurationManager.ConnectionStrings["ConString"].ConnectionString;
-            MySqlConnection con = new MySqlConnection(ConString);
-            MySqlCommand cmd = new MySqlCommand(spname, con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("name", txtName.Text);
-            cmd.Parameters.AddWithValue("password", txtPassWord.Text);
-            cmd.Parameters.AddWithValue("privileges", privileges);
-            cmd.Parameters.AddWithValue("companyRole", txtCompanyRole.Text);
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
+                List<string> selectedFields = new List<string>();
+                foreach (DataRowView selecteditem in lstPrivilege.SelectedItems)
+                {
+                    selectedFields.Add(selecteditem["PrivilegeID"].ToString());
+                }
+                string privileges = string.Join(",", selectedFields.ToArray());
+                string spname = "sp_insertusers";
+                string ConString = ConfigurationManager.ConnectionStrings["ConString"].ConnectionString;
+                MySqlConnection con = new MySqlConnection(ConString);
+                MySqlCommand cmd = new MySqlCommand(spname, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("name", txtName.Text);
+                cmd.Parameters.AddWithValue("password", txtPassWord.Text);
+                cmd.Parameters.AddWithValue("privileges", privileges);
+                cmd.Parameters.AddWithValue("companyRole", txtCompanyRole.Text);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
 
-            MessageBox.Show("User saved successfully!!", "Sucess Message");
-            txtCompanyRole.Text = "";
-            txtPassWord.Text = "";
-            txtName.Text = "";
-            lstPrivilege.ClearSelected();
-            string CmdString = "SELECT U.USERID as UserID,U.USERNAME as UserName,U.PASSWORD as Password,P.PRIVILEGEID as Privilege,P.PRIVILEGEID as PrivilegeID,U.companyRole FROM RASTA.tbl_userprivilege UP " +
-                                "LEFT JOIN RASTA.tbl_users U ON U.USERID=UP.UserID " +
-                                "LEFT JOIN RASTA.tbl_privilege P ON P.PRIVILEGEID=UP.PRIVILEGEID order by U.USERNAME";
-            MySqlDataAdapter sda1 = new MySqlDataAdapter(CmdString, con);
-            DataTable dtUserDetails = new DataTable();
-            sda1.Fill(dtUserDetails);
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.DataSource = dtUserDetails;
+                MessageBox.Show("User saved successfully!!", "Sucess Message");
+                txtCompanyRole.Text = "";
+                txtPassWord.Text = "";
+                txtName.Text = "";
+                lstPrivilege.ClearSelected();
+                string CmdString = "SELECT U.USERID as UserID,U.USERNAME as UserName,U.PASSWORD as Password,P.PRIVILEGEID as Privilege,P.PRIVILEGEID as PrivilegeID,U.companyRole FROM RASTA.tbl_userprivilege UP " +
+                                    "LEFT JOIN RASTA.tbl_users U ON U.USERID=UP.UserID " +
+                                    "LEFT JOIN RASTA.tbl_privilege P ON P.PRIVILEGEID=UP.PRIVILEGEID order by U.USERNAME";
+                MySqlDataAdapter sda1 = new MySqlDataAdapter(CmdString, con);
+                DataTable dtUserDetails = new DataTable();
+                sda1.Fill(dtUserDetails);
+                this.dataGridView1.AutoGenerateColumns = false;
+                this.dataGridView1.DataSource = dtUserDetails;
             }
             catch (Exception ex)
             {
@@ -461,28 +462,36 @@ namespace Rasta
         {
             try
             {
-            string spname = "insert into rasta.tbl_currency(CurrencyName) values('" + txtCurrency.Text + "')";
-            MySqlConnection con = new MySqlConnection(ConString);
-            MySqlCommand cmd = new MySqlCommand(spname, con);
-            cmd.CommandType = CommandType.Text;
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
-            spname = "insert into rasta.tbl_CurrencyExchange(currencyid,ExchangeRateinUSD) values((select max(currencyid) from tbl_currency),'" + txtExchangeRate.Text + "')";
-            MySqlCommand cmd1 = new MySqlCommand(spname, con);
-            cmd1.CommandType = CommandType.Text;
-            con.Open();
-            cmd1.ExecuteNonQuery();
-            con.Close();
-            MessageBox.Show("Currency saved successfully!!", "Sucess Message");
-            txtCurrency.Text = "";
-            txtExchangeRate.Text = "";
-            string CmdString2 = "SELECT c.CurrencyName,c.CurrencyID, ce.ExchangeRateinUSD FROM tbl_Currency c left join rasta.tbl_CurrencyExchange ce on ce.currencyid=c.currencyid";
-            MySqlDataAdapter sda1 = new MySqlDataAdapter(CmdString2, con);
-            DataTable dtCurrency = new DataTable();
-            sda1.Fill(dtCurrency);
-            dgvCurrency.AutoGenerateColumns = false;
-            dgvCurrency.DataSource = dtCurrency;
+                if (!(string.IsNullOrWhiteSpace(txtCurrency.Text) || string.IsNullOrWhiteSpace(txtExchangeRate.Text)))
+                {
+                    string spname = "insert into rasta.tbl_currency(CurrencyName) values('" + txtCurrency.Text + "')";
+                    MySqlConnection con = new MySqlConnection(ConString);
+                    MySqlCommand cmd = new MySqlCommand(spname, con);
+                    cmd.CommandType = CommandType.Text;
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    spname = "insert into rasta.tbl_CurrencyExchange(currencyid,ExchangeRateinUSD) values((select max(currencyid) from tbl_currency),'" + txtExchangeRate.Text + "')";
+                    MySqlCommand cmd1 = new MySqlCommand(spname, con);
+                    cmd1.CommandType = CommandType.Text;
+                    con.Open();
+                    cmd1.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Currency saved successfully!!", "Sucess Message");
+                    txtCurrency.Text = "";
+                    txtExchangeRate.Text = "";
+                    string CmdString2 = "SELECT c.CurrencyName,c.CurrencyID, ce.ExchangeRateinUSD FROM tbl_Currency c left join rasta.tbl_CurrencyExchange ce on ce.currencyid=c.currencyid";
+                    MySqlDataAdapter sda1 = new MySqlDataAdapter(CmdString2, con);
+                    DataTable dtCurrency = new DataTable();
+                    sda1.Fill(dtCurrency);
+                    dgvCurrency.AutoGenerateColumns = false;
+                    dgvCurrency.DataSource = dtCurrency;
+                }
+                else
+                {
+                    MessageBox.Show("Cannot add empty Currency or exchange Rate!!", "Warning");
+
+                }
             }
             catch (Exception ex)
             {
@@ -495,21 +504,29 @@ namespace Rasta
         {
             try
             {
-            string spname = "insert into rasta.tbl_Site(SiteName) values('" + txtSite.Text + "')";
-            MySqlConnection con = new MySqlConnection(ConString);
-            MySqlCommand cmd = new MySqlCommand(spname, con);
-            cmd.CommandType = CommandType.Text;
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
-            MessageBox.Show("Site saved successfully!!", "Sucess Message");
-            txtSite.Text = "";
-            string cmdSite = "SELECT SiteName,SiteID FROM tbl_Site";
-            MySqlDataAdapter sda1 = new MySqlDataAdapter(cmdSite, con);
-            DataTable dtSite = new DataTable();
-            sda1.Fill(dtSite);
-            dgvSite.AutoGenerateColumns = false;
-            dgvSite.DataSource = dtSite;
+                if (!string.IsNullOrWhiteSpace(txtSite.Text))
+                {
+                    string spname = "insert into rasta.tbl_Site(SiteName) values('" + txtSite.Text + "')";
+                    MySqlConnection con = new MySqlConnection(ConString);
+                    MySqlCommand cmd = new MySqlCommand(spname, con);
+                    cmd.CommandType = CommandType.Text;
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Site saved successfully!!", "Sucess Message");
+                    txtSite.Text = "";
+                    string cmdSite = "SELECT SiteName,SiteID FROM tbl_Site";
+                    MySqlDataAdapter sda1 = new MySqlDataAdapter(cmdSite, con);
+                    DataTable dtSite = new DataTable();
+                    sda1.Fill(dtSite);
+                    dgvSite.AutoGenerateColumns = false;
+                    dgvSite.DataSource = dtSite;
+                }
+                else
+                {
+                    MessageBox.Show("Cannot add empty Site!!", "Warning");
+
+                }
             }
             catch (Exception ex)
             {
@@ -522,21 +539,29 @@ namespace Rasta
         {
             try
             {
-            string spname = "insert into rasta.tbl_ExpenseType(ExpenseTypeName) values('" + txtExpenseType.Text + "')";
-            MySqlConnection con = new MySqlConnection(ConString);
-            MySqlCommand cmd = new MySqlCommand(spname, con);
-            cmd.CommandType = CommandType.Text;
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
-            MessageBox.Show("Expense Type saved successfully!!", "Sucess Message");
-            txtExpenseType.Text = "";
-            string cmdExpenseType = "SELECT ExpenseTypeName,ExpenseTypeID FROM tbl_ExpenseType";
-            MySqlDataAdapter sda1 = new MySqlDataAdapter(cmdExpenseType, con);
-            DataTable dtExpenseType = new DataTable();
-            sda1.Fill(dtExpenseType);
-            dgvExpenseType.AutoGenerateColumns = false;
-            dgvExpenseType.DataSource = dtExpenseType;
+                if (!string.IsNullOrWhiteSpace(txtExpenseType.Text))
+                {
+                    string spname = "insert into rasta.tbl_ExpenseType(ExpenseTypeName) values('" + txtExpenseType.Text + "')";
+                    MySqlConnection con = new MySqlConnection(ConString);
+                    MySqlCommand cmd = new MySqlCommand(spname, con);
+                    cmd.CommandType = CommandType.Text;
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Expense Type saved successfully!!", "Sucess Message");
+                    txtExpenseType.Text = "";
+                    string cmdExpenseType = "SELECT ExpenseTypeName,ExpenseTypeID FROM tbl_ExpenseType";
+                    MySqlDataAdapter sda1 = new MySqlDataAdapter(cmdExpenseType, con);
+                    DataTable dtExpenseType = new DataTable();
+                    sda1.Fill(dtExpenseType);
+                    dgvExpenseType.AutoGenerateColumns = false;
+                    dgvExpenseType.DataSource = dtExpenseType;
+                }
+                else
+                {
+                    MessageBox.Show("Cannot add empty Expense Type!!", "Warning");
+
+                }
             }
             catch (Exception ex)
             {
@@ -549,26 +574,26 @@ namespace Rasta
         {
             try
             {
-            string spname = "insert into rasta.tbl_Project(ProjectTypeID,AmountTillDate,RemainingAmount,TotalAmount,projctname) values(" +
-                "'" + cmbProjectType.SelectedValue + "'," + txtAmountTillDate.Text + "," + txtAmountDue.Text + "," + txtTotalAmount.Text + ",'" + txtProjectName.Text + "')";
-            MySqlConnection con = new MySqlConnection(ConString);
-            MySqlCommand cmd = new MySqlCommand(spname, con);
-            cmd.CommandType = CommandType.Text;
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
-            MessageBox.Show("Project saved successfully!!", "Sucess Message");
-            txtAmountTillDate.Text = "";
-            txtAmountDue.Text = "";
-            txtTotalAmount.Text = "";
-            cmbProjectType.SelectedIndex = 0;
-            string cmdProject = "SELECT PT.ProjectTypeID as ProjectType,P.ProjectID as ProjectID,P.AmountTillDate as AmountTillDate,RemainingAmount as RemainingAmount,TotalAmount as TotalAmount,p.projctname " +
-            "FROM tbl_Project P LEFT JOIN tbl_ProjectTYpe PT on P.ProjectTYpeID=PT.ProjectTypeID";
-            MySqlDataAdapter sda1 = new MySqlDataAdapter(cmdProject, con);
-            DataTable dtProject = new DataTable();
-            sda1.Fill(dtProject);
-            dgvProject.AutoGenerateColumns = false;
-            dgvProject.DataSource = dtProject;
+                string spname = "insert into rasta.tbl_Project(ProjectTypeID,AmountTillDate,RemainingAmount,TotalAmount,projctname) values(" +
+                    "'" + cmbProjectType.SelectedValue + "'," + txtAmountTillDate.Text + "," + txtAmountDue.Text + "," + txtTotalAmount.Text + ",'" + txtProjectName.Text + "')";
+                MySqlConnection con = new MySqlConnection(ConString);
+                MySqlCommand cmd = new MySqlCommand(spname, con);
+                cmd.CommandType = CommandType.Text;
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Project saved successfully!!", "Sucess Message");
+                txtAmountTillDate.Text = "";
+                txtAmountDue.Text = "";
+                txtTotalAmount.Text = "";
+                cmbProjectType.SelectedIndex = 0;
+                string cmdProject = "SELECT PT.ProjectTypeID as ProjectType,P.ProjectID as ProjectID,P.AmountTillDate as AmountTillDate,RemainingAmount as RemainingAmount,TotalAmount as TotalAmount,p.projctname " +
+                "FROM tbl_Project P LEFT JOIN tbl_ProjectTYpe PT on P.ProjectTYpeID=PT.ProjectTypeID";
+                MySqlDataAdapter sda1 = new MySqlDataAdapter(cmdProject, con);
+                DataTable dtProject = new DataTable();
+                sda1.Fill(dtProject);
+                dgvProject.AutoGenerateColumns = false;
+                dgvProject.DataSource = dtProject;
             }
             catch (Exception ex)
             {
@@ -581,30 +606,30 @@ namespace Rasta
         {
             try
             {
-            string spname = "insert into rasta.tbl_Bank(BankName,BankCode,CurrencyID,IBAN,SwiftCode,Country,accountNumber,Disciplineid,cash) values(" +
-                "'" + txtBankName.Text + "','" + txtBankCode.Text + "'," + cmbCurrencyAccepted.SelectedValue + ",'" + txtIBAN.Text + "','" + txtSwiftCode.Text + "','" + txtCountry.Text + "','" + txtAccountNumber.Text + "','" + cmbDiscipline.SelectedValue + "','" + txtCash.Text + "')";
-            MySqlConnection con = new MySqlConnection(ConString);
-            MySqlCommand cmd = new MySqlCommand(spname, con);
-            cmd.CommandType = CommandType.Text;
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
-            MessageBox.Show("Bank saved successfully!!", "Sucess Message");
-            txtBankName.Text = "";
-            txtBankCode.Text = "";
-            txtIBAN.Text = "";
-            cmbCurrencyAccepted.SelectedIndex = 0;
-            txtSwiftCode.Text = "";
-            txtCountry.Text = "";
-            txtAccountNumber.Text = "";
-            cmbDiscipline.SelectedIndex = 0;
-            txtCash.Text = "";
-            string cmdBank = "SELECT BankID,BankName, BankCode,IBAN,SwiftCode,Country,CurrencyID,accountNumber,Disciplineid,cash FROM Tbl_Bank";
-            MySqlDataAdapter sda1 = new MySqlDataAdapter(cmdBank, con);
-            DataTable dtBank = new DataTable();
-            sda1.Fill(dtBank);
-            dgvBank.AutoGenerateColumns = false;
-            dgvBank.DataSource = dtBank;
+                string spname = "insert into rasta.tbl_Bank(BankName,BankCode,CurrencyID,IBAN,SwiftCode,Country,accountNumber,Disciplineid,cash) values(" +
+                    "'" + txtBankName.Text + "','" + txtBankCode.Text + "'," + cmbCurrencyAccepted.SelectedValue + ",'" + txtIBAN.Text + "','" + txtSwiftCode.Text + "','" + txtCountry.Text + "','" + txtAccountNumber.Text + "','" + cmbDiscipline.SelectedValue + "','" + txtCash.Text + "')";
+                MySqlConnection con = new MySqlConnection(ConString);
+                MySqlCommand cmd = new MySqlCommand(spname, con);
+                cmd.CommandType = CommandType.Text;
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Bank saved successfully!!", "Sucess Message");
+                txtBankName.Text = "";
+                txtBankCode.Text = "";
+                txtIBAN.Text = "";
+                cmbCurrencyAccepted.SelectedIndex = 0;
+                txtSwiftCode.Text = "";
+                txtCountry.Text = "";
+                txtAccountNumber.Text = "";
+                cmbDiscipline.SelectedIndex = 0;
+                txtCash.Text = "";
+                string cmdBank = "SELECT BankID,BankName, BankCode,IBAN,SwiftCode,Country,CurrencyID,accountNumber,Disciplineid,cash FROM Tbl_Bank";
+                MySqlDataAdapter sda1 = new MySqlDataAdapter(cmdBank, con);
+                DataTable dtBank = new DataTable();
+                sda1.Fill(dtBank);
+                dgvBank.AutoGenerateColumns = false;
+                dgvBank.DataSource = dtBank;
 
             }
             catch (Exception ex)
@@ -618,27 +643,27 @@ namespace Rasta
         {
             try
             {
-            string spname = "insert into rasta.tbl_Supplier(SupplierName,SupplierCode,BankID,SupplierTypeID,Address,Country) values(" +
-                            "'" + txtSupplierName.Text + "','" + txtSupplierCode.Text + "'," + cmbSupplierBank.SelectedValue + ",'" + cmbSupplierType.SelectedValue + "','" + txtSupplierAddress.Text + "','" + txtSupplerCountry.Text + "')";
-            MySqlConnection con = new MySqlConnection(ConString);
-            MySqlCommand cmd = new MySqlCommand(spname, con);
-            cmd.CommandType = CommandType.Text;
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
-            MessageBox.Show("Supplier saved successfully!!", "Sucess Message");
-            txtSupplierName.Text = "";
-            txtSupplierCode.Text = "";
-            cmbSupplierType.SelectedIndex = 0;
-            cmbSupplierBank.SelectedIndex = 0;
-            txtSupplierAddress.Text = "";
-            txtSupplerCountry.Text = "";
-            string cmdSupplier = "SELECT SupplierID ,	SupplierName ,	SupplierCode,	BankID ,SupplierTypeID,	Address,Country FROM Tbl_Supplier";
-            MySqlDataAdapter sda1 = new MySqlDataAdapter(cmdSupplier, con);
-            DataTable dtSupplier = new DataTable();
-            sda1.Fill(dtSupplier);
-            dgvSupplier.AutoGenerateColumns = false;
-            dgvSupplier.DataSource = dtSupplier;
+                string spname = "insert into rasta.tbl_Supplier(SupplierName,SupplierCode,BankID,SupplierTypeID,Address,Country) values(" +
+                                "'" + txtSupplierName.Text + "','" + txtSupplierCode.Text + "'," + cmbSupplierBank.SelectedValue + ",'" + cmbSupplierType.SelectedValue + "','" + txtSupplierAddress.Text + "','" + txtSupplerCountry.Text + "')";
+                MySqlConnection con = new MySqlConnection(ConString);
+                MySqlCommand cmd = new MySqlCommand(spname, con);
+                cmd.CommandType = CommandType.Text;
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Supplier saved successfully!!", "Sucess Message");
+                txtSupplierName.Text = "";
+                txtSupplierCode.Text = "";
+                cmbSupplierType.SelectedIndex = 0;
+                cmbSupplierBank.SelectedIndex = 0;
+                txtSupplierAddress.Text = "";
+                txtSupplerCountry.Text = "";
+                string cmdSupplier = "SELECT SupplierID ,	SupplierName ,	SupplierCode,	BankID ,SupplierTypeID,	Address,Country FROM Tbl_Supplier";
+                MySqlDataAdapter sda1 = new MySqlDataAdapter(cmdSupplier, con);
+                DataTable dtSupplier = new DataTable();
+                sda1.Fill(dtSupplier);
+                dgvSupplier.AutoGenerateColumns = false;
+                dgvSupplier.DataSource = dtSupplier;
 
             }
             catch (Exception ex)
@@ -863,7 +888,7 @@ namespace Rasta
             this.CurrencyAccepted.DataSource = dtCurrencyType;
             this.CurrencyAccepted.DisplayMember = "CurrencyName";
             this.CurrencyAccepted.ValueMember = "CurrencyID";
-            this.CurrencyAccepted.DataPropertyName= "CurrencyID";
+            this.CurrencyAccepted.DataPropertyName = "CurrencyID";
 
             string CmdDisciplineType = "SELECT distinct DisciplineName,DisciplineID FROM tbl_Discipline";
             sda1 = new MySqlDataAdapter(CmdDisciplineType, con);
@@ -879,7 +904,7 @@ namespace Rasta
             this.Discipline.ValueMember = "DisciplineID";
             this.Discipline.DataPropertyName = "Disciplineid";
 
-            
+
             //Supplier
             string cmdSupplier = "SELECT SupplierID ,	SupplierName ,	SupplierCode,	BankID ,SupplierTypeid,	Address,Country FROM Tbl_Supplier";
             sda1 = new MySqlDataAdapter(cmdSupplier, con);
@@ -947,7 +972,7 @@ namespace Rasta
                     string query = "DELETE FROM tbl_Userprivilege " +
                     "WHERE UserID =" + dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString() + " AND " +
                     " PrivilegeID=" + dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString() + "";
-                   
+
                     MySqlDataAdapter sda = new MySqlDataAdapter(query, con);
                     DataTable dtUserDetails = new DataTable();
                     sda.Fill(dtUserDetails);
@@ -967,7 +992,7 @@ namespace Rasta
                    "PassWord = '" + dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString() + "' ," +
                    "CompanyRole = '" + dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString() + "' " +
                    "WHERE UserID =" + dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString() + "";
-                   
+
                     MySqlDataAdapter sda = new MySqlDataAdapter(query, con);
                     DataTable dtUserDetails = new DataTable();
                     sda.Fill(dtUserDetails);
@@ -995,7 +1020,7 @@ namespace Rasta
                     dgv.EditMode = DataGridViewEditMode.EditOnEnter;
                     dgv.BeginEdit(false);
                 }
-              
+
 
             }
             catch
@@ -1014,7 +1039,7 @@ namespace Rasta
                 dgv.Focus();
                 dgv.EndEdit();
             }
-            else if (e.ColumnIndex ==7)
+            else if (e.ColumnIndex == 7)
             {
                 string query = "DELETE FROM tbl_UserDiscipline " +
                 "WHERE disciplineid =" + dgvApprover.Rows[e.RowIndex].Cells[0].Value.ToString() + " and " +
@@ -1036,7 +1061,7 @@ namespace Rasta
                     string query = "UPDATE tbl_UserDiscipline  " +
                    "SET disciplineid =" + dgvApprover.Rows[e.RowIndex].Cells[0].Value.ToString() + " , " +
                 "userid =" + dgvApprover.Rows[e.RowIndex].Cells[2].Value.ToString() + " , " +
-                "siteid =" + dgvApprover.Rows[e.RowIndex].Cells[1].Value.ToString() + " "+
+                "siteid =" + dgvApprover.Rows[e.RowIndex].Cells[1].Value.ToString() + " " +
                     "WHERE disciplineid =" + dgvApprover.Rows[e.RowIndex].Cells[3].Value.ToString() + " and " +
                 "userid =" + dgvApprover.Rows[e.RowIndex].Cells[5].Value.ToString() + " and " +
                 "siteid =" + dgvApprover.Rows[e.RowIndex].Cells[4].Value.ToString() + " ";
@@ -1064,7 +1089,8 @@ namespace Rasta
 
         private void btnEditCash_Click(object sender, EventArgs e)
         {
-            try{
+            try
+            {
                 string spname = "insert into rasta.tbl_termdeposit(BankID,TotalTime,Amount,DepositDate,DepositType) VALUES(" +
                "'" + cmbEditBankName.SelectedValue + "','" + txtTDDuration.Text + "'," + txtNegativeCash.Text + ",'" + Convert.ToDateTime(calTDStartDate.Text).ToString("yyyy-MM-dd H:mm:ss") + "','" + txtNegativeCashType.Text + "')";
                 MySqlConnection con = new MySqlConnection(ConString);
@@ -1074,8 +1100,8 @@ namespace Rasta
                 cmd.ExecuteNonQuery();
                 con.Close();
 
-                spname = "update rasta.tbl_bank set negativecash=IFNULL(negativecash,0)+" +txtNegativeCash.Text + " where bankid="+cmbEditBankName.SelectedValue+"";
-             
+                spname = "update rasta.tbl_bank set negativecash=IFNULL(negativecash,0)+" + txtNegativeCash.Text + " where bankid=" + cmbEditBankName.SelectedValue + "";
+
                 MySqlCommand cmd1 = new MySqlCommand(spname, con);
                 cmd1.CommandType = CommandType.Text;
                 con.Open();
@@ -1087,8 +1113,8 @@ namespace Rasta
                 txtNegativeCash.Text = "";
                 txtNegativeCashType.Text = "";
                 cmbEditBankName.SelectedIndex = 0;
-               
-                
+
+
 
             }
             catch (Exception ex)
@@ -1110,14 +1136,15 @@ namespace Rasta
                 MySqlDataAdapter sda1 = new MySqlDataAdapter(cmdbank1, con);
                 DataTable dtBankEditcash = new DataTable();
                 sda1.Fill(dtBankEditcash);
-                if(dtBankEditcash.Rows.Count>0)
-                txtTotalCash.Text = dtBankEditcash.Rows[0][0].ToString();
+                if (dtBankEditcash.Rows.Count > 0)
+                    txtTotalCash.Text = dtBankEditcash.Rows[0][0].ToString();
             }
         }
 
         private void btnApproverSave_Click(object sender, EventArgs e)
         {
-            try{
+            try
+            {
                 string spname = "insert into rasta.tbl_UserDiscipline(disciplineid,userid,siteid) VALUES(" +
               "'" + cmbDepartment.SelectedValue + "','" + cmbApprover.SelectedValue + "'," + cmbLocation2.SelectedValue + ")";
                 MySqlConnection con = new MySqlConnection(ConString);
