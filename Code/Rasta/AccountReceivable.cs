@@ -146,13 +146,13 @@ namespace Rasta
             this.cmbBank.DisplayMember = "BankName";
             this.cmbBank.ValueMember = "BankID";
 
-            string CmdProject = "SELECT distinct ProjectID FROM tbl_Project";
+            string CmdProject = "SELECT distinct ProjectID,ProjctName FROM tbl_Project";
             sda1 = new MySqlDataAdapter(CmdProject, con);
             DataTable dtProject = new DataTable();
             sda1.Fill(dtProject);
 
             this.cmbProject.DataSource = dtProject;
-            this.cmbProject.DisplayMember = "ProjectID";
+            this.cmbProject.DisplayMember = "ProjctName";
             this.cmbProject.ValueMember = "ProjectID";
 
             string CmdExpenseType = "SELECT distinct ExpenseTypeID,ExpenseTypeName FROM tbl_ExpenseType";

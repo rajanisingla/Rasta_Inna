@@ -1,4 +1,5 @@
-﻿namespace Rasta
+﻿using System;
+namespace Rasta
 {
     partial class Admin
     {
@@ -18,6 +19,12 @@
                 components.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public int selectIndexOfTabControl
+        {
+            get { return this.tabControl1.SelectedIndex; }
+            set { this.tabControl1.SelectedIndex=1; }
         }
 
         #region Windows Form Designer generated code
@@ -419,7 +426,7 @@
             this.lblPassWord.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.lblPassWord.Size = new System.Drawing.Size(143, 33);
             this.lblPassWord.TabIndex = 1;
-            this.lblPassWord.Text = "PassWord";
+            this.lblPassWord.Text = "Password";
             this.lblPassWord.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblName
@@ -522,7 +529,7 @@
             // 
             // PassWord
             // 
-            this.PassWord.HeaderText = "PassWord";
+            this.PassWord.HeaderText = "Password";
             this.PassWord.Name = "PassWord";
             // 
             // PrivilegeOld
@@ -2621,14 +2628,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SiteID;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewButtonColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewButtonColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UserID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PassWord;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrivilegeOld;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Privilege;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CompanyRole;
-        private System.Windows.Forms.DataGridViewImageColumn Edit;
-        private System.Windows.Forms.DataGridViewImageColumn Delete;
         private System.Windows.Forms.ComboBox cmbSupplierType;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn SupplierID;
@@ -2686,8 +2685,16 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewButtonColumn6;
         private System.Windows.Forms.ComboBox cmbDepartment;
         private System.Windows.Forms.ComboBox cmbApprover;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PassWord;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrivilegeOld;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Privilege;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CompanyRole;
+        private System.Windows.Forms.DataGridViewImageColumn Edit;
+        private System.Windows.Forms.DataGridViewImageColumn Delete;
 
-        
+       
         
     }
    

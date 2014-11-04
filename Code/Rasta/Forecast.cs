@@ -403,5 +403,13 @@ namespace Rasta
             con.Close();
 
         }
+
+        private void lnkNewSupplier_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Admin adminform = new Admin();
+            adminform.Show();
+            adminform.BringToFront();
+            adminform.selectIndexOfTabControl = 1;
+        }
     }
 }

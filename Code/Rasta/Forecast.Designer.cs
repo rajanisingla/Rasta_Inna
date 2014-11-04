@@ -481,7 +481,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1290, 551);
+            this.tabPage2.Size = new System.Drawing.Size(1266, 639);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Expense Forecast";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -550,7 +550,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.820137F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.254815F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1284, 545);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1260, 633);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // label1
@@ -562,7 +562,7 @@
             this.label1.Location = new System.Drawing.Point(2, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1280, 41);
+            this.label1.Size = new System.Drawing.Size(1256, 49);
             this.label1.TabIndex = 0;
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -571,11 +571,11 @@
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(2, 82);
+            this.label2.Location = new System.Drawing.Point(2, 98);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.label2.Size = new System.Drawing.Size(317, 41);
+            this.label2.Size = new System.Drawing.Size(311, 49);
             this.label2.TabIndex = 1;
             this.label2.Text = "SupplierName";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -585,11 +585,11 @@
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(644, 82);
+            this.label3.Location = new System.Drawing.Point(632, 98);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.label3.Size = new System.Drawing.Size(317, 41);
+            this.label3.Size = new System.Drawing.Size(311, 49);
             this.label3.TabIndex = 9;
             this.label3.Text = "SupplierCode";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -599,11 +599,11 @@
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(2, 287);
+            this.label4.Location = new System.Drawing.Point(2, 343);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.label4.Size = new System.Drawing.Size(317, 41);
+            this.label4.Size = new System.Drawing.Size(311, 49);
             this.label4.TabIndex = 7;
             this.label4.Text = "InvoiceDate";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -613,11 +613,11 @@
             this.lblRecievedDate.AutoSize = true;
             this.lblRecievedDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblRecievedDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecievedDate.Location = new System.Drawing.Point(644, 287);
+            this.lblRecievedDate.Location = new System.Drawing.Point(632, 343);
             this.lblRecievedDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRecievedDate.Name = "lblRecievedDate";
             this.lblRecievedDate.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.lblRecievedDate.Size = new System.Drawing.Size(317, 41);
+            this.lblRecievedDate.Size = new System.Drawing.Size(311, 49);
             this.lblRecievedDate.TabIndex = 8;
             this.lblRecievedDate.Text = "Recieved Date";
             this.lblRecievedDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -631,7 +631,7 @@
             "Sp0003",
             "Sp0004",
             "Sp0005"});
-            this.cmbExpenseSupplierCode.Location = new System.Drawing.Point(965, 87);
+            this.cmbExpenseSupplierCode.Location = new System.Drawing.Point(947, 103);
             this.cmbExpenseSupplierCode.Margin = new System.Windows.Forms.Padding(2, 5, 2, 3);
             this.cmbExpenseSupplierCode.Name = "cmbExpenseSupplierCode";
             this.cmbExpenseSupplierCode.Size = new System.Drawing.Size(120, 21);
@@ -643,11 +643,11 @@
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(2, 164);
+            this.label5.Location = new System.Drawing.Point(2, 196);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.label5.Size = new System.Drawing.Size(317, 41);
+            this.label5.Size = new System.Drawing.Size(311, 49);
             this.label5.TabIndex = 5;
             this.label5.Text = "Amount";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -657,18 +657,18 @@
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(644, 164);
+            this.label6.Location = new System.Drawing.Point(632, 196);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.label6.Size = new System.Drawing.Size(317, 41);
+            this.label6.Size = new System.Drawing.Size(311, 49);
             this.label6.TabIndex = 6;
             this.label6.Text = "Currency";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtExpenseAmount
             // 
-            this.txtExpenseAmount.Location = new System.Drawing.Point(323, 169);
+            this.txtExpenseAmount.Location = new System.Drawing.Point(317, 201);
             this.txtExpenseAmount.Margin = new System.Windows.Forms.Padding(2, 5, 2, 3);
             this.txtExpenseAmount.Name = "txtExpenseAmount";
             this.txtExpenseAmount.Size = new System.Drawing.Size(120, 20);
@@ -681,7 +681,7 @@
             "AOA",
             "USD",
             "EUR"});
-            this.comboBox2.Location = new System.Drawing.Point(965, 169);
+            this.comboBox2.Location = new System.Drawing.Point(947, 201);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 5, 2, 3);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(120, 21);
@@ -693,11 +693,11 @@
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(2, 328);
+            this.label7.Location = new System.Drawing.Point(2, 392);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.label7.Size = new System.Drawing.Size(317, 41);
+            this.label7.Size = new System.Drawing.Size(311, 49);
             this.label7.TabIndex = 2;
             this.label7.Text = "CostCode";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -707,11 +707,11 @@
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(644, 328);
+            this.label8.Location = new System.Drawing.Point(632, 392);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.label8.Size = new System.Drawing.Size(317, 41);
+            this.label8.Size = new System.Drawing.Size(311, 49);
             this.label8.TabIndex = 3;
             this.label8.Text = "label8";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -722,11 +722,11 @@
             this.lblPONumber.AutoSize = true;
             this.lblPONumber.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPONumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPONumber.Location = new System.Drawing.Point(2, 246);
+            this.lblPONumber.Location = new System.Drawing.Point(2, 294);
             this.lblPONumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPONumber.Name = "lblPONumber";
             this.lblPONumber.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.lblPONumber.Size = new System.Drawing.Size(317, 41);
+            this.lblPONumber.Size = new System.Drawing.Size(311, 49);
             this.lblPONumber.TabIndex = 3;
             this.lblPONumber.Text = "PO Number";
             this.lblPONumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -736,11 +736,11 @@
             this.lblPOAmount.AutoSize = true;
             this.lblPOAmount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPOAmount.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPOAmount.Location = new System.Drawing.Point(644, 246);
+            this.lblPOAmount.Location = new System.Drawing.Point(632, 294);
             this.lblPOAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPOAmount.Name = "lblPOAmount";
             this.lblPOAmount.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.lblPOAmount.Size = new System.Drawing.Size(317, 41);
+            this.lblPOAmount.Size = new System.Drawing.Size(311, 49);
             this.lblPOAmount.TabIndex = 3;
             this.lblPOAmount.Text = "PO Amount";
             this.lblPOAmount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -750,18 +750,18 @@
             this.lblDate.AutoSize = true;
             this.lblDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(2, 123);
+            this.lblDate.Location = new System.Drawing.Point(2, 147);
             this.lblDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDate.Name = "lblDate";
             this.lblDate.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.lblDate.Size = new System.Drawing.Size(317, 41);
+            this.lblDate.Size = new System.Drawing.Size(311, 49);
             this.lblDate.TabIndex = 3;
             this.lblDate.Text = "Date";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtPONumber
             // 
-            this.txtPONumber.Location = new System.Drawing.Point(323, 251);
+            this.txtPONumber.Location = new System.Drawing.Point(317, 299);
             this.txtPONumber.Margin = new System.Windows.Forms.Padding(2, 5, 2, 3);
             this.txtPONumber.Name = "txtPONumber";
             this.txtPONumber.Size = new System.Drawing.Size(120, 20);
@@ -769,7 +769,7 @@
             // 
             // txtPOAmount
             // 
-            this.txtPOAmount.Location = new System.Drawing.Point(965, 251);
+            this.txtPOAmount.Location = new System.Drawing.Point(947, 299);
             this.txtPOAmount.Margin = new System.Windows.Forms.Padding(2, 5, 2, 3);
             this.txtPOAmount.Name = "txtPOAmount";
             this.txtPOAmount.Size = new System.Drawing.Size(120, 20);
@@ -779,18 +779,19 @@
             // 
             this.lnkNewSupplier.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lnkNewSupplier.AutoSize = true;
-            this.lnkNewSupplier.Location = new System.Drawing.Point(30, 65);
+            this.lnkNewSupplier.Location = new System.Drawing.Point(30, 77);
             this.lnkNewSupplier.Margin = new System.Windows.Forms.Padding(30, 20, 3, 0);
             this.lnkNewSupplier.Name = "lnkNewSupplier";
             this.lnkNewSupplier.Size = new System.Drawing.Size(90, 13);
             this.lnkNewSupplier.TabIndex = 30;
             this.lnkNewSupplier.TabStop = true;
             this.lnkNewSupplier.Text = "Add New supplier";
+            this.lnkNewSupplier.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkNewSupplier_LinkClicked);
             // 
             // calDate
             // 
             this.calDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.calDate.Location = new System.Drawing.Point(323, 128);
+            this.calDate.Location = new System.Drawing.Point(317, 152);
             this.calDate.Margin = new System.Windows.Forms.Padding(2, 5, 2, 3);
             this.calDate.Name = "calDate";
             this.calDate.Size = new System.Drawing.Size(120, 20);
@@ -799,7 +800,7 @@
             // calRecievedDate
             // 
             this.calRecievedDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.calRecievedDate.Location = new System.Drawing.Point(965, 292);
+            this.calRecievedDate.Location = new System.Drawing.Point(947, 348);
             this.calRecievedDate.Margin = new System.Windows.Forms.Padding(2, 5, 2, 3);
             this.calRecievedDate.Name = "calRecievedDate";
             this.calRecievedDate.Size = new System.Drawing.Size(120, 20);
@@ -808,7 +809,7 @@
             // cmbCostCode
             // 
             this.cmbCostCode.FormattingEnabled = true;
-            this.cmbCostCode.Location = new System.Drawing.Point(323, 333);
+            this.cmbCostCode.Location = new System.Drawing.Point(317, 397);
             this.cmbCostCode.Margin = new System.Windows.Forms.Padding(2, 5, 2, 3);
             this.cmbCostCode.Name = "cmbCostCode";
             this.cmbCostCode.Size = new System.Drawing.Size(120, 21);
@@ -819,7 +820,7 @@
             // cmbExpense
             // 
             this.cmbExpense.FormattingEnabled = true;
-            this.cmbExpense.Location = new System.Drawing.Point(965, 333);
+            this.cmbExpense.Location = new System.Drawing.Point(947, 397);
             this.cmbExpense.Margin = new System.Windows.Forms.Padding(2, 5, 2, 3);
             this.cmbExpense.Name = "cmbExpense";
             this.cmbExpense.Size = new System.Drawing.Size(120, 21);
@@ -832,11 +833,11 @@
             this.lblPaymentDueDate.AutoSize = true;
             this.lblPaymentDueDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPaymentDueDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaymentDueDate.Location = new System.Drawing.Point(644, 123);
+            this.lblPaymentDueDate.Location = new System.Drawing.Point(632, 147);
             this.lblPaymentDueDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPaymentDueDate.Name = "lblPaymentDueDate";
             this.lblPaymentDueDate.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.lblPaymentDueDate.Size = new System.Drawing.Size(317, 41);
+            this.lblPaymentDueDate.Size = new System.Drawing.Size(311, 49);
             this.lblPaymentDueDate.TabIndex = 3;
             this.lblPaymentDueDate.Text = "Payment Due Date";
             this.lblPaymentDueDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -846,11 +847,11 @@
             this.lblSite.AutoSize = true;
             this.lblSite.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSite.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSite.Location = new System.Drawing.Point(2, 205);
+            this.lblSite.Location = new System.Drawing.Point(2, 245);
             this.lblSite.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSite.Name = "lblSite";
             this.lblSite.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.lblSite.Size = new System.Drawing.Size(317, 41);
+            this.lblSite.Size = new System.Drawing.Size(311, 49);
             this.lblSite.TabIndex = 3;
             this.lblSite.Text = "Site";
             this.lblSite.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -860,11 +861,11 @@
             this.lblPaymentPurpose.AutoSize = true;
             this.lblPaymentPurpose.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPaymentPurpose.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaymentPurpose.Location = new System.Drawing.Point(644, 205);
+            this.lblPaymentPurpose.Location = new System.Drawing.Point(632, 245);
             this.lblPaymentPurpose.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPaymentPurpose.Name = "lblPaymentPurpose";
             this.lblPaymentPurpose.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.lblPaymentPurpose.Size = new System.Drawing.Size(317, 41);
+            this.lblPaymentPurpose.Size = new System.Drawing.Size(311, 49);
             this.lblPaymentPurpose.TabIndex = 3;
             this.lblPaymentPurpose.Text = "Payment Purpose";
             this.lblPaymentPurpose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -872,7 +873,7 @@
             // cmbSite
             // 
             this.cmbSite.FormattingEnabled = true;
-            this.cmbSite.Location = new System.Drawing.Point(323, 210);
+            this.cmbSite.Location = new System.Drawing.Point(317, 250);
             this.cmbSite.Margin = new System.Windows.Forms.Padding(2, 5, 2, 3);
             this.cmbSite.Name = "cmbSite";
             this.cmbSite.Size = new System.Drawing.Size(120, 21);
@@ -881,7 +882,7 @@
             // 
             // txtPaymentPurpose
             // 
-            this.txtPaymentPurpose.Location = new System.Drawing.Point(965, 210);
+            this.txtPaymentPurpose.Location = new System.Drawing.Point(947, 250);
             this.txtPaymentPurpose.Margin = new System.Windows.Forms.Padding(2, 5, 2, 3);
             this.txtPaymentPurpose.Name = "txtPaymentPurpose";
             this.txtPaymentPurpose.Size = new System.Drawing.Size(120, 20);
@@ -890,7 +891,7 @@
             // calPaymentDueDate
             // 
             this.calPaymentDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.calPaymentDueDate.Location = new System.Drawing.Point(965, 128);
+            this.calPaymentDueDate.Location = new System.Drawing.Point(947, 152);
             this.calPaymentDueDate.Margin = new System.Windows.Forms.Padding(2, 5, 2, 3);
             this.calPaymentDueDate.Name = "calPaymentDueDate";
             this.calPaymentDueDate.Size = new System.Drawing.Size(120, 20);
@@ -900,7 +901,7 @@
             // calExpenseInvoiceDate
             // 
             this.calExpenseInvoiceDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.calExpenseInvoiceDate.Location = new System.Drawing.Point(323, 292);
+            this.calExpenseInvoiceDate.Location = new System.Drawing.Point(317, 348);
             this.calExpenseInvoiceDate.Margin = new System.Windows.Forms.Padding(2, 5, 2, 3);
             this.calExpenseInvoiceDate.Name = "calExpenseInvoiceDate";
             this.calExpenseInvoiceDate.Size = new System.Drawing.Size(120, 20);
@@ -909,7 +910,7 @@
             // cmbExpenseSuppliername
             // 
             this.cmbExpenseSuppliername.FormattingEnabled = true;
-            this.cmbExpenseSuppliername.Location = new System.Drawing.Point(323, 87);
+            this.cmbExpenseSuppliername.Location = new System.Drawing.Point(317, 103);
             this.cmbExpenseSuppliername.Margin = new System.Windows.Forms.Padding(2, 5, 2, 3);
             this.cmbExpenseSuppliername.Name = "cmbExpenseSuppliername";
             this.cmbExpenseSuppliername.Size = new System.Drawing.Size(120, 21);
@@ -921,11 +922,11 @@
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(2, 369);
+            this.label9.Location = new System.Drawing.Point(2, 441);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.label9.Size = new System.Drawing.Size(317, 41);
+            this.label9.Size = new System.Drawing.Size(311, 49);
             this.label9.TabIndex = 34;
             this.label9.Text = "label9";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -936,11 +937,11 @@
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(644, 369);
+            this.label10.Location = new System.Drawing.Point(632, 441);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.label10.Size = new System.Drawing.Size(317, 41);
+            this.label10.Size = new System.Drawing.Size(311, 49);
             this.label10.TabIndex = 35;
             this.label10.Text = "label10";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -949,7 +950,7 @@
             // combobox1
             // 
             this.combobox1.FormattingEnabled = true;
-            this.combobox1.Location = new System.Drawing.Point(324, 372);
+            this.combobox1.Location = new System.Drawing.Point(318, 444);
             this.combobox1.Name = "combobox1";
             this.combobox1.Size = new System.Drawing.Size(121, 21);
             this.combobox1.TabIndex = 36;
@@ -958,7 +959,7 @@
             // comboBox7
             // 
             this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(966, 372);
+            this.comboBox7.Location = new System.Drawing.Point(948, 444);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(121, 21);
             this.comboBox7.TabIndex = 37;
@@ -968,7 +969,7 @@
             // lblAPID
             // 
             this.lblAPID.AutoSize = true;
-            this.lblAPID.Location = new System.Drawing.Point(966, 41);
+            this.lblAPID.Location = new System.Drawing.Point(948, 49);
             this.lblAPID.Name = "lblAPID";
             this.lblAPID.Size = new System.Drawing.Size(0, 13);
             this.lblAPID.TabIndex = 39;
@@ -977,7 +978,7 @@
             // btnExpenseSave
             // 
             this.btnExpenseSave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExpenseSave.Location = new System.Drawing.Point(351, 492);
+            this.btnExpenseSave.Location = new System.Drawing.Point(345, 587);
             this.btnExpenseSave.Margin = new System.Windows.Forms.Padding(30, 3, 2, 10);
             this.btnExpenseSave.Name = "btnExpenseSave";
             this.btnExpenseSave.Size = new System.Drawing.Size(78, 30);
@@ -991,11 +992,11 @@
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(2, 410);
+            this.label11.Location = new System.Drawing.Point(2, 490);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.label11.Size = new System.Drawing.Size(317, 41);
+            this.label11.Size = new System.Drawing.Size(311, 49);
             this.label11.TabIndex = 40;
             this.label11.Text = "label11";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1004,7 +1005,7 @@
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(324, 413);
+            this.comboBox3.Location = new System.Drawing.Point(318, 493);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 41;

@@ -419,6 +419,7 @@
             this.lnkNewSupplier.TabIndex = 30;
             this.lnkNewSupplier.TabStop = true;
             this.lnkNewSupplier.Text = "Add New supplier";
+            this.lnkNewSupplier.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkNewSupplier_LinkClicked);
             // 
             // calDate
             // 
