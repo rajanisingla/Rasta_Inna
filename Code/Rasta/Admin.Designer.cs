@@ -570,7 +570,7 @@ namespace Rasta
             this.tpSupplierMgt.Location = new System.Drawing.Point(4, 22);
             this.tpSupplierMgt.Name = "tpSupplierMgt";
             this.tpSupplierMgt.Padding = new System.Windows.Forms.Padding(3);
-            this.tpSupplierMgt.Size = new System.Drawing.Size(1266, 639);
+            this.tpSupplierMgt.Size = new System.Drawing.Size(1266, 591);
             this.tpSupplierMgt.TabIndex = 1;
             this.tpSupplierMgt.Text = "Suppliers";
             this.tpSupplierMgt.UseVisualStyleBackColor = true;
@@ -867,7 +867,7 @@ namespace Rasta
             this.tpBankMgt.Location = new System.Drawing.Point(4, 22);
             this.tpBankMgt.Name = "tpBankMgt";
             this.tpBankMgt.Padding = new System.Windows.Forms.Padding(3);
-            this.tpBankMgt.Size = new System.Drawing.Size(1266, 639);
+            this.tpBankMgt.Size = new System.Drawing.Size(1266, 591);
             this.tpBankMgt.TabIndex = 0;
             this.tpBankMgt.Text = "Banks";
             this.tpBankMgt.UseVisualStyleBackColor = true;
@@ -1455,7 +1455,7 @@ namespace Rasta
             this.tpProjectMgt.Location = new System.Drawing.Point(4, 22);
             this.tpProjectMgt.Name = "tpProjectMgt";
             this.tpProjectMgt.Padding = new System.Windows.Forms.Padding(3);
-            this.tpProjectMgt.Size = new System.Drawing.Size(1266, 639);
+            this.tpProjectMgt.Size = new System.Drawing.Size(1266, 591);
             this.tpProjectMgt.TabIndex = 1;
             this.tpProjectMgt.Text = "Projects";
             this.tpProjectMgt.UseVisualStyleBackColor = true;
@@ -1719,7 +1719,7 @@ namespace Rasta
             this.tpExpenseTypeMgt.Location = new System.Drawing.Point(4, 22);
             this.tpExpenseTypeMgt.Name = "tpExpenseTypeMgt";
             this.tpExpenseTypeMgt.Padding = new System.Windows.Forms.Padding(3);
-            this.tpExpenseTypeMgt.Size = new System.Drawing.Size(1266, 639);
+            this.tpExpenseTypeMgt.Size = new System.Drawing.Size(1266, 591);
             this.tpExpenseTypeMgt.TabIndex = 0;
             this.tpExpenseTypeMgt.Text = "Revenue Type";
             this.tpExpenseTypeMgt.UseVisualStyleBackColor = true;
@@ -1862,7 +1862,7 @@ namespace Rasta
             this.tpSiteMgt.Location = new System.Drawing.Point(4, 22);
             this.tpSiteMgt.Name = "tpSiteMgt";
             this.tpSiteMgt.Padding = new System.Windows.Forms.Padding(3);
-            this.tpSiteMgt.Size = new System.Drawing.Size(1266, 639);
+            this.tpSiteMgt.Size = new System.Drawing.Size(1266, 591);
             this.tpSiteMgt.TabIndex = 1;
             this.tpSiteMgt.Text = "Sites";
             this.tpSiteMgt.UseVisualStyleBackColor = true;
@@ -2005,7 +2005,7 @@ namespace Rasta
             this.tpPayementApprovalMgt.Location = new System.Drawing.Point(4, 22);
             this.tpPayementApprovalMgt.Name = "tpPayementApprovalMgt";
             this.tpPayementApprovalMgt.Padding = new System.Windows.Forms.Padding(3);
-            this.tpPayementApprovalMgt.Size = new System.Drawing.Size(1266, 639);
+            this.tpPayementApprovalMgt.Size = new System.Drawing.Size(1266, 591);
             this.tpPayementApprovalMgt.TabIndex = 0;
             this.tpPayementApprovalMgt.Text = "Payment Approval";
             this.tpPayementApprovalMgt.UseVisualStyleBackColor = true;
@@ -2121,6 +2121,7 @@ namespace Rasta
             this.linkLabel8.TabIndex = 0;
             this.linkLabel8.TabStop = true;
             this.linkLabel8.Text = "Add New Approver";
+            this.linkLabel8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel8_LinkClicked_1);
             // 
             // tableLayoutPanel16
             // 
@@ -2228,7 +2229,7 @@ namespace Rasta
             this.tpSettings.Location = new System.Drawing.Point(4, 22);
             this.tpSettings.Name = "tpSettings";
             this.tpSettings.Padding = new System.Windows.Forms.Padding(3);
-            this.tpSettings.Size = new System.Drawing.Size(1266, 639);
+            this.tpSettings.Size = new System.Drawing.Size(1266, 591);
             this.tpSettings.TabIndex = 1;
             this.tpSettings.Text = "Settings";
             this.tpSettings.UseVisualStyleBackColor = true;

@@ -1175,5 +1175,10 @@ namespace Rasta
         {
             this.Close();
         }
+
+        private void linkLabel8_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.splitContainer8.Panel2Collapsed = false;
+        }
     }
 }
