@@ -66,7 +66,7 @@ namespace Rasta
                     sda.Fill(dtCurrency1);
                     MessageBox.Show("Information saved successfully!!", "Success");
                 }
-                catch (Exception ex)
+               catch
                 {
                     MessageBox.Show("Some Error has occured!!", "Error");
 
@@ -118,7 +118,7 @@ namespace Rasta
                     con.Close();
                     MessageBox.Show("Information saved successfully!!", "Success");
                 }
-                catch (Exception ex)
+               catch
                 {
                     MessageBox.Show("Some Error has occured!!", "Error");
 
@@ -170,7 +170,7 @@ namespace Rasta
                     con.Close();
                     MessageBox.Show("Information saved successfully!!", "Success");
                 }
-                catch (Exception ex)
+               catch
                 {
                     MessageBox.Show("Some Error has occured!!", "Error");
 
@@ -225,7 +225,7 @@ namespace Rasta
                     con.Close();
                     MessageBox.Show("Information saved successfully!!", "Success");
                 }
-                catch (Exception ex)
+               catch
                 {
                     MessageBox.Show("Some Error has occured!!", "Error");
 
@@ -284,7 +284,7 @@ namespace Rasta
 
                     MessageBox.Show("Information saved successfully!!", "Success");
                 }
-                catch (Exception ex)
+               catch
                 {
                     MessageBox.Show("Some Error has occured!!", "Error");
 
@@ -340,7 +340,7 @@ namespace Rasta
                     con.Close();
                     MessageBox.Show("Information saved successfully!!", "Success");
                 }
-                catch (Exception ex)
+               catch
                 {
                     MessageBox.Show("Some Error has occured!!", "Error");
 
@@ -449,7 +449,7 @@ namespace Rasta
                 this.dataGridView1.AutoGenerateColumns = false;
                 this.dataGridView1.DataSource = dtUserDetails;
             }
-            catch (Exception ex)
+           catch
             {
                 MessageBox.Show("Some error has occured!!", "Error");
             }
@@ -493,7 +493,7 @@ namespace Rasta
 
                 }
             }
-            catch (Exception ex)
+           catch
             {
                 MessageBox.Show("Some error has occured!!", "Error");
             }
@@ -528,7 +528,7 @@ namespace Rasta
 
                 }
             }
-            catch (Exception ex)
+           catch
             {
                 MessageBox.Show("Some error has occured!!", "Error");
             }
@@ -563,7 +563,7 @@ namespace Rasta
 
                 }
             }
-            catch (Exception ex)
+           catch
             {
                 MessageBox.Show("Some error has occured!!", "Error");
             }
@@ -595,7 +595,7 @@ namespace Rasta
                 dgvProject.AutoGenerateColumns = false;
                 dgvProject.DataSource = dtProject;
             }
-            catch (Exception ex)
+           catch
             {
                 MessageBox.Show("Some error has occured!!", "Error");
             }
@@ -632,7 +632,7 @@ namespace Rasta
                 dgvBank.DataSource = dtBank;
 
             }
-            catch (Exception ex)
+           catch
             {
                 MessageBox.Show("Some error has occured!!", "Error");
             }
@@ -666,7 +666,7 @@ namespace Rasta
                 dgvSupplier.DataSource = dtSupplier;
 
             }
-            catch (Exception ex)
+           catch
             {
                 MessageBox.Show("Some error has occured!!", "Error");
             }
@@ -1073,7 +1073,7 @@ namespace Rasta
                     con.Close();
                     MessageBox.Show("Information saved successfully!!", "Success");
                 }
-                catch (Exception ex)
+               catch
                 {
                     MessageBox.Show("Some Error has occured!!", "Error");
 
@@ -1117,7 +1117,7 @@ namespace Rasta
 
 
             }
-            catch (Exception ex)
+           catch
             {
                 MessageBox.Show("Some error has occured!!", "Error");
             }
@@ -1165,10 +1165,15 @@ namespace Rasta
                 cmbLocation2.SelectedIndex = 0;
                 cmbApprover.SelectedIndex = 0;
             }
-            catch (Exception ex)
+           catch
             {
                 MessageBox.Show("Some error has occured!!", "Error");
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

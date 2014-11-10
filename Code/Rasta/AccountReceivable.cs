@@ -272,7 +272,7 @@ namespace Rasta
                 this.chkCreditToBank.Enabled = true;
 
             }
-            catch(Exception ex)
+            catch
             {
                  MessageBox.Show("Some error has occured!!", "Error");
             }

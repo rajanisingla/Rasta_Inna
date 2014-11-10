@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,6 +38,7 @@
             this.cmbCurrency = new System.Windows.Forms.ComboBox();
             this.dgvRevenue = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -65,6 +67,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnCancel);
             this.tabPage1.Controls.Add(this.tableLayoutPanel1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -73,6 +76,17 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Revenue";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(465, 526);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(30, 2, 2, 3);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(78, 32);
+            this.btnCancel.TabIndex = 44;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -138,6 +152,7 @@
             // 
             // dgvRevenue
             // 
+            this.dgvRevenue.AllowUserToAddRows = false;
             this.dgvRevenue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel1.SetColumnSpan(this.dgvRevenue, 4);
             this.dgvRevenue.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -148,14 +163,26 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.tableLayoutPanel2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1017, 527);
+            this.tabPage2.Size = new System.Drawing.Size(1266, 639);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Expense";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(465, 526);
+            this.button1.Margin = new System.Windows.Forms.Padding(30, 2, 2, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(78, 32);
+            this.button1.TabIndex = 45;
+            this.button1.Text = "Cancel";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -220,6 +247,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel2.SetColumnSpan(this.dataGridView1, 4);
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -232,7 +260,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1147, 556);
+            this.ClientSize = new System.Drawing.Size(1147, 581);
             this.Controls.Add(this.tabControl1);
             this.Name = "TreasuryReport";
             this.Text = "TreasuryReport";
@@ -267,5 +295,7 @@
         private System.Windows.Forms.ComboBox cmbExpenseYear;
         private System.Windows.Forms.ComboBox cmbExpenseCurrency;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button button1;
     }
 }

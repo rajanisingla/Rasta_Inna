@@ -36,7 +36,34 @@ namespace Rasta
             {
                 if (string.Equals(password, results.Field<string>("PassWord")))
                 {
-                    Master master = new Master();
+                    Master master= new Master();
+                    string CmdString1 = "select privilegename from rasta.tbl_privilege P left join rasta.tbl_userprivilege UP "+
+                                        "on up.privilegeid=P.privilegeid where UP.userid="+results[0]+"";
+                    MySqlDataAdapter cmd1 = new MySqlDataAdapter(CmdString1, con);
+                    DataTable dtUserPrivilege = new DataTable();
+                    cmd1.Fill(dtUserPrivilege);
+                    var privilegeAR = dtUserPrivilege.AsEnumerable().FirstOrDefault(entity => string.Equals(entity.Field<string>("privilegename"), "AR"));
+                    var privilegeAP = dtUserPrivilege.AsEnumerable().FirstOrDefault(entity => string.Equals(entity.Field<string>("privilegename"), "AP"));
+                    if (privilegeAP != null && privilegeAR != null)
+                    {
+                        master.enableAdminMenu = false;
+                        master.enableBudgetMenu = false;
+                        master.enableTreasuryMenu = false;
+                    }
+                    else if(privilegeAP != null && privilegeAR == null)
+                    {
+                        master.enableAdminMenu = false;
+                        master.enableBudgetMenu = false;
+                        master.enableTreasuryMenu = false;
+                        master.enableARMenu = false;
+                    }
+                    else if (privilegeAP == null && privilegeAR != null)
+                    {
+                        master.enableAdminMenu = false;
+                        master.enableBudgetMenu = false;
+                        master.enableTreasuryMenu = false;
+                        master.enableAPMenu = false;
+                    }
                     master.Show();
                     master.BringToFront();
                     this.Hide();

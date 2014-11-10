@@ -17,9 +17,35 @@ namespace Rasta
             InitializeComponent();
         }
 
+        public Boolean enableAdminMenu
+        {
+            get{return this.toolStripMenuItem1.Enabled;}
+            set { this.toolStripMenuItem1.Enabled = false; }
+        }
+         public Boolean enableARMenu
+        {
+            get{return this.toolStripMenuItem2.Enabled;}
+            set{this.toolStripMenuItem2.Enabled = false;}
+        }
+         public Boolean enableAPMenu
+        {
+            get{return this.toolStripMenuItem3.Enabled;}
+            set { this.toolStripMenuItem3.Enabled = false; }
+        }
+         public Boolean enableTreasuryMenu
+        {
+            get{return this.treasuryToolStripMenuItem.Enabled;}
+            set { this.treasuryToolStripMenuItem.Enabled = false; }
+        }
+         public Boolean enableBudgetMenu
+        {
+            get{return this.budgetToolStripMenuItem.Enabled;}
+            set { this.budgetToolStripMenuItem.Enabled = false; }
+        }
+           
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
@@ -30,7 +56,7 @@ namespace Rasta
             accountReceivableForm.Dock = DockStyle.Fill; //set form's dock property to fill
             accountReceivableForm.Show();
             accountReceivableForm.BringToFront();
-            
+
 
         }
 
@@ -46,7 +72,7 @@ namespace Rasta
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void treasuryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -129,10 +155,7 @@ namespace Rasta
             Forecastform.BringToFront();
         }
 
-        private void Master_Load(object sender, EventArgs e)
-        {
 
-        }
 
         private void generalBudgetToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -143,10 +166,15 @@ namespace Rasta
             Budgetform.Show();
             Budgetform.BringToFront();
         }
-        
 
-      
+        private void budgetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
-        
+        }
+
+
+
+
+
     }
 }

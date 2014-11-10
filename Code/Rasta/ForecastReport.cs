@@ -81,7 +81,7 @@ namespace Rasta
             }
             else
             {
-                string CmdBank = "select concat(b.bankname,' (',c.currencyname,')') as title,p.projctname," +
+                string CmdBank = "select concat(b.bankname,' (',c.currencyname,')') as Bank,p.projctname," +
                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 1 THEN a.amount/ce.exchangerateinusd END) AS Jan," +
                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 2 THEN a.amount/ce.exchangerateinusd END) AS Feb," +
                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 3 THEN a.amount/ce.exchangerateinusd END) AS Mar," +
@@ -105,6 +105,22 @@ namespace Rasta
                 sda1.Fill(dtExpenseType);
                 if (dtExpenseType.Rows.Count > 0)
                 {
+                    DataRow dr = dtExpenseType.NewRow();
+                    dr[0] = "Total";
+                    dr[1] = "";
+                    dr[2] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Jan")));
+                    dr[3] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Feb")));
+                    dr[4] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Mar")));
+                    dr[5] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Apr")));
+                    dr[6] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("May")));
+                    dr[7] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Jun")));
+                    dr[8] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Jul")));
+                    dr[9] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Aug")));
+                    dr[10] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Sep")));
+                    dr[11] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Oct")));
+                    dr[12] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Nov")));
+                    dr[13] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Decm")));
+                    dtExpenseType.Rows.Add(dr);
                     dgvRevenue.DataSource = dtExpenseType;
                     dgvRevenue.Visible = true;
 
@@ -121,7 +137,7 @@ namespace Rasta
             }
             else
             {
-                string CmdBank = "select concat(c.currencyname) as title,p.projctname," +
+                string CmdBank = "select concat(c.currencyname) as Currency,p.projctname," +
                                   "sum(case when year(a.invoicedate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and month(a.invoicedate) = 1 then a.amount/ce.exchangerateinusd end) as jan," +
                                   "sum(case when year(a.invoicedate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and month(a.invoicedate) = 2 then a.amount/ce.exchangerateinusd end) as feb," +
                                   "sum(case when year(a.invoicedate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and month(a.invoicedate) = 3 then a.amount/ce.exchangerateinusd end) as mar," +
@@ -147,11 +163,37 @@ namespace Rasta
                 sda1.Fill(dtExpenseType);
                 if (dtExpenseType.Rows.Count > 0)
                 {
+                    DataRow dr = dtExpenseType.NewRow();
+                    dr[0] = "Total";
+                    dr[1] = "";
+                    dr[2] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Jan")));
+                    dr[3] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Feb")));
+                    dr[4] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Mar")));
+                    dr[5] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Apr")));
+                    dr[6] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("May")));
+                    dr[7] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Jun")));
+                    dr[8] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Jul")));
+                    dr[9] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Aug")));
+                    dr[10] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Sep")));
+                    dr[11] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Oct")));
+                    dr[12] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Nov")));
+                    dr[13] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Decm")));
+                    dtExpenseType.Rows.Add(dr);
                     dataGridView1.DataSource = dtExpenseType;
                     dataGridView1.Visible = true;
 
                 }
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -36,6 +36,7 @@
             this.cmbYear = new System.Windows.Forms.ComboBox();
             this.cmbCurrency = new System.Windows.Forms.ComboBox();
             this.dgvRevenue = new System.Windows.Forms.DataGridView();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,6 +44,7 @@
             this.cmbExpenseYear = new System.Windows.Forms.ComboBox();
             this.cmbExpenseCurrency = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -86,11 +88,13 @@
             this.tableLayoutPanel1.Controls.Add(this.cmbYear, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.cmbCurrency, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.dgvRevenue, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnCancel, 2, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.88889F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1005, 518);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -102,7 +106,7 @@
             this.label1.Location = new System.Drawing.Point(80, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(80, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 57);
+            this.label1.Size = new System.Drawing.Size(169, 53);
             this.label1.TabIndex = 0;
             this.label1.Text = "Year";
             // 
@@ -114,7 +118,7 @@
             this.label2.Location = new System.Drawing.Point(582, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(80, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(169, 57);
+            this.label2.Size = new System.Drawing.Size(169, 53);
             this.label2.TabIndex = 1;
             this.label2.Text = "Currency";
             // 
@@ -137,13 +141,25 @@
             // 
             // dgvRevenue
             // 
+            this.dgvRevenue.AllowUserToAddRows = false;
             this.dgvRevenue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel1.SetColumnSpan(this.dgvRevenue, 4);
             this.dgvRevenue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvRevenue.Location = new System.Drawing.Point(3, 60);
+            this.dgvRevenue.Location = new System.Drawing.Point(3, 56);
             this.dgvRevenue.Name = "dgvRevenue";
-            this.dgvRevenue.Size = new System.Drawing.Size(999, 455);
+            this.dgvRevenue.Size = new System.Drawing.Size(999, 422);
             this.dgvRevenue.TabIndex = 4;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(504, 483);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 3);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(78, 32);
+            this.btnCancel.TabIndex = 15;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // tabPage2
             // 
@@ -151,7 +167,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1017, 527);
+            this.tabPage2.Size = new System.Drawing.Size(1266, 639);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "OPEX IT Report";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -168,11 +184,13 @@
             this.tableLayoutPanel2.Controls.Add(this.cmbExpenseYear, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.cmbExpenseCurrency, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.dataGridView1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.button1, 2, 2);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.88889F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1005, 518);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
@@ -184,7 +202,7 @@
             this.label3.Location = new System.Drawing.Point(80, 0);
             this.label3.Margin = new System.Windows.Forms.Padding(80, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(169, 57);
+            this.label3.Size = new System.Drawing.Size(169, 53);
             this.label3.TabIndex = 0;
             this.label3.Text = "Year";
             // 
@@ -196,7 +214,7 @@
             this.label4.Location = new System.Drawing.Point(582, 0);
             this.label4.Margin = new System.Windows.Forms.Padding(80, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(169, 57);
+            this.label4.Size = new System.Drawing.Size(169, 53);
             this.label4.TabIndex = 1;
             this.label4.Text = "Currency";
             // 
@@ -219,13 +237,25 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel2.SetColumnSpan(this.dataGridView1, 4);
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 60);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 56);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(999, 455);
+            this.dataGridView1.Size = new System.Drawing.Size(999, 425);
             this.dataGridView1.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(504, 486);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(78, 29);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Cancel";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ITReport
             // 
@@ -266,6 +296,8 @@
         private System.Windows.Forms.ComboBox cmbExpenseYear;
         private System.Windows.Forms.ComboBox cmbExpenseCurrency;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button button1;
 
     }
 }

@@ -60,6 +60,8 @@
             this.cmbSite = new System.Windows.Forms.ComboBox();
             this.cmbSign1 = new System.Windows.Forms.ComboBox();
             this.cmbSign2 = new System.Windows.Forms.ComboBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tblMain.SuspendLayout();
@@ -93,12 +95,11 @@
             // tblMain
             // 
             this.tblMain.AutoSize = true;
-            this.tblMain.ColumnCount = 2;
-            this.tblMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 902F));
-            this.tblMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblMain.ColumnCount = 3;
+            this.tblMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tblMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tblMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tblMain.Controls.Add(this.btnCancel, 2, 1);
             this.tblMain.Controls.Add(this.btnPay, 0, 1);
             this.tblMain.Controls.Add(this.dgvInvoices, 0, 0);
             this.tblMain.Controls.Add(this.btnPDF, 1, 1);
@@ -109,6 +110,7 @@
             this.tblMain.RowCount = 2;
             this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79.94995F));
             this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.05005F));
+            this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblMain.Size = new System.Drawing.Size(1260, 633);
             this.tblMain.TabIndex = 1;
             // 
@@ -137,7 +139,7 @@
             this.Bank,
             this.SupplierID,
             this.APID});
-            this.tblMain.SetColumnSpan(this.dgvInvoices, 2);
+            this.tblMain.SetColumnSpan(this.dgvInvoices, 3);
             this.dgvInvoices.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvInvoices.Location = new System.Drawing.Point(3, 3);
             this.dgvInvoices.Name = "dgvInvoices";
@@ -189,7 +191,7 @@
             // btnPDF
             // 
             this.btnPDF.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPDF.Location = new System.Drawing.Point(361, 516);
+            this.btnPDF.Location = new System.Drawing.Point(422, 516);
             this.btnPDF.Margin = new System.Windows.Forms.Padding(3, 10, 10, 3);
             this.btnPDF.Name = "btnPDF";
             this.btnPDF.Size = new System.Drawing.Size(152, 32);
@@ -205,7 +207,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1040, 489);
+            this.tabPage2.Size = new System.Drawing.Size(1266, 639);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Generate Reference Letter";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -218,6 +220,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Controls.Add(this.button1, 2, 7);
             this.tableLayoutPanel1.Controls.Add(this.lblSite, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.lblSignature2, 2, 5);
             this.tableLayoutPanel1.Controls.Add(this.lbl, 0, 0);
@@ -248,7 +251,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1034, 483);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1260, 633);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // lblSite
@@ -256,11 +259,11 @@
             this.lblSite.AutoSize = true;
             this.lblSite.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSite.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSite.Location = new System.Drawing.Point(2, 223);
+            this.lblSite.Location = new System.Drawing.Point(2, 294);
             this.lblSite.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSite.Name = "lblSite";
             this.lblSite.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.lblSite.Size = new System.Drawing.Size(254, 60);
+            this.lblSite.Size = new System.Drawing.Size(311, 79);
             this.lblSite.TabIndex = 28;
             this.lblSite.Text = "S‪ite";
             this.lblSite.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -270,11 +273,11 @@
             this.lblSignature2.AutoSize = true;
             this.lblSignature2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSignature2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSignature2.Location = new System.Drawing.Point(518, 283);
+            this.lblSignature2.Location = new System.Drawing.Point(632, 373);
             this.lblSignature2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSignature2.Name = "lblSignature2";
             this.lblSignature2.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.lblSignature2.Size = new System.Drawing.Size(254, 60);
+            this.lblSignature2.Size = new System.Drawing.Size(311, 79);
             this.lblSignature2.TabIndex = 8;
             this.lblSignature2.Text = "Signature2";
             this.lblSignature2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -288,7 +291,7 @@
             this.lbl.Location = new System.Drawing.Point(2, 0);
             this.lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(1030, 60);
+            this.lbl.Size = new System.Drawing.Size(1256, 79);
             this.lbl.TabIndex = 0;
             this.lbl.Text = "Generate Reference Letter";
             this.lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -298,11 +301,11 @@
             this.lblRef.AutoSize = true;
             this.lblRef.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblRef.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRef.Location = new System.Drawing.Point(2, 163);
+            this.lblRef.Location = new System.Drawing.Point(2, 215);
             this.lblRef.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRef.Name = "lblRef";
             this.lblRef.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.lblRef.Size = new System.Drawing.Size(254, 60);
+            this.lblRef.Size = new System.Drawing.Size(311, 79);
             this.lblRef.TabIndex = 2;
             this.lblRef.Text = "Reference Number";
             this.lblRef.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -312,11 +315,11 @@
             this.lblID.AutoSize = true;
             this.lblID.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(518, 163);
+            this.lblID.Location = new System.Drawing.Point(632, 215);
             this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblID.Name = "lblID";
             this.lblID.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.lblID.Size = new System.Drawing.Size(254, 60);
+            this.lblID.Size = new System.Drawing.Size(311, 79);
             this.lblID.TabIndex = 3;
             this.lblID.Text = "ID Number";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -326,11 +329,11 @@
             this.lblBank.AutoSize = true;
             this.lblBank.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblBank.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBank.Location = new System.Drawing.Point(2, 103);
+            this.lblBank.Location = new System.Drawing.Point(2, 136);
             this.lblBank.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBank.Name = "lblBank";
             this.lblBank.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.lblBank.Size = new System.Drawing.Size(254, 60);
+            this.lblBank.Size = new System.Drawing.Size(311, 79);
             this.lblBank.TabIndex = 4;
             this.lblBank.Text = "Bank";
             this.lblBank.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -340,11 +343,11 @@
             this.lblAmount.AutoSize = true;
             this.lblAmount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblAmount.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmount.Location = new System.Drawing.Point(518, 103);
+            this.lblAmount.Location = new System.Drawing.Point(632, 136);
             this.lblAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAmount.Name = "lblAmount";
             this.lblAmount.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.lblAmount.Size = new System.Drawing.Size(254, 60);
+            this.lblAmount.Size = new System.Drawing.Size(311, 79);
             this.lblAmount.TabIndex = 5;
             this.lblAmount.Text = "Amount";
             this.lblAmount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -354,11 +357,11 @@
             this.lblSignature1.AutoSize = true;
             this.lblSignature1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSignature1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSignature1.Location = new System.Drawing.Point(2, 283);
+            this.lblSignature1.Location = new System.Drawing.Point(2, 373);
             this.lblSignature1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSignature1.Name = "lblSignature1";
             this.lblSignature1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.lblSignature1.Size = new System.Drawing.Size(254, 60);
+            this.lblSignature1.Size = new System.Drawing.Size(311, 79);
             this.lblSignature1.TabIndex = 7;
             this.lblSignature1.Text = "Signature1";
             this.lblSignature1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -366,7 +369,7 @@
             // btnGenerateRefLetter
             // 
             this.btnGenerateRefLetter.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerateRefLetter.Location = new System.Drawing.Point(288, 413);
+            this.btnGenerateRefLetter.Location = new System.Drawing.Point(345, 541);
             this.btnGenerateRefLetter.Margin = new System.Windows.Forms.Padding(30, 10, 2, 3);
             this.btnGenerateRefLetter.Name = "btnGenerateRefLetter";
             this.btnGenerateRefLetter.Size = new System.Drawing.Size(156, 32);
@@ -379,7 +382,7 @@
             // 
             this.lblInvoiceID.AutoSize = true;
             this.lblInvoiceID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInvoiceID.Location = new System.Drawing.Point(519, 60);
+            this.lblInvoiceID.Location = new System.Drawing.Point(633, 79);
             this.lblInvoiceID.Name = "lblInvoiceID";
             this.lblInvoiceID.Size = new System.Drawing.Size(0, 19);
             this.lblInvoiceID.TabIndex = 25;
@@ -389,7 +392,7 @@
             this.cmbBank.FormattingEnabled = true;
             this.cmbBank.Items.AddRange(new object[] {
             "--Select--"});
-            this.cmbBank.Location = new System.Drawing.Point(260, 123);
+            this.cmbBank.Location = new System.Drawing.Point(317, 156);
             this.cmbBank.Margin = new System.Windows.Forms.Padding(2, 20, 2, 3);
             this.cmbBank.Name = "cmbBank";
             this.cmbBank.Size = new System.Drawing.Size(120, 21);
@@ -397,7 +400,7 @@
             // 
             // txtAmount
             // 
-            this.txtAmount.Location = new System.Drawing.Point(776, 123);
+            this.txtAmount.Location = new System.Drawing.Point(947, 156);
             this.txtAmount.Margin = new System.Windows.Forms.Padding(2, 20, 2, 3);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(120, 20);
@@ -405,7 +408,7 @@
             // 
             // txtRef
             // 
-            this.txtRef.Location = new System.Drawing.Point(260, 183);
+            this.txtRef.Location = new System.Drawing.Point(317, 235);
             this.txtRef.Margin = new System.Windows.Forms.Padding(2, 20, 2, 3);
             this.txtRef.Name = "txtRef";
             this.txtRef.Size = new System.Drawing.Size(121, 20);
@@ -413,7 +416,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(776, 183);
+            this.txtID.Location = new System.Drawing.Point(947, 235);
             this.txtID.Margin = new System.Windows.Forms.Padding(2, 20, 2, 3);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(121, 20);
@@ -422,7 +425,7 @@
             // cmbSite
             // 
             this.cmbSite.FormattingEnabled = true;
-            this.cmbSite.Location = new System.Drawing.Point(261, 243);
+            this.cmbSite.Location = new System.Drawing.Point(318, 314);
             this.cmbSite.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
             this.cmbSite.Name = "cmbSite";
             this.cmbSite.Size = new System.Drawing.Size(121, 21);
@@ -431,7 +434,7 @@
             // cmbSign1
             // 
             this.cmbSign1.FormattingEnabled = true;
-            this.cmbSign1.Location = new System.Drawing.Point(261, 303);
+            this.cmbSign1.Location = new System.Drawing.Point(318, 393);
             this.cmbSign1.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
             this.cmbSign1.Name = "cmbSign1";
             this.cmbSign1.Size = new System.Drawing.Size(121, 21);
@@ -440,17 +443,39 @@
             // cmbSign2
             // 
             this.cmbSign2.FormattingEnabled = true;
-            this.cmbSign2.Location = new System.Drawing.Point(777, 303);
+            this.cmbSign2.Location = new System.Drawing.Point(948, 393);
             this.cmbSign2.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
             this.cmbSign2.Name = "cmbSign2";
             this.cmbSign2.Size = new System.Drawing.Size(121, 21);
             this.cmbSign2.TabIndex = 33;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(868, 516);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(30, 10, 2, 3);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(78, 32);
+            this.btnCancel.TabIndex = 44;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(660, 533);
+            this.button1.Margin = new System.Windows.Forms.Padding(30, 2, 2, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(78, 32);
+            this.button1.TabIndex = 44;
+            this.button1.Text = "Cancel";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Treasury
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1062, 545);
+            this.ClientSize = new System.Drawing.Size(1062, 571);
             this.Controls.Add(this.tabControl1);
             this.Name = "Treasury";
             this.Text = "Treasury";
@@ -502,5 +527,7 @@
         private System.Windows.Forms.ComboBox cmbSite;
         private System.Windows.Forms.ComboBox cmbSign1;
         private System.Windows.Forms.ComboBox cmbSign2;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button button1;
     }
 }

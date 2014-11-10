@@ -96,6 +96,7 @@
             this.btnExpenseSave = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tblMain.SuspendLayout();
@@ -532,11 +533,12 @@
             this.tableLayoutPanel1.Controls.Add(this.btnExpenseSave, 1, 12);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 10);
             this.tableLayoutPanel1.Controls.Add(this.comboBox3, 1, 10);
+            this.tableLayoutPanel1.Controls.Add(this.button1, 2, 12);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 12;
+            this.tableLayoutPanel1.RowCount = 13;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.817467F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.817467F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.817467F));
@@ -1010,6 +1012,17 @@
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 41;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(632, 586);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(78, 32);
+            this.button1.TabIndex = 42;
+            this.button1.Text = "Cancel";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Forecast
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1102,6 +1115,7 @@
         private System.Windows.Forms.Button btnExpenseSave;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button button1;
 
     }
 }

@@ -153,7 +153,7 @@ namespace Rasta
                 this.chkCreditToBank.Enabled = true;
 
             }
-            catch (Exception ex)
+           catch
             {
                 MessageBox.Show("Some error has occured!!", "Error");
             }
@@ -410,6 +410,11 @@ namespace Rasta
             adminform.Show();
             adminform.BringToFront();
             adminform.selectIndexOfTabControl = 1;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -106,6 +106,7 @@
             this.ReceivedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CurrencyID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SiteID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.tblMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvApproverManagement)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -122,6 +123,7 @@
             this.tblMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tblMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tblMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tblMain.Controls.Add(this.btnCancel, 3, 12);
             this.tblMain.Controls.Add(this.lbl, 0, 0);
             this.tblMain.Controls.Add(this.lblSupplierName, 0, 2);
             this.tblMain.Controls.Add(this.lblSupplierCode, 2, 2);
@@ -969,6 +971,17 @@
             this.SiteID.ReadOnly = true;
             this.SiteID.Visible = false;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(975, 593);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(30, 2, 2, 3);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(78, 32);
+            this.btnCancel.TabIndex = 42;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // AccountPayable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1065,6 +1078,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Button btnCancel;
     }
 
 }

@@ -40,8 +40,8 @@
             this.treasuryReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wEETREToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iTReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.treasuryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.forecastReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.treasuryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.budgetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generalBudgetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -116,30 +116,37 @@
             // bankReportToolStripMenuItem
             // 
             this.bankReportToolStripMenuItem.Name = "bankReportToolStripMenuItem";
-            this.bankReportToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.bankReportToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.bankReportToolStripMenuItem.Text = "Bank Report";
             this.bankReportToolStripMenuItem.Click += new System.EventHandler(this.bankReportToolStripMenuItem_Click);
             // 
             // treasuryReportToolStripMenuItem
             // 
             this.treasuryReportToolStripMenuItem.Name = "treasuryReportToolStripMenuItem";
-            this.treasuryReportToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.treasuryReportToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.treasuryReportToolStripMenuItem.Text = "TREFLT";
             this.treasuryReportToolStripMenuItem.Click += new System.EventHandler(this.treasuryReportToolStripMenuItem_Click);
             // 
             // wEETREToolStripMenuItem
             // 
             this.wEETREToolStripMenuItem.Name = "wEETREToolStripMenuItem";
-            this.wEETREToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.wEETREToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.wEETREToolStripMenuItem.Text = "WEETRE";
             this.wEETREToolStripMenuItem.Click += new System.EventHandler(this.wEETREToolStripMenuItem_Click);
             // 
             // iTReportToolStripMenuItem
             // 
             this.iTReportToolStripMenuItem.Name = "iTReportToolStripMenuItem";
-            this.iTReportToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.iTReportToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.iTReportToolStripMenuItem.Text = "IT Report";
             this.iTReportToolStripMenuItem.Click += new System.EventHandler(this.iTReportToolStripMenuItem_Click);
+            // 
+            // forecastReportToolStripMenuItem
+            // 
+            this.forecastReportToolStripMenuItem.Name = "forecastReportToolStripMenuItem";
+            this.forecastReportToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.forecastReportToolStripMenuItem.Text = "Forecast Report";
+            this.forecastReportToolStripMenuItem.Click += new System.EventHandler(this.forecastReportToolStripMenuItem_Click);
             // 
             // treasuryToolStripMenuItem
             // 
@@ -148,13 +155,6 @@
             this.treasuryToolStripMenuItem.Text = "Treasury";
             this.treasuryToolStripMenuItem.Click += new System.EventHandler(this.treasuryToolStripMenuItem_Click);
             // 
-            // forecastReportToolStripMenuItem
-            // 
-            this.forecastReportToolStripMenuItem.Name = "forecastReportToolStripMenuItem";
-            this.forecastReportToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.forecastReportToolStripMenuItem.Text = "Forecast Report";
-            this.forecastReportToolStripMenuItem.Click += new System.EventHandler(this.forecastReportToolStripMenuItem_Click);
-            // 
             // budgetToolStripMenuItem
             // 
             this.budgetToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -162,6 +162,7 @@
             this.budgetToolStripMenuItem.Name = "budgetToolStripMenuItem";
             this.budgetToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.budgetToolStripMenuItem.Text = "Budget";
+            this.budgetToolStripMenuItem.Click += new System.EventHandler(this.budgetToolStripMenuItem_Click);
             // 
             // generalBudgetToolStripMenuItem
             // 
@@ -182,7 +183,6 @@
             this.Name = "Master";
             this.Text = "Rastaa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Master_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

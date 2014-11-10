@@ -232,6 +232,7 @@ namespace Rasta
             this.btnCurrencySave = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.btnCancel = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tpUserMgt.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -317,7 +318,7 @@ namespace Rasta
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1274, 665);
+            this.tabControl1.Size = new System.Drawing.Size(1274, 617);
             this.tabControl1.TabIndex = 0;
             // 
             // tpUserMgt
@@ -326,7 +327,7 @@ namespace Rasta
             this.tpUserMgt.Location = new System.Drawing.Point(4, 22);
             this.tpUserMgt.Name = "tpUserMgt";
             this.tpUserMgt.Padding = new System.Windows.Forms.Padding(3);
-            this.tpUserMgt.Size = new System.Drawing.Size(1266, 639);
+            this.tpUserMgt.Size = new System.Drawing.Size(1266, 591);
             this.tpUserMgt.TabIndex = 0;
             this.tpUserMgt.Text = "Users";
             this.tpUserMgt.UseVisualStyleBackColor = true;
@@ -2395,11 +2396,23 @@ namespace Rasta
             this.btnCurrencySave.UseVisualStyleBackColor = true;
             this.btnCurrencySave.Click += new System.EventHandler(this.btnCurrencySave_Click);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(530, 618);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(30, 2, 2, 3);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(78, 32);
+            this.btnCancel.TabIndex = 43;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1270, 622);
+            this.ClientSize = new System.Drawing.Size(1270, 652);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.tabControl1);
             this.Name = "Admin";
             this.Text = "Admin";
@@ -2693,6 +2706,7 @@ namespace Rasta
         private System.Windows.Forms.DataGridViewTextBoxColumn CompanyRole;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
+        private System.Windows.Forms.Button btnCancel;
 
        
         
