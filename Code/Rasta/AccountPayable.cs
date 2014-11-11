@@ -24,7 +24,7 @@ namespace Rasta
         public AccountPayable()
         {
             InitializeComponent();
-            
+
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace Rasta
             if (this.tabControl1.SelectedIndex == 1)
             {
                 string cmdView = "select ap.apid, s.suppliername,ap.paymentduedate,ap.amount,c.currencyname,st.sitename,s.SupplierCode,ap.CurrentDate,ap.CostCodeID,ap.PaymentPurpose,ap.PONumber,ap.POAmount,ap.InvoiceDate,ap.RecievedDate,ap.currencyID,ap.siteid  " +
-                              " from rasta.tbl_AccountPayable ap " +
+                              " from rasta.tbl_accountpayable ap " +
                               "left join rasta.tbl_supplier S on s.SupplierID=ap.SupplierID  " +
                               "left join rasta.tbl_currency c on c.currencyid=ap.currencyid " +
                               "left join rasta.tbl_site st on st.siteid=ap.siteid " +
@@ -118,7 +118,7 @@ namespace Rasta
             this.cmbType.ValueMember = "CostCodeID";
             this.cmbType.SelectedValue = "0";
 
-            
+
 
 
         }
@@ -134,7 +134,7 @@ namespace Rasta
         {
 
         }
-       
+
         private void btnExportToPDF_Click(object sender, EventArgs e)
         {
             //Creating iTextSharp Table from the DataTable data
@@ -169,53 +169,55 @@ namespace Rasta
 
             PdfPTable pdfTable1 = new PdfPTable(2);
             pdfTable1.DefaultCell.Padding = 3;
-            pdfTable1.TotalWidth =300f;
+            pdfTable1.TotalWidth = 300f;
             pdfTable1.HorizontalAlignment = Element.ALIGN_LEFT;
             pdfTable1.DefaultCell.BorderWidth = 1;
-            
+
             //Adding Header row
-            
-                PdfPCell cellheader = new PdfPCell(new Phrase("AFP INFORMATION"));
-                cellheader.BackgroundColor = new iTextSharp.text.BaseColor(Color.Yellow);
-                cellheader.Colspan = 2;
-                pdfTable1.AddCell(cellheader);
-            
+
+            PdfPCell cellheader = new PdfPCell(new Phrase("AFP INFORMATION"));
+            cellheader.BackgroundColor = new iTextSharp.text.BaseColor(Color.Yellow);
+            cellheader.Colspan = 2;
+            pdfTable1.AddCell(cellheader);
+
 
             //Adding DataRow
-           
-                    pdfTable1.AddCell("SupplierName");
-                    pdfTable1.AddCell(cmbSupplierName.Text);
-                    pdfTable1.AddCell("Invoice Number:");
-                    pdfTable1.AddCell("");
-                    pdfTable1.AddCell("Invoice Date (+ Receipt Date):");
-                    pdfTable1.AddCell(calInvoiceDate.Value.ToString());
-                    pdfTable1.AddCell("Due Date of Payment:");
-                    pdfTable1.AddCell(calPaymentDueDate.Value.ToString());
-                    pdfTable1.AddCell("Amount invoiced incl. WHT:");
-                    pdfTable1.AddCell(txtAmount.Text);
-                    pdfTable1.AddCell("Total PO/SC Value: ");
-                    pdfTable1.AddCell(txtPOAmount.Text);
-                    pdfTable1.AddCell("Total invoiced (without this AFP):");
-                    pdfTable1.AddCell("");
-                    pdfTable1.AddCell("Site (DSB / Luanda / Lobito) :");
-                    pdfTable1.AddCell(cmbSite.Text);
-                    pdfTable1.AddCell("PO / SC Reference:");
-                    pdfTable1.AddCell(txtPONumber.Text);
-                    pdfTable1.AddCell("Payment purpose");
-                    pdfTable1.AddCell(txtPaymentPurpose.Text);
-                    pdfTable1.AddCell("Cost Code:");
-                    pdfTable1.AddCell(cmbType.Text);
-                    pdfTable1.AddCell("Project / Section:");
-                    pdfTable1.AddCell(combobox1.Text);
+
+            pdfTable1.AddCell("SupplierName");
+            pdfTable1.AddCell(cmbSupplierName.Text);
+            pdfTable1.AddCell("Invoice Number:");
+            pdfTable1.AddCell("");
+            pdfTable1.AddCell("Invoice Date (+ Receipt Date):");
+            pdfTable1.AddCell(calInvoiceDate.Value.ToString());
+            pdfTable1.AddCell("Due Date of Payment:");
+            pdfTable1.AddCell(calPaymentDueDate.Value.ToString());
+            pdfTable1.AddCell("Amount invoiced incl. WHT:");
+            pdfTable1.AddCell(txtAmount.Text);
+            pdfTable1.AddCell("Total PO/SC Value: ");
+            pdfTable1.AddCell(txtPOAmount.Text);
+            pdfTable1.AddCell("Total invoiced (without this AFP):");
+            pdfTable1.AddCell("");
+            pdfTable1.AddCell("Site (DSB / Luanda / Lobito) :");
+            pdfTable1.AddCell(cmbSite.Text);
+            pdfTable1.AddCell("PO / SC Reference:");
+            pdfTable1.AddCell(txtPONumber.Text);
+            pdfTable1.AddCell("Payment purpose");
+            pdfTable1.AddCell(txtPaymentPurpose.Text);
+            pdfTable1.AddCell("Cost Code:");
+            pdfTable1.AddCell(cmbType.Text);
+            pdfTable1.AddCell("Project / Section:");
+            pdfTable1.AddCell(combobox1.Text);
 
 
             ////Exporting to PDF
-            string folderPath = Path.GetDirectoryName(Application.ExecutablePath)+"\\PDFs\\";
+            string folderPath = Path.GetDirectoryName(Application.ExecutablePath) + "\\PDFs\\";
             if (!Directory.Exists(folderPath))
             {
                 Directory.CreateDirectory(folderPath);
             }
-            using (FileStream stream = new FileStream(folderPath + "AFP-" + DateTime.Now.ToString("yyyyMMddHHmmssfff") + ".pdf", FileMode.Create))
+
+            string fileName = folderPath + "AFP-" + DateTime.Now.ToString("yyyyMMddHHmmssfff") + ".pdf";
+            using (FileStream stream = new FileStream(fileName, FileMode.Create))
             {
                 Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
                 PdfWriter.GetInstance(pdfDoc, stream);
@@ -228,26 +230,7 @@ namespace Rasta
                 stream.Close();
             }
 
-            //if (dgvApproverManagement.Rows.Count > 0)
-            //{
-            //    Microsoft.Office.Interop.Excel.ApplicationClass XcelApp = new Microsoft.Office.Interop.Excel.ApplicationClass();
-            //    XcelApp.Application.Workbooks.Add(Type.Missing);
-
-            //    for (int i = 1; i < dgvApproverManagement.Columns.Count + 1; i++)
-            //    {
-            //        XcelApp.Cells[1, i] = dgvApproverManagement.Columns[i - 1].HeaderText;
-            //    }
-
-            //    for (int i = 0; i < dgvApproverManagement.Rows.Count; i++)
-            //    {
-            //        for (int j = 0; j < dgvApproverManagement.Columns.Count; j++)
-            //        {
-            //            XcelApp.Cells[i + 2, j + 1] = dgvApproverManagement.Rows[i].Cells[j].Value.ToString();
-            //        }
-            //    }
-            //    XcelApp.Columns.AutoFit();
-            //    XcelApp.Visible = true;
-            //}
+            MessageBox.Show(string.Format("Please collect output PDF @ ", fileName));
         }
 
         private void cmbType_SelectedIndexChanged(object sender, EventArgs e)
@@ -292,7 +275,7 @@ namespace Rasta
             }
             else if (cmbType.SelectedValue.ToString() == "3")
             {
-                          
+
                 this.label1.Text = "Rebill";
                 this.label1.Visible = true;
                 this.combobox1.Visible = true;
@@ -304,7 +287,7 @@ namespace Rasta
                 this.combobox1.DataSource = dt;
                 this.combobox1.ValueMember = "RebillID";
                 this.combobox1.DisplayMember = "RebillName";
-           
+
                 this.label2.Text = "CBS ";
                 this.label2.Visible = true;
                 this.comboBox2.Visible = true;
@@ -316,7 +299,7 @@ namespace Rasta
                 this.comboBox2.DataSource = dt2;
                 this.comboBox2.ValueMember = "CBSID";
                 this.comboBox2.DisplayMember = "CBSName";
-           
+
                 this.label3.Text = "Reference ";
                 this.label3.Visible = true;
                 this.comboBox3.Visible = true;
@@ -329,7 +312,7 @@ namespace Rasta
                 this.comboBox3.ValueMember = "ReferenceType";
                 this.comboBox3.DisplayMember = "ReferenceType";
                 this.comboBox3.SelectedIndex = -1;
-            
+
             }
             else if (cmbType.SelectedValue.ToString() == "0")
             {
@@ -341,8 +324,8 @@ namespace Rasta
 
         private void cmbProject_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
-                
+
+
             if (combobox1.Text == "Other corporate expenses")
             {
                 this.label2.Text = "Other corporate expenses";
@@ -450,10 +433,10 @@ namespace Rasta
             cmd.Parameters.AddWithValue("CMB1", combobox1.SelectedValue);
             cmd.Parameters.AddWithValue("retAPID", MySqlDbType.Int16);
             cmd.Parameters["retAPID"].Direction = ParameterDirection.Output;
-            
-                cmd.Parameters.AddWithValue("CMB2", comboBox2.SelectedValue);
+
+            cmd.Parameters.AddWithValue("CMB2", comboBox2.SelectedValue);
             cmd.Parameters.AddWithValue("CMB4", comboBox4.Text);
-            cmd.Parameters.AddWithValue("isForecast",0);
+            cmd.Parameters.AddWithValue("isForecast", 0);
 
             con.Open();
             cmd.ExecuteNonQuery();
@@ -474,7 +457,9 @@ namespace Rasta
                 con.Close();
             }
 
-
+            MessageBox.Show("Account Payable Details saved sucessfully");
+            this.Controls.Clear();
+            this.InitializeComponent();
         }
 
         private void btnApprove_Click(object sender, EventArgs e)
@@ -492,7 +477,7 @@ namespace Rasta
             APIds = APIds.Remove(0, 1);
             if (!string.IsNullOrWhiteSpace(APIds))
             {
-                string query = "uPDATE tbl_AccountPayable SET ISAPPROVED=1 WHERE APID IN (" + APIds + ")";
+                string query = "uPDATE tbl_accountpayable SET ISAPPROVED=1 WHERE APID IN (" + APIds + ")";
                 string ConString = ConfigurationManager.ConnectionStrings["ConString"].ConnectionString;
                 MySqlConnection con = new MySqlConnection(ConString);
                 MySqlCommand cmd = new MySqlCommand(query, con);
@@ -515,7 +500,7 @@ namespace Rasta
             }
             else if (e.ColumnIndex == 8)
             {
-                string query = "DELETE FROM tbl_AccountPayable " +
+                string query = "DELETE FROM tbl_accountpayable " +
                 "WHERE APID =" + dgvAccountPayable.Rows[e.RowIndex].Cells[1].Value.ToString() + " ";
                 MySqlConnection connection = new MySqlConnection(con);
                 MySqlCommand cmd = new MySqlCommand(query, connection);
@@ -571,7 +556,7 @@ namespace Rasta
                     cbCell.DataSource = dtRow;
                     cbCell.DisplayMember = "USERNAME";
                     cbCell.ValueMember = "UserId";
-                    
+
                 }
 
                 if (cmbType.Text == "Project Expenses")
@@ -580,7 +565,7 @@ namespace Rasta
                     sda1 = new MySqlDataAdapter(query, con);
                     DataTable dt1 = new DataTable();
                     sda1.Fill(dt1);
-                   
+
                 }
                 else if (cmbType.Text == "Department Expenses")
                 {
@@ -596,7 +581,7 @@ namespace Rasta
                         this.comboBox2.Visible = true;
                         comboBox2.SelectedValue = dt1.Rows[0][1].ToString();
                     }
-                   
+
                 }
                 else if (cmbType.Text == "IT Expenses")
                 {
@@ -614,7 +599,7 @@ namespace Rasta
                     }
                     else if (!string.IsNullOrWhiteSpace(dt1.Rows[0][1].ToString()))
                     {
-                         this.label2.Text = "CBS";
+                        this.label2.Text = "CBS";
                         this.label2.Visible = true;
                         this.comboBox2.Visible = true;
                         comboBox2.SelectedValue = dt1.Rows[0][1].ToString();
@@ -626,13 +611,13 @@ namespace Rasta
                         this.label2.Text = "Reference";
                         this.label2.Visible = true;
                         this.comboBox2.Visible = true;
-                        string value=dt1.Rows[0][3].ToString().Substring(2, 5);
+                        string value = dt1.Rows[0][3].ToString().Substring(2, 5);
                         value = value.Replace("-", "");
                         comboBox2.SelectedValue = value;
                         this.label3.Text = value;
                         this.label3.Visible = true;
                         this.comboBox3.Visible = true;
-                        string cmd = "SELECT distinct IPEXOPEXID,IPEXOPEXNAME FROM tbl_IPEXOPEX where ReferenceType='"+value+"'";
+                        string cmd = "SELECT distinct IPEXOPEXID,IPEXOPEXNAME FROM tbl_IPEXOPEX where ReferenceType='" + value + "'";
                         sda1 = new MySqlDataAdapter(cmd, con);
                         DataTable dt = new DataTable();
                         sda1.Fill(dt);
@@ -641,7 +626,7 @@ namespace Rasta
                         this.comboBox3.ValueMember = "IPEXOPEXID";
                         this.comboBox3.DisplayMember = "IPEXOPEXNAME";
                         comboBox3.SelectedValue = dt1.Rows[0][2].ToString();
-                        
+
                     }
                 }
                 btnSave.Visible = false;
@@ -676,9 +661,9 @@ namespace Rasta
             cmd.Parameters.AddWithValue("cRECEIVEDDATE", Convert.ToDateTime(calRecievedDate.Text).ToString("yyyy-MM-dd H:mm:ss"));
             cmd.Parameters.AddWithValue("iCOSTCODEID", cmbType.SelectedValue);
             cmd.Parameters.AddWithValue("CMB1", combobox1.SelectedValue);
-            cmd.Parameters.AddWithValue("iAPID",lblAPID.Text);
-            
-                cmd.Parameters.AddWithValue("CMB2", comboBox2.SelectedValue);
+            cmd.Parameters.AddWithValue("iAPID", lblAPID.Text);
+
+            cmd.Parameters.AddWithValue("CMB2", comboBox2.SelectedValue);
             cmd.Parameters.AddWithValue("CMB4", comboBox4.Text);
 
             con.Open();
@@ -686,13 +671,13 @@ namespace Rasta
             con.Close();
 
             string query = "delete from rasta.tbl_APApprovers  where apid='" + lblAPID.Text + "'";
-                MySqlCommand cmdQuery = new MySqlCommand(query, con);
-                cmdQuery.CommandType = CommandType.Text;
-                con.Open();
-                cmdQuery.ExecuteNonQuery();
-                con.Close();
+            MySqlCommand cmdQuery = new MySqlCommand(query, con);
+            cmdQuery.CommandType = CommandType.Text;
+            con.Open();
+            cmdQuery.ExecuteNonQuery();
+            con.Close();
 
-            
+
             for (int i = 0; i < dgvApproverManagement.Rows.Count; i++)
             {
                 string spname1 = "sp_APApprovers";
@@ -723,14 +708,14 @@ namespace Rasta
                 this.label4.Text = "CAPEX ";
                 this.label4.Visible = true;
                 this.comboBox4.Visible = true;
-                string cmd = "SELECT distinct IPEXOPEXID,IPEXOPEXNAME FROM tbl_IPEXOPEX where ReferenceType='CAPEX'";
+                string cmd = "SELECT distinct IPEXOPEXID,IPEXOPEXNAME, Header FROM tbl_IPEXOPEX where ReferenceType='CAPEX'";
                 sda1 = new MySqlDataAdapter(cmd, con);
                 DataTable dt = new DataTable();
                 sda1.Fill(dt);
 
                 this.comboBox4.DataSource = dt;
                 this.comboBox4.ValueMember = "IPEXOPEXID";
-                this.comboBox4.DisplayMember = "IPEXOPEXNAME";
+                this.comboBox4.DisplayMember = "Header";
             }
             else if (comboBox3.Text == "OPEX")
             {
@@ -753,10 +738,10 @@ namespace Rasta
         {
             Admin adminform = new Admin();
             adminform.Show();
-            adminform.BringToFront();         
+            adminform.BringToFront();
             adminform.selectIndexOfTabControl = 1;
-           
-            
+
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -764,7 +749,6 @@ namespace Rasta
             this.Close();
         }
 
-       
 
     }
 }

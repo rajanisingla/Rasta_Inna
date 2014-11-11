@@ -93,7 +93,7 @@ namespace Rasta
                         }
                     }
                     APIds = APIds.Remove(0, 1);
-                    string query1 = "uPDATE tbl_AccountPayable SET ispaid=1 WHERE APID IN (" + APIds + ")";
+                    string query1 = "uPDATE tbl_accountpayable SET ispaid=1 WHERE APID IN (" + APIds + ")";
                     string ConString1 = ConfigurationManager.ConnectionStrings["ConString"].ConnectionString;
                     MySqlConnection con1 = new MySqlConnection(ConString1);
                     MySqlCommand cmd1 = new MySqlCommand(query1, con1);
@@ -120,7 +120,7 @@ namespace Rasta
         {
             if (tabControl1.SelectedIndex == 0)
             {
-                string CmdAFP = "select s.suppliername,s.supplierid,ap.amount,c.currencyname,s.bankid,ap.apid from rasta.tbl_AccountPayable ap " +
+                string CmdAFP = "select s.suppliername,s.supplierid,ap.amount,c.currencyname,s.bankid,ap.apid from rasta.tbl_accountpayable ap " +
                "left join tbl_currency c on c.currencyid=ap.currencyid " +
                "left join tbl_supplier s on s.supplierid=ap.supplierid " +
                "where ap.isApproved=1 and ap.isPaid=0";

@@ -23,7 +23,7 @@ namespace Rasta
 
         private void ForecastReport_Load(object sender, EventArgs e)
         {
-            string Cmdyear = "SELECT distinct year(InvoiceDate) as year from tbl_AccountPayable";
+            string Cmdyear = "SELECT distinct year(InvoiceDate) as year from tbl_accountpayable";
             sda1 = new MySqlDataAdapter(Cmdyear, con);
             DataTable dtYear = new DataTable();
             sda1.Fill(dtYear);
@@ -48,7 +48,7 @@ namespace Rasta
             if (tabControl1.SelectedIndex == 1)
             {
 
-                string Cmdyear = "SELECT distinct year(InvoiceDate) as year from tbl_AccountPayable";
+                string Cmdyear = "SELECT distinct year(InvoiceDate) as year from tbl_accountpayable";
                 sda1 = new MySqlDataAdapter(Cmdyear, con);
                 DataTable dtYear = new DataTable();
                 sda1.Fill(dtYear);
