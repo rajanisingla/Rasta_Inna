@@ -84,18 +84,18 @@ namespace Rasta
             else
             {
                 string CmdBank = "select concat(c.currencyname) as Currency,i.IPEXOPEXname,cbs.cbsname," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 1 THEN a.amount/ce.exchangerateinusd END) AS Jan," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 2 THEN a.amount/ce.exchangerateinusd END) AS Feb," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 3 THEN a.amount/ce.exchangerateinusd END) AS Mar," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 4 THEN a.amount/ce.exchangerateinusd END) AS Apr," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 5 THEN a.amount/ce.exchangerateinusd END) AS May," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 6 THEN a.amount/ce.exchangerateinusd END) AS Jun," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 7 THEN a.amount/ce.exchangerateinusd END) AS Jul," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 8 THEN a.amount/ce.exchangerateinusd END) AS Aug," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 9 THEN a.amount/ce.exchangerateinusd END) AS Sep," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 10 THEN a.amount/ce.exchangerateinusd END) AS Oct," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 11 THEN a.amount/ce.exchangerateinusd END) AS Nov," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 12 THEN a.amount/ce.exchangerateinusd END) AS Decm " +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 1 THEN a.amount/ce.exchangerateinusd END),0) AS Jan," +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 2 THEN a.amount/ce.exchangerateinusd END),0) AS Feb," +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 3 THEN a.amount/ce.exchangerateinusd END),0) AS Mar," +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 4 THEN a.amount/ce.exchangerateinusd END),0) AS Apr," +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 5 THEN a.amount/ce.exchangerateinusd END),0) AS May," +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 6 THEN a.amount/ce.exchangerateinusd END),0) AS Jun," +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 7 THEN a.amount/ce.exchangerateinusd END),0) AS Jul," +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 8 THEN a.amount/ce.exchangerateinusd END),0) AS Aug," +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 9 THEN a.amount/ce.exchangerateinusd END),0) AS Sep," +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 10 THEN a.amount/ce.exchangerateinusd END),0) AS Oct," +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 11 THEN a.amount/ce.exchangerateinusd END),0) AS Nov," +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 12 THEN a.amount/ce.exchangerateinusd END),0) AS Decm " +
                                   "from rasta.vw_AccountPayable a " +
                                   "left join rasta.tbl_APITExpense ad on ad.apid=a.apid " +
                                   "left join rasta.tbl_CBS cbs on cbs.cbsid=ad.cbsid " +
@@ -125,6 +125,8 @@ namespace Rasta
                     dr[13] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Nov")));
                     dr[14] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Decm")));
                     dtExpenseType.Rows.Add(dr);
+                    dtExpenseType.Columns.Add("Subtotal", typeof(Double));
+                    dtExpenseType.Columns["Subtotal"].Expression = "Jan+Feb+Mar+Apr+May+Jun+Jul+Aug+Sep+Oct+Nov+Decm";
                     dgvRevenue.DataSource = dtExpenseType;
                     dgvRevenue.Visible = true;
 
@@ -142,18 +144,18 @@ namespace Rasta
             else
             {
                 string CmdBank = "select concat(c.currencyname) as Currency,i.IPEXOPEXname,cbs.cbsname," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 1 THEN a.amount/ce.exchangerateinusd END) AS Jan," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 2 THEN a.amount/ce.exchangerateinusd END) AS Feb," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 3 THEN a.amount/ce.exchangerateinusd END) AS Mar," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 4 THEN a.amount/ce.exchangerateinusd END) AS Apr," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 5 THEN a.amount/ce.exchangerateinusd END) AS May," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 6 THEN a.amount/ce.exchangerateinusd END) AS Jun," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 7 THEN a.amount/ce.exchangerateinusd END) AS Jul," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 8 THEN a.amount/ce.exchangerateinusd END) AS Aug," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 9 THEN a.amount/ce.exchangerateinusd END) AS Sep," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 10 THEN a.amount/ce.exchangerateinusd END) AS Oct," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 11 THEN a.amount/ce.exchangerateinusd END) AS Nov," +
-                                  "sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 12 THEN a.amount/ce.exchangerateinusd END) AS Decm " +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 1 THEN a.amount/ce.exchangerateinusd END),0) AS Jan," +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 2 THEN a.amount/ce.exchangerateinusd END),0) AS Feb," +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 3 THEN a.amount/ce.exchangerateinusd END),0) AS Mar," +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 4 THEN a.amount/ce.exchangerateinusd END),0) AS Apr," +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 5 THEN a.amount/ce.exchangerateinusd END),0) AS May," +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 6 THEN a.amount/ce.exchangerateinusd END),0) AS Jun," +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 7 THEN a.amount/ce.exchangerateinusd END),0) AS Jul," +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 8 THEN a.amount/ce.exchangerateinusd END),0) AS Aug," +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 9 THEN a.amount/ce.exchangerateinusd END),0) AS Sep," +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 10 THEN a.amount/ce.exchangerateinusd END),0) AS Oct," +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 11 THEN a.amount/ce.exchangerateinusd END),0) AS Nov," +
+                                  "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + cmbExpenseYear.SelectedValue.ToString() + "' and MONTH(a.InvoiceDate) = 12 THEN a.amount/ce.exchangerateinusd END),0) AS Decm " +
                                   "from rasta.vw_AccountPayable a " +
                                   "left join rasta.tbl_APITExpense ad on ad.apid=a.apid " +
                                   "left join rasta.tbl_CBS cbs on cbs.cbsid=ad.cbsid " +
@@ -184,6 +186,8 @@ namespace Rasta
                     dr[13] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Nov")));
                     dr[14] = Convert.ToDouble(dtExpenseType.AsEnumerable().Sum(x => x.Field<Double?>("Decm")));
                     dtExpenseType.Rows.Add(dr);
+                    dtExpenseType.Columns.Add("Subtotal", typeof(Double));
+                    dtExpenseType.Columns["Subtotal"].Expression = "Jan+Feb+Mar+Apr+May+Jun+Jul+Aug+Sep+Oct+Nov+Decm";
                     dataGridView1.DataSource = dtExpenseType;
                     dataGridView1.Visible = true;
 
