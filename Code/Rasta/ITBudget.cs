@@ -1,27 +1,33 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using MySql.Data.MySqlClient;
 
 namespace Rasta
 {
-    public partial class GeneralBudget : Form
+    public partial class ITBudget : Form
     {
         string con = ConfigurationManager.ConnectionStrings["ConString"].ConnectionString;
         MySqlDataAdapter sda1;
-        public GeneralBudget()
+        public ITBudget()
         {
             InitializeComponent();
         }
 
-        private void GeneralBudget_Load(object sender, EventArgs e)
+        private void ITBudget_Load(object sender, EventArgs e)
         {
             string CmdCurrencyType = "SELECT distinct CurrencyName,CurrencyID FROM tbl_Currency";
             sda1 = new MySqlDataAdapter(CmdCurrencyType, con);
             DataTable dtCurrencyType = new DataTable();
             sda1.Fill(dtCurrencyType);
-            
+
             this.cmbCurrency.DataSource = dtCurrencyType;
             this.cmbCurrency.DisplayMember = "CurrencyName";
             this.cmbCurrency.ValueMember = "CurrencyID";
@@ -38,7 +44,7 @@ namespace Rasta
             }
             else
             {
-                string CmdBank = "select c.currencyname as Currency,d.Departmentname as ExpenseType," +
+                string CmdBank = "select c.currencyname as Currency,cbs.cbsname,i.IPEXOPEXName, " +
                                 "IFNULL(max(CASE WHEN (b.budgetMonth) = 1 THEN b.amount/ce.exchangerateinusd END),0) AS JanForecast," +
                                 "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + DateTime.Now.Year.ToString() + "' and a.IsForecast=0 and MONTH(a.InvoiceDate) = 1 THEN a.amount/ce.exchangerateinusd END),0) AS JanActual," +
                                 "IFNULL(max(CASE WHEN (b.budgetMonth) = 1 THEN b.amount/ce.exchangerateinusd END),0) - " +
@@ -98,14 +104,16 @@ namespace Rasta
                                 "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + DateTime.Now.Year.ToString() + "' and a.IsForecast=0 and MONTH(a.InvoiceDate) = 12 THEN a.amount/ce.exchangerateinusd END),0) AS DecActual," +
                                 "IFNULL(sum(CASE WHEN (b.budgetYear)='" + DateTime.Now.Year.ToString() + "'  and (b.budgetMonth) = 12 THEN b.amount/ce.exchangerateinusd END),0) - " +
                                 "IFNULL(sum(CASE WHEN YEAR(a.InvoiceDate)='" + DateTime.Now.Year.ToString() + "' and a.IsForecast=0 and MONTH(a.InvoiceDate) = 12 THEN a.amount/ce.exchangerateinusd END),0) AS DecDifference " +
+                                "from rasta.vw_AccountPayable a " +
+                                  "left join rasta.tbl_APITExpense ad on ad.apid=a.apid " +
+                                  "left join rasta.tbl_CBS cbs on cbs.cbsid=ad.cbsid " +
+                                  "left join rasta.tbl_IPEXOPEX i on i.IPEXOPEXID = ad.IPEXOPEXID " +
+                                  "left join rasta.tbl_ITbudget b on b.cbsid=cbs.cbsid and b.IPEXOPEXID=i.IPEXOPEXID and b.costcodeid=3 and b.budgetYear= '" + DateTime.Now.Year.ToString() + "' " +
+                                  "left join rasta.tbl_currencyexchange ce on ce.currencyid='" + cmbCurrency.SelectedValue.ToString() + "' " +
+                                  "left join rasta.tbl_currency c on c.currencyid=ce.currencyid " +
+                                  "where a.costcodeid=3 ";
 
-                                " from rasta.tbl_department d  "+
-                                "left join rasta.tbl_apdepartmentexpense ad on d.departmentid=ad.departmentid  "+
-                                "left join rasta.vw_AccountPayable a on ad.apid=a.apid and a.isforecast=0 and a.costcodeid=2  " +
-                                "left join rasta.tbl_budget b on b.departmentid=d.departmentid and b.costcodeid=2 and b.budgetYear= '" + DateTime.Now.Year.ToString() + "' " +
-                               "left join rasta.tbl_currencyexchange ce on ce.currencyid='" + cmbCurrency.SelectedValue.ToString() + "' " +
-                               "left join rasta.tbl_currency c on c.currencyid=ce.currencyid " +
-                               "group by  d.Departmentname";
+                               
                 sda1 = new MySqlDataAdapter(CmdBank, con);
                 DataTable dtExpenseType = new DataTable();
                 sda1.Fill(dtExpenseType);
@@ -116,6 +124,41 @@ namespace Rasta
 
                 }
             }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow dr in dataGridView1.Rows)
+            {
+
+                string spname = "sp_InsertITBudget";
+                string ConString = ConfigurationManager.ConnectionStrings["ConString"].ConnectionString;
+                MySqlConnection con = new MySqlConnection(ConString);
+                MySqlCommand cmd = new MySqlCommand(spname, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("iBudgetYear", DateTime.Now.Year);
+                cmd.Parameters.AddWithValue("iCostCodeID", 3);
+                cmd.Parameters.AddWithValue("iCBStname", dr.Cells[1].Value.ToString());
+                cmd.Parameters.AddWithValue("iPEXOPEXName", dr.Cells[2].Value.ToString());
+                cmd.Parameters.AddWithValue("dAMOUNT1", dr.Cells[3].Value.ToString());
+                cmd.Parameters.AddWithValue("dAMOUNT2", dr.Cells[6].Value.ToString());
+                cmd.Parameters.AddWithValue("dAMOUNT3", dr.Cells[9].Value.ToString());
+                cmd.Parameters.AddWithValue("dAMOUNT4", dr.Cells[12].Value.ToString());
+                cmd.Parameters.AddWithValue("dAMOUNT5", dr.Cells[15].Value.ToString());
+                cmd.Parameters.AddWithValue("dAMOUNT6", dr.Cells[18].Value.ToString());
+                cmd.Parameters.AddWithValue("dAMOUNT7", dr.Cells[21].Value.ToString());
+                cmd.Parameters.AddWithValue("dAMOUNT8", dr.Cells[24].Value.ToString());
+                cmd.Parameters.AddWithValue("dAMOUNT9", dr.Cells[27].Value.ToString());
+                cmd.Parameters.AddWithValue("dAMOUNT10", dr.Cells[30].Value.ToString());
+                cmd.Parameters.AddWithValue("dAMOUNT11", dr.Cells[33].Value.ToString());
+                cmd.Parameters.AddWithValue("dAMOUNT12", dr.Cells[36].Value.ToString());
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -123,47 +166,7 @@ namespace Rasta
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-            foreach (DataGridViewRow dr in dataGridView1.Rows)
-            {
-                
-                    string spname = "sp_InsertBudget";
-                    string ConString = ConfigurationManager.ConnectionStrings["ConString"].ConnectionString;
-                    MySqlConnection con = new MySqlConnection(ConString);
-                    MySqlCommand cmd = new MySqlCommand(spname, con);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("iBudgetYear", DateTime.Now.Year);
-                    cmd.Parameters.AddWithValue("iCostCodeID", 2);
-                    cmd.Parameters.AddWithValue("iDepartmentname", dr.Cells[1].Value.ToString());
-                   cmd.Parameters.AddWithValue("dAMOUNT1", dr.Cells[2].Value.ToString());
-                   cmd.Parameters.AddWithValue("dAMOUNT2", dr.Cells[5].Value.ToString());
-                   cmd.Parameters.AddWithValue("dAMOUNT3", dr.Cells[8].Value.ToString());
-                   cmd.Parameters.AddWithValue("dAMOUNT4", dr.Cells[11].Value.ToString());
-                   cmd.Parameters.AddWithValue("dAMOUNT5", dr.Cells[14].Value.ToString());
-                   cmd.Parameters.AddWithValue("dAMOUNT6", dr.Cells[17].Value.ToString());
-                   cmd.Parameters.AddWithValue("dAMOUNT7", dr.Cells[20].Value.ToString());
-                   cmd.Parameters.AddWithValue("dAMOUNT8", dr.Cells[23].Value.ToString());
-                   cmd.Parameters.AddWithValue("dAMOUNT9", dr.Cells[26].Value.ToString());
-                   cmd.Parameters.AddWithValue("dAMOUNT10", dr.Cells[29].Value.ToString());
-                   cmd.Parameters.AddWithValue("dAMOUNT11", dr.Cells[32].Value.ToString());
-                   cmd.Parameters.AddWithValue("dAMOUNT12", dr.Cells[35].Value.ToString());
-                
-                    con.Open();
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-                
-            }
-
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = ((DataGridView)sender);
             if (e.ColumnIndex < 0)
@@ -177,8 +180,7 @@ namespace Rasta
                 dgv.EditMode = DataGridViewEditMode.EditOnEnter;
                 dgv.BeginEdit(false);
             }
-
         }
+
     }
 }
-

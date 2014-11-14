@@ -1,6 +1,6 @@
 ﻿namespace Rasta
 {
-    partial class GeneralBudget
+    partial class ITBudget
     {
         /// <summary>
         /// Required designer variable.
@@ -48,14 +48,14 @@
             this.tableLayoutPanel1.Controls.Add(this.cmbCurrency, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnCancel, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.button1, 0, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 1);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.631147F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.36885F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1322, 488);
-            this.tableLayoutPanel1.TabIndex = 3;
+            this.tableLayoutPanel1.TabIndex = 4;
             // 
             // dataGridView1
             // 
@@ -69,7 +69,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1316, 404);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
@@ -114,15 +113,15 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // GeneralBudget
+            // ITBudget
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 533);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "GeneralBudget";
-            this.Text = "GeneralBudget";
-            this.Load += new System.EventHandler(this.GeneralBudget_Load);
+            this.Name = "ITBudget";
+            this.Text = "ITBudget";
+            this.Load += new System.EventHandler(this.ITBudget_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

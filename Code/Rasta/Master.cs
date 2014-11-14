@@ -172,6 +172,21 @@ namespace Rasta
 
         }
 
+        private void Master_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTBudgetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ITBudget Budgetform = new ITBudget();
+            Budgetform.MdiParent = this;
+            Budgetform.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None; //set form without maximize,minimize and close button
+            Budgetform.Dock = DockStyle.Fill; //set form's dock property to fill
+            Budgetform.Show();
+            Budgetform.BringToFront();
+        }
+
 
 
 

@@ -44,6 +44,7 @@
             this.treasuryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.budgetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generalBudgetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iTBudgetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,7 +159,8 @@
             // budgetToolStripMenuItem
             // 
             this.budgetToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.generalBudgetToolStripMenuItem});
+            this.generalBudgetToolStripMenuItem,
+            this.iTBudgetToolStripMenuItem});
             this.budgetToolStripMenuItem.Name = "budgetToolStripMenuItem";
             this.budgetToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.budgetToolStripMenuItem.Text = "Budget";
@@ -170,6 +172,13 @@
             this.generalBudgetToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.generalBudgetToolStripMenuItem.Text = "General Budget";
             this.generalBudgetToolStripMenuItem.Click += new System.EventHandler(this.generalBudgetToolStripMenuItem_Click);
+            // 
+            // iTBudgetToolStripMenuItem
+            // 
+            this.iTBudgetToolStripMenuItem.Name = "iTBudgetToolStripMenuItem";
+            this.iTBudgetToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.iTBudgetToolStripMenuItem.Text = "IT Budget";
+            this.iTBudgetToolStripMenuItem.Click += new System.EventHandler(this.iTBudgetToolStripMenuItem_Click);
             // 
             // Master
             // 
@@ -183,6 +192,7 @@
             this.Name = "Master";
             this.Text = "Rastaa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Master_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -207,6 +217,7 @@
         private System.Windows.Forms.ToolStripMenuItem forecastReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem budgetToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem generalBudgetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem iTBudgetToolStripMenuItem;
 
        
     }
